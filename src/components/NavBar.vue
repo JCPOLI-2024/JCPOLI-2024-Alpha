@@ -37,6 +37,7 @@
         <router-link to="/hackathon" tag="li">Hackathon TESTE </router-link>
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
+        <router-link to="/JCPOLI" tag="li">JCPOLI</router-link>
       </ul>
       </div>
     </div>

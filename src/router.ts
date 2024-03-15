@@ -56,7 +56,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "ops" */ "./views/four04.vue")
     },
-
+    {
+      path: "/JCPOLI",
+      name: "JCPOLI",
+      component: () =>
+        import(/* webpackChunkName: "JCPOLI" */"./views/Jcpoli.vue")
+    }, 
 
 
     /* REMOVE PATH JGES
