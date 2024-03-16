@@ -56,13 +56,20 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "ops" */ "./views/four04.vue")
     },
+    //Pagina da JCPOLI
     {
       path: "/JCPOLI",
       name: "JCPOLI",
       component: () =>
         import(/* webpackChunkName: "JCPOLI" */"./views/Jcpoli.vue")
-    }, 
-
+    },
+    // Pagina dos perfil dos palestrantes 
+    {
+      path: "/profile",
+      name: "speakerProfile",
+      component: () =>
+        import(/* webpackChunkName: "speakerProfile" */ "./views/SpeakerProfile.vue")
+    },
 
     /* REMOVE PATH JGES
     {
