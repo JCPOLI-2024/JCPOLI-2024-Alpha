@@ -131,7 +131,7 @@
       //Supporters
     }
   })
-  export default class Home extends Vue {
+  export default class Jcpoli extends Vue {
     private speakersList: any = null
   
     constructor() {
