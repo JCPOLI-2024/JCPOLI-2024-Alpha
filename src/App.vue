@@ -1,8 +1,10 @@
+<!-- Lógica original para manter o navbar da politecnica no site -->
+<!-- 
 <template>
   <v-app id="app">
     <NavBar v-if="$route.path==='/conta' ? false : true" />
     <notifications position="top right" />
-    <router-view />
+    <router-view /> -->
 
     <!-- <div
       v-if="$route.path==='/conta' || $route.path==='/'? false : true"
@@ -10,6 +12,7 @@
     >
       <p>&copy; 4º Jornada Científica da Escola de Ciências Exatas e da Computação - JCECEC 2019</p>
     </div>-->
+<!--     
   </v-app>
 </template>
 
@@ -26,6 +29,36 @@ import router from "@/router";
 export default class App extends Vue {
   constructor() {
     super();
+  }
+}
+</script> -->
+
+<!-- Lógica improvisada (até ter um loyout) para manter o navbar da politecnica e o navbar da jcpoli(aparece só na aba jcpoli) no site -->
+<template>
+  <v-app id="app">
+    <!-- Renderiza o NavBar -->
+    <NavBar />
+    <!-- Renderiza o NavBarj apenas na rota '/JCPOLI' -->
+    <NavBarj v-if="isSpecialRoute" />
+    <notifications position="top right" />
+    <router-view />
+  </v-app>
+</template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+import NavBarj from "@/components/NavBarj.vue";
+
+export default {
+  components: {
+    NavBar,
+    NavBarj
+  },
+  computed: {
+    isSpecialRoute() {
+      // Verifica se a rota atual é '/JCPOLI'
+      return this.$route.path === "/JCPOLI";
+    }
   }
 }
 </script>
