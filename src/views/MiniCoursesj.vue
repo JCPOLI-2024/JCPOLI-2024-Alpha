@@ -1,30 +1,31 @@
-<!-- Pagina da JCPOLI -  Pagina das Palestras -->
-<!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas as palestras são as que estavam na JCPOLI -->
+<!-- Pagina da JCPOLI -  Pagina de Minicuros -->
+<!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas os minicursos são as que estavam na JCPOLI -->
 <template>
     <div>
       <PhotoHeader
         :title="title"
         :description="description"
         :image="background"
-        offset="calc((-150/500)*100vw + 67.304015296px)"
+        offset="calc((-100/523)*100vw + 67.304015296px)"
       ></PhotoHeader>
   
       <Main>
         <h4 class="text-center">Agenda</h4>
+  
         <div class="button-container">
-          <button class="button" v-on:click="clearFilter">Todas as datas</button>
-          <button class="button" v-on:click="filterPalestras">
+          <button class="button" v-on:click="clearFilter">Todos as datas</button>
+          <button class="button" v-on:click="filterCourses">
             09/05
           </button>
-          <button class="button" v-on:click="filterPalestras">10/05</button>
-          <button class="button" v-on:click="filterPalestras">11/05</button>
-          <!--<button class="button" v-on:click="filterPalestras">12/05</button>
-          <button class="button" v-on:click="filterPalestras">13/05</button>-->
+          <button class="button" v-on:click="filterCourses">10/05</button>
+          <button class="button" v-on:click="filterCourses">11/05</button>
+          <!--<button class="button" v-on:click="filterCourses">12/05</button>
+          <button class="button" v-on:click="filterCourses">13/05</button>-->
         </div>
         <div class="courses-list">
-          <div v-for="(props, index) in filtered_palestras" :key="index">
+          <div v-for="(props, index) in filtered_courses" :key="index">
             <!--<h3 class="section-course">{{ props.curso }}</h3> -->
-            <div v-for="(course, index) in props.palestras" :key="index">
+            <div v-for="(course, index) in props.minicurso" :key="index">
               <MiniCourse :course="course"></MiniCourse>
               <hr />
             </div>
@@ -39,13 +40,12 @@
   import PhotoHeader from '../components/organization/PhotoHeader.vue'
   import Main from '../components/organization/Main.vue'
   import MiniCourse from '../components/miniCourse/index.vue'
-  import SectionCourse from '../components/organization/SectionCourse.vue'
-  
-  //Para pegar as palestras que estavam na Escola Politécnica e de Artes
-  //import { Palestras_Cursos } from '@/storage/programacao/palestras_new'
 
-  //Para pegar as palestras que estavam na JCPOLI
-  import { Palestras_Cursos } from '@/storage/programacao/palestras_new_j'
+  //Para pegar os minicursos que estavam na Escola Politécnica e de Artes
+  //import { miniCourses_Section } from '@/models/miniCourses'
+  
+  //Para pegar os minicursos que estavam na JCPOLI
+  import { miniCourses_Section } from '@/models/miniCoursesj'
   
   @Component({
     components: {
@@ -54,33 +54,34 @@
       MiniCourse
     }
   })
-  export default class Palestras extends Vue {
-    private all_palestras
-    private filtered_palestras
+  export default class MiniCourses extends Vue {
+    private coursesList: any
+    private filtered_courses: any
   
-    private title = 'Palestras'
-    private description = 'Palestras da jornada'
-    private background = 'assets/img/slider/6.jpg'
+    private title = 'Minicursos'
+    private description = 'Minicursos da jornada'
+    private background = 'assets/img/lab.jpg'
   
-    filterPalestras(e) {
+    filterCourses(e: any) {
       let data = e.target.innerText
-      this.filtered_palestras = this.all_palestras.map(item => {
-        let palestras = item.palestras.filter(aux => {
+      this.filtered_courses = this.coursesList.map(item => {
+        const minicurso = item.minicurso.filter(aux => {
           return aux.date == data
         })
-        return { ...item, palestras }
+  
+        return { ...item, minicurso }
       })
     }
   
     clearFilter() {
-      this.filtered_palestras = this.all_palestras
+      this.filtered_courses = this.coursesList
     }
   
     constructor() {
       super()
   
-      this.all_palestras = Palestras_Cursos
-      this.filtered_palestras = this.all_palestras
+      this.coursesList = miniCourses_Section
+      this.filtered_courses = this.coursesList
     }
   }
   </script>
@@ -101,9 +102,7 @@
       0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05),
       0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
     padding: 1rem;
-    color: black;
   }
-  
   .button-container {
     display: flex;
     flex-direction: row;
