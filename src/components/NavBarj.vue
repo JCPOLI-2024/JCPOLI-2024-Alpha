@@ -24,7 +24,7 @@
           <router-link to="/jges" tag="li">JGES</router-link>
           <router-link to="/cadastro" tag="li">Inscrição</router-link>
           -->
-          <router-link to="/orientacoes" tag="li">Orientações</router-link>
+          <router-link to="/orientacoesj" tag="li">Orientações</router-link>
         </ul>
       </div>
   
@@ -70,7 +70,7 @@
           <router-link to="/jges" tag="li">JGES</router-link>
           <router-link to="/cadastro" tag="li">Inscrição</router-link>
           -->
-          <router-link to="/orientacoes" tag="li">Orientações</router-link>
+          <router-link to="/orientacoesj" tag="li">Orientações</router-link>
         </ul>
       </div>
     </div>
