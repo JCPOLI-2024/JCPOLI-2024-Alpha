@@ -13,7 +13,7 @@
         <ul>
           <router-link to="/JCPOLI" tag="li">Home</router-link>
           <router-link to="/escolaj" tag="li">Escola</router-link>
-          <router-link to="/palestras" tag="li">Palestras</router-link>
+          <router-link to="/palestrasj" tag="li">Palestras</router-link>
           <router-link to="/minicursos" tag="li">Minicursos</router-link>
           <router-link to="/competicoes" tag="li">Competições</router-link>
           <router-link to="/exposicoes" tag="li">Exposições</router-link>
@@ -60,7 +60,7 @@
         <ul>
           <router-link to="/JCPOLI" tag="li">Home</router-link>
           <router-link to="/escolaj" tag="li">Escola</router-link>
-          <router-link to="/palestras" tag="li">Palestras</router-link>
+          <router-link to="/palestrasj" tag="li">Palestras</router-link>
           <router-link to="/minicursos" tag="li">Minicursos</router-link>
           <router-link to="/competicoes" tag="li">Competições</router-link>
           <router-link to="/exposicoes" tag="li">Exposições</router-link>

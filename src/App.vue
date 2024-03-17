@@ -55,11 +55,13 @@ export default {
     NavBarj
   },
   computed: {
-    isSpecialRoute() {
-      // Verifica se a rota atual é '/JCPOLI'
-      return this.$route.path === "/JCPOLI";
-    }
+  isSpecialRoute() {
+    // Lista das rotas da JCPOLI para q o NavBar apareça
+    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj"];
+    // Verifica se a rota atual está na lista de rotas especiais
+    return specialRoutes.includes(this.$route.path);
   }
+}
 }
 </script>
 

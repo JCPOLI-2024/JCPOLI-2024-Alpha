@@ -212,6 +212,7 @@
   </template>
   
   <script lang="ts">
+  //Manteve mesmos componentes que no código da JCPOLI (sem criar ou modificar um componente) pq a página é ficou a mesma
   import { Component, Vue } from 'vue-property-decorator'
   import PhotoHeader from '@/components/organization/PhotoHeader.vue'
   import Main from '@/components/organization/Main.vue'
