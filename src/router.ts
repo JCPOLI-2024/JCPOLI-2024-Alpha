@@ -129,11 +129,18 @@ const router = new Router({
     },
 
     // Pagina da JCPOLI - Rotas ativas, porém de dificil acesso
-    // {
-    //   path: "/programacao",
-    //   component: () =>
-    //     import(/* webpackChunkName: "programacao" */ "./views/Programacao.vue")
-    // },
+    // Para a página de programação da Escola Politecnica
+    {
+      path: "/programacao",
+      component: () =>
+        import(/* webpackChunkName: "programacao" */ "./views/Programacao.vue")
+    },
+    // Para a página de programação da JCPOLI
+    {
+      path: "/programacaoj",
+      component: () =>
+        import(/* webpackChunkName: "programacao" */ "./views/Programacaoj.vue")
+    },
     // {
     //   path: "/egressos",
     //   component: () =>
