@@ -33,7 +33,7 @@ export default class App extends Vue {
 }
 </script> -->
 
-<!-- Lógica improvisada (até ter um loyout) para manter o navbar da politecnica e o navbar da jcpoli(aparece só na aba jcpoli) no site -->
+<!-- Lógica improvisada (até ter um loyout) para manter o navbar da politecnica e o navbar da jcpoli(aparecer só nas abas da jcpoli) no site -->
 <template>
   <v-app id="app">
     <!-- Renderiza o NavBar -->
@@ -57,7 +57,7 @@ export default {
   computed: {
   isSpecialRoute() {
     // Lista das rotas da JCPOLI para q o NavBar apareça
-    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj", "/minicursosj", "/competicoesj"];
+    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj", "/minicursosj", "/competicoesj", "/exposicoesj"];
     // Verifica se a rota atual está na lista de rotas especiais
     return specialRoutes.includes(this.$route.path);
   }
