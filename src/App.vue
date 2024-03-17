@@ -57,7 +57,7 @@ export default {
   computed: {
   isSpecialRoute() {
     // Lista das rotas da JCPOLI para q o NavBar apareça
-    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj", "/minicursosj"];
+    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj", "/minicursosj", "/competicoesj"];
     // Verifica se a rota atual está na lista de rotas especiais
     return specialRoutes.includes(this.$route.path);
   }
