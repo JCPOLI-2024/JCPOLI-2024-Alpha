@@ -24,6 +24,13 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "account" */ "./views/Maintenance.vue")
     },
+    // Pagina da JCPOLI - Página de manutenção
+    // {
+    //   path: "/manutencao",
+    //   name: "manutencao",
+    //   component: () =>
+    //     import(/* webpackChunkName: "account" */ "./views/Maintenance.vue")
+    // },
     {
       path: "/TCC",
       name: "TCC",
@@ -119,7 +126,40 @@ const router = new Router({
       name: "orientacoesj",
       component: () =>
         import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesj.vue")
-    },    
+    },
+
+    // Pagina da JCPOLI - Rotas ativas, porém de dificil acesso
+    // {
+    //   path: "/programacao",
+    //   component: () =>
+    //     import(/* webpackChunkName: "programacao" */ "./views/Programacao.vue")
+    // },
+    // {
+    //   path: "/egressos",
+    //   component: () =>
+    //     import(/* webpackChunkName: "egressos" */ "./views/Egressos.vue")
+    // },
+
+    // Pagina da JCPOLI - Rotas que estão na JCPOLI mas que estão inutilizadas
+    // {
+    //   path: "/cadastro",
+    //   name: "cadastro",
+    //   component: () =>
+    //     import(/* webpackChunkName: "about" */ "./views/SignUp/SignUp.vue")
+    // },
+    // {
+    //   path: "/cadastro/confirmacao",
+    //   name: "confirmacao",
+    //   component: () =>
+    //     import(/* webpackChunkName: "about" */ "./views/SignUp/Confirm.vue")
+    // },
+    // {
+    //   path: "/conta",
+    //   name: "conta",
+    //   component: () =>
+    //     import(/* webpackChunkName: "account" */ "./views/Admin/MyAccount.vue")
+    // },
+
     /* REMOVE PATH JGES
     {
       path: "/jges",
