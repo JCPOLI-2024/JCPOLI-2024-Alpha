@@ -75,7 +75,7 @@
       MiniCourse
     }
   })
-  export default class competicoes extends Vue {
+  export default class competicoesj extends Vue {
     private all_competicoes: any
   
     private title = 'Competições'

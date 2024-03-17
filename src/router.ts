@@ -105,6 +105,13 @@ const router = new Router({
       name: "exposicoesj",
       component: () =>
         import(/* webpackChunkName: "exposicoes" */ "./views/Exposicoesj.vue")
+    },
+    // Pagina da JCPOLI -  Pagina de Publicações/Anais
+    {
+      path: "/anaisj",
+      name: "anaisj",
+      component: () =>
+        import(/* webpackChunkName: "egressos" */ "./views/Anaisj.vue")
     },    
     /* REMOVE PATH JGES
     {

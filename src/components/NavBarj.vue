@@ -18,7 +18,7 @@
           <router-link to="/competicoesj" tag="li">Competições</router-link>
           <router-link to="/exposicoesj" tag="li">Exposições</router-link>
           <router-link to="/egressos" tag="li">Egressos</router-link>
-          <router-link to="/anais" tag="li">Publicações</router-link>
+          <router-link to="/anaisj" tag="li">Publicações</router-link>
   
           <!--
           <router-link to="/jges" tag="li">JGES</router-link>
@@ -64,7 +64,7 @@
           <router-link to="/minicursosj" tag="li">Minicursos</router-link>
           <router-link to="/competicoesj" tag="li">Competições</router-link>
           <router-link to="/exposicoesj" tag="li">Exposições</router-link>
-          <router-link to="/anais" tag="li">Publicações</router-link>
+          <router-link to="/anaisj" tag="li">Publicações</router-link>
   
           <!--
           <router-link to="/jges" tag="li">JGES</router-link>
