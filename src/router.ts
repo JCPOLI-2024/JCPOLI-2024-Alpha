@@ -56,21 +56,28 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "ops" */ "./views/four04.vue")
     },
-    //Pagina da JCPOLI
+
+    // Pagina da JCPOLI - Home
     {
       path: "/JCPOLI",
       name: "JCPOLI",
       component: () =>
         import(/* webpackChunkName: "JCPOLI" */"./views/Jcpoli.vue")
     },
-    // Pagina dos perfil dos palestrantes 
+    // Pagina da JCPOLI -  Pagina dos perfil dos palestrantes 
     {
       path: "/profile",
       name: "speakerProfile",
       component: () =>
         import(/* webpackChunkName: "speakerProfile" */ "./views/SpeakerProfile.vue")
     },
-
+    // Pagina da JCPOLI -  Pagina da Escola
+    {
+      path: "/escolaj",
+      name: "escolaj",
+      component: () =>
+        import(/* webpackChunkName: "evento2" */ "./views/Escolaj.vue")
+    },
     /* REMOVE PATH JGES
     {
       path: "/jges",

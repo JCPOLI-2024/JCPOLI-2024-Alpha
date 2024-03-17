@@ -1,3 +1,4 @@
+<!-- Página JCPOLI -Navbar de abas da JCPOLI -->
 <template>
     <div class="navbar-h mx-auto">
       <input type="checkbox" id="open-mmenu" :style="{ display: 'none' }" />
@@ -11,7 +12,7 @@
         </div>
         <ul>
           <router-link to="/JCPOLI" tag="li">Home</router-link>
-          <router-link to="/escola" tag="li">Escola</router-link>
+          <router-link to="/escolaj" tag="li">Escola</router-link>
           <router-link to="/palestras" tag="li">Palestras</router-link>
           <router-link to="/minicursos" tag="li">Minicursos</router-link>
           <router-link to="/competicoes" tag="li">Competições</router-link>
@@ -58,7 +59,7 @@
       <div class="nav-container desktop">
         <ul>
           <router-link to="/JCPOLI" tag="li">Home</router-link>
-          <router-link to="/escola" tag="li">Escola</router-link>
+          <router-link to="/escolaj" tag="li">Escola</router-link>
           <router-link to="/palestras" tag="li">Palestras</router-link>
           <router-link to="/minicursos" tag="li">Minicursos</router-link>
           <router-link to="/competicoes" tag="li">Competições</router-link>

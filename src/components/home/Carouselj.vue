@@ -1,3 +1,4 @@
+<!-- Página JCPOLI - Carousel -->
 <template>
     <v-layout row wrap class="jcecec-slider">
       <v-flex xs12>
