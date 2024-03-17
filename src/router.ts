@@ -141,11 +141,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "programacao" */ "./views/Programacaoj.vue")
     },
-    // {
-    //   path: "/egressos",
-    //   component: () =>
-    //     import(/* webpackChunkName: "egressos" */ "./views/Egressos.vue")
-    // },
+    //Pagina da JCPOLI -  Pagina de Egressos
+    {
+      path: "/egressosj",
+      component: () =>
+        import(/* webpackChunkName: "egressos" */ "./views/Egressosj.vue")
+    },
 
     // Pagina da JCPOLI - Rotas que estão na JCPOLI mas que estão inutilizadas
     // {

@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI -  Pagina das Programações -->
 <template>
     <div class="programacao">
       <Main>
@@ -64,13 +65,15 @@
   
       constructor(){
         super();
-  
+        // Os storages "trabalhos", "jges", "oficina" são as da JCPOLI
+        // Os storage "palestras" e "minicursos"são iguais para Escola Politecnica e JCPOLI
+        // O storage "hacktonj" é o que estava na JCPOLI (Já "hackaton" é o storage com dados que estavam na EScola Politecnica) 
         this.palestras = require('@/storage/programacao/palestras').default;
         this.trabalhos = require('@/storage/programacao/trabalhos').default;
         this.jges = require('@/storage/programacao/jges').default;
         this.minicursos = require('@/storage/programacao/minicursos').default;
         this.oficina = require('@/storage/programacao/oficina').default;
-        this.hackaton = require('@/storage/programacao/hackaton').default;
+        this.hackaton = require('@/storage/programacao/hackatonj').default;
   
         this.events = [
           {

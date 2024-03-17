@@ -1,4 +1,4 @@
-
+// Storage para os trabalhos que estavam na página da JCPOLI
 export default [
     {
         date: '12/11',
