@@ -900,7 +900,7 @@
     }
   
     private goToSubmission() {
-      this.$router.push('/orientacoes')
+      this.$router.push('/orientacoesj')
     }
   }
   </script>
