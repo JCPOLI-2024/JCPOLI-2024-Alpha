@@ -1,8 +1,10 @@
+<!-- Lógica original para manter o navbar da politecnica no site -->
+<!-- 
 <template>
   <v-app id="app">
     <NavBar v-if="$route.path==='/conta' ? false : true" />
     <notifications position="top right" />
-    <router-view />
+    <router-view /> -->
 
     <!-- <div
       v-if="$route.path==='/conta' || $route.path==='/'? false : true"
@@ -10,6 +12,7 @@
     >
       <p>&copy; 4º Jornada Científica da Escola de Ciências Exatas e da Computação - JCECEC 2019</p>
     </div>-->
+<!--     
   </v-app>
 </template>
 
@@ -27,6 +30,39 @@ export default class App extends Vue {
   constructor() {
     super();
   }
+}
+</script> -->
+
+<!-- Lógica improvisada (até ter um loyout) para manter o navbar da politecnica e o navbar da jcpoli(aparecer só nas abas da jcpoli) no site -->
+<template>
+  <v-app id="app">
+    <!-- Renderiza o NavBar -->
+    <NavBar />
+    <!-- Renderiza o NavBarj apenas na rota '/JCPOLI' -->
+    <NavBarj v-if="isSpecialRoute" />
+    <notifications position="top right" />
+    <router-view />
+  </v-app>
+</template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+import NavBarj from "@/components/NavBarj.vue";
+
+export default {
+  components: {
+    NavBar,
+    NavBarj
+  },
+  computed: {
+  isSpecialRoute() {
+    // Lista das rotas da JCPOLI para q o NavBar apareça
+    const specialRoutes = ["/JCPOLI", "/escolaj", "/palestrasj", "/minicursosj", "/competicoesj", 
+                           "/exposicoesj", "/anaisj", "/orientacoesj", "/programacaoj", "/egressosj"];
+    // Verifica se a rota atual está na lista de rotas especiais
+    return specialRoutes.includes(this.$route.path);
+  }
+}
 }
 </script>
 
