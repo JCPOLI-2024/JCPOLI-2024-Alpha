@@ -1,5 +1,7 @@
 <template>
   <div class="navbar-h">
+  <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
+  <!-- <div class="navbar-h mx-auto"> -->
 
     <input type="checkbox" id="open-mmenu" :style="{ display: 'none' }" />
 
@@ -38,6 +40,19 @@
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
         <router-link to="/JCPOLI" tag="li">JCPOLI</router-link>
+        <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
+        <!-- <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+          JCPOLI III
+          <ul v-if="showDropdown" class="dropdown-content">
+            <router-link to="/JCPOLI" tag="li">Home</router-link>
+            <router-link to="/escolaj" tag="li">Escola</router-link>
+            <router-link to="/palestrasj" tag="li">Palestras</router-link>
+            <router-link to="/minicursosj" tag="li">Minicursos</router-link>
+            <router-link to="/competicoesj" tag="li">Competições</router-link>
+            <router-link to="/exposicoesj" tag="li">Exposições</router-link>
+            <router-link to="/anaisj" tag="li">Publicações</router-link>
+          </ul>
+        </li> -->
       </ul>
       </div>
     </div>
@@ -69,7 +84,13 @@ export default class NavBar extends Vue {
   created() {
     this.$router.beforeEach(this.closeMenuOnRouteChange)    
   }
-
+  // Rascunho para uma futura possivel dropdown na parte de abas
+  // data() {
+  //   return {
+  //     showDropdown: false // Variável para controlar a exibição do dropdown
+  //   };
+  // }
+  
   mounted() {    
     window.addEventListener("resize", this.centralizar);
     setTimeout(this.centralizar, 300);
@@ -250,8 +271,39 @@ export default class NavBar extends Vue {
   border: none;
   text-decoration: none;
 }
+/* Rascunho para uma futura possivel dropdown na parte de abas */
+/* Estilos para o dropdown */
+/*
+.dropdown {
+  position: relative;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0;
+}
 
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block; /* Exibir as abas na horizontal 
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostra o dropdown quando o mouse está sobre a aba "JCPOLI" 
+.nav-container.desktop .dropdown:hover .dropdown-content {
+  display: block;
+}
+*/
 @media screen and (min-width: 926px) {
   .mobile {
     display: none !important;

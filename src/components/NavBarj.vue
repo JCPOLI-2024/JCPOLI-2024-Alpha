@@ -71,6 +71,8 @@
           <router-link to="/cadastro" tag="li">Inscrição</router-link>
           -->
           <router-link to="/orientacoesj" tag="li">Orientações</router-link>
+          <!-- Rascunho para aba de edições -->
+          <!-- <router-link to="/orientacoesj" tag="li">Edições</router-link> -->
         </ul>
       </div>
     </div>
