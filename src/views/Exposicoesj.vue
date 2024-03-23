@@ -56,7 +56,7 @@ import Main from '../components/organization/Main.vue'
 import MiniCourse from '../components/miniCourse/index.vue'
 import SectionCourse from '../components/organization/SectionCourse.vue'
 //Para pegar as exposições que estavam na JCPOLI
-import { Exposicao_Cursos } from '@/storage/programacao/exposicaoj'
+import { Exposicao_Cursos } from '@/storage/programacao/exposicao1JCPOLI'
 
 @Component({
   components: {

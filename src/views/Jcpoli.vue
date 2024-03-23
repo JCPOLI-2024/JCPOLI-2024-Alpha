@@ -116,7 +116,7 @@
   import Dates from '@/components/home/Datesj.vue'
   //import Supporters from '@/components/organization/Supporters.vue'
   
-  //import { speakers_list } from '@/storage/programacao/speakers'
+  //import { speakers_list } from '@/storage/programacao/speakers1JCPOLI'
   
   @Component({
     components: {

@@ -38,7 +38,7 @@
   import Columns from "@/components/organization/Columns.vue";
   import Organization from "@/components/organization/Names.vue";
   import Supporters from "@/components/organization/Supporters.vue";
-  import speakers from "@/models/speakers";
+  import speakers from "@/models/speakersJCPOLI";
   
   @Component({
     components: {
@@ -65,15 +65,15 @@
   
       constructor(){
         super();
-        // Os storages "trabalhos", "jges", "oficina" são as da JCPOLI
-        // Os storage "palestras" e "minicursos"são iguais para Escola Politecnica e JCPOLI
-        // O storage "hacktonj" é o que estava na JCPOLI (Já "hackaton" é o storage com dados que estavam na EScola Politecnica) 
-        this.palestras = require('@/storage/programacao/palestras').default;
-        this.trabalhos = require('@/storage/programacao/trabalhos').default;
-        this.jges = require('@/storage/programacao/jges').default;
-        this.minicursos = require('@/storage/programacao/minicursos').default;
-        this.oficina = require('@/storage/programacao/oficina').default;
-        this.hackaton = require('@/storage/programacao/hackatonj').default;
+        // Os storages "trabalhos1JCPOLI", "jges1JCPOLI", "oficina1JCPOLI" são as da JCPOLI
+        // Os storage "palestras" e "minicursos"são iguais para Escola Politecnica e JCPOLI, porém é bom dividir
+        // O storage "hackton1JCPOLI" é o que estava na JCPOLI (Já "hackaton" é o storage com dados que estavam na EScola Politecnica) 
+        this.palestras = require('@/storage/programacao/palestras1JCPOLI').default;
+        this.trabalhos = require('@/storage/programacao/trabalhos1JCPOLI').default;
+        this.jges = require('@/storage/programacao/jges1JCPOLI').default;
+        this.minicursos = require('@/storage/programacao/minicursos1JCPOLI').default;
+        this.oficina = require('@/storage/programacao/oficina1JCPOLI').default;
+        this.hackaton = require('@/storage/programacao/hackaton1JCPOLI').default;
   
         this.events = [
           {

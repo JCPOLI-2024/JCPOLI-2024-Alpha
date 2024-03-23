@@ -7,6 +7,7 @@ Vue.use(Router);
 const router = new Router({
   mode: "history",
   routes: [
+//########################################## Pagina da Escola Politecnica e de Artes - Rotas que estão na Politecnica  ##########################################
     /*{
       path: "/",
       name: "home",
@@ -64,6 +65,7 @@ const router = new Router({
         import(/* webpackChunkName: "ops" */ "./views/four04.vue")
     },
 
+//########################################## Pagina da JCPOLI - Rotas que estão na JCPOLI  ##########################################
     // Pagina da JCPOLI - Home
     {
       path: "/JCPOLI",
@@ -128,7 +130,7 @@ const router = new Router({
         import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesj.vue")
     },
 
-    // Pagina da JCPOLI - Rotas ativas, porém de dificil acesso
+//########################################## Pagina da JCPOLI e Escola Politecnica de Artes - Rotas ativas, porém de dificil acesso ##########################################
     // Para a página de programação da Escola Politecnica
     {
       path: "/programacao",
@@ -148,7 +150,7 @@ const router = new Router({
         import(/* webpackChunkName: "egressos" */ "./views/Egressosj.vue")
     },
 
-    // Pagina da JCPOLI - Rotas que estão na JCPOLI mas que estão inutilizadas
+//########################################## Pagina da JCPOLI - Rotas que estão na JCPOLI mas que estão inutilizadas ##########################################
     // {
     //   path: "/cadastro",
     //   name: "cadastro",

@@ -49,7 +49,7 @@ import Speakers from "@/components/organization/Speakers.vue";
 import Columns from "@/components/organization/Columns.vue";
 import Organization from "@/components/organization/Names.vue";
 import Supporters from "@/components/organization/Supporters.vue";
-import speakers from "@/models/speakers";
+import speakers from "@/models/speakersJCPOLI";
 
 @Component({
   components: {

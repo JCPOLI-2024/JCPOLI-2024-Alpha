@@ -38,8 +38,8 @@ export default class App extends Vue {
   <v-app id="app">
     <!-- Renderiza o NavBar -->
     <NavBar />
-    <!-- Renderiza o NavBarj apenas na rota '/JCPOLI' -->
-    <NavBarj v-if="isSpecialRoute" />
+    <!-- Renderiza o NavBarJCPOLI apenas na rota '/JCPOLI' -->
+    <NavBarJCPOLI v-if="isSpecialRoute" />
     <notifications position="top right" />
     <router-view />
   </v-app>
@@ -47,12 +47,12 @@ export default class App extends Vue {
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import NavBarj from "@/components/NavBarj.vue";
+import NavBarJCPOLI from "@/components/NavBarJCPOLI.vue";
 
 export default {
   components: {
     NavBar,
-    NavBarj
+    NavBarJCPOLI
   },
   computed: {
   isSpecialRoute() {

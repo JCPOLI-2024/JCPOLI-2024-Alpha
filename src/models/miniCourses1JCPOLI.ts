@@ -1,4 +1,4 @@
-// Minicursos que estavam na página JCPOLI
+// Minicursos que estavam na página 1 JCPOLI
 let Courses = [
   
     {

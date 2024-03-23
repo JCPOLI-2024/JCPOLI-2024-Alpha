@@ -1,4 +1,4 @@
-// Storage para as exposições que estavam na página da JCPOLI
+// Storage para as exposições que estavam na página da 1 JCPOLI
 const Exposicao_Design = [
     {
       title: "Povos originários — os caminhos da memória",
