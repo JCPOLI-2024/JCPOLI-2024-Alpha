@@ -40,6 +40,7 @@
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
         <router-link to="/JCPOLI" tag="li">JCPOLI</router-link>
+
         <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
         <!-- <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
           JCPOLI III
@@ -53,10 +54,20 @@
             <router-link to="/anaisj" tag="li">Publicações</router-link>
           </ul>
         </li> -->
+      
       </ul>
       </div>
     </div>
 
+    <!-- Nova posição da logo da JCPOLI -->
+    <!-- <div class="logo-jcpoli"> -->
+    <div class="logo-jcpoli">
+      <a href="/JCPOLI">
+        <!-- <img src="assets/img/logoj.png" alt="logo da puc" style=" transform: scale(1.1, 1.1); max-width: 356px; height: 108px;  margin-left: 4rem; position: absolute;"> -->
+        <img src="assets/img/logoj.png" alt="logo da puc">
+      </a>
+    </div>
+    
     <div id="barra-mobile" class="mobile"> <!-- imagem do amburguer -->
         <label for="open-mmenu">
           <i class="fas fa-bars fa-3x"></i>
@@ -142,6 +153,62 @@ export default class NavBar extends Vue {
   margin-right: 1rem;
 }
 
+.logo-jcpoli {
+
+  /* 0º Opção de tamanho de logo sem posição absoluta (logo pequena)*/
+  transform: scale(0.19, 0.2);
+  max-width: 30px;
+  height: 0px;
+  top: 0rem;
+  margin-right: 16rem;
+  margin-left: auto;
+  margin-top: -0.35rem;
+
+  /* 1º Opção de tamanho de logo sem posição absoluta */
+  /* transform: scale(0.21, 0.21);
+  max-width: 90px;
+  height: 0px;
+  top: 0rem;
+  margin-right: 16rem;
+  margin-left: auto;
+  margin-top: -0.76rem; */
+
+  /* 2º Opção de tamanho de logo sem posição absoluta e um pouco maior que a ultima logo */
+  /* transform: scale(0.25, 0.23);
+  max-width: 80px;
+  height: 0px;
+  top: 0rem;
+  margin-right: 17rem;
+  margin-left: auto;
+  margin-top: -1.6rem; */
+
+  /* 3º Opção de tamanho de logo sem posição absoluta e alinhada com o final da logo da puc  (Precisa cortar a parte branca)*/
+  /* transform: scale(0.22, 0.23);
+  max-width: 90px;
+  height: 0px;
+  top: 0rem;
+  margin-right: 14rem;
+  margin-left: auto;
+  margin-top: -0.76rem; */
+
+  /* 4º Opção de tamanho de logo alinhado com o topo da logo da puc */
+  /* transform: scale(0.23, 0.23);
+  width: 22px;
+  height: 0px;
+  position: absolute;
+  bottom: 9.5rem;
+  right: 0;
+  margin-right: 17.6rem; */
+
+  /* 5º Opção de tamanho de logo alinhado com o topo e com o final da logo da puc (Precisa cortar a parte branca) */
+  /* transform: scale(0.26, 0.26);
+  width: 22px;
+  height: 0px;
+  position: absolute;
+  bottom: 9.5rem;
+  right: 0;
+  margin-right: 18.2rem; */
+}
 
 
 .navbar-h .nav-container {
@@ -271,6 +338,7 @@ export default class NavBar extends Vue {
   border: none;
   text-decoration: none;
 }
+
 /* Rascunho para uma futura possivel dropdown na parte de abas */
 /* Estilos para o dropdown */
 /*
@@ -304,6 +372,7 @@ export default class NavBar extends Vue {
   display: block;
 }
 */
+
 @media screen and (min-width: 926px) {
   .mobile {
     display: none !important;

@@ -27,8 +27,9 @@
           <router-link to="/orientacoesj" tag="li">Orientações</router-link>
         </ul>
       </div>
-  
-      <div class="nav-info">
+      
+      <!-- Antiga parte onde ficava a logo e data da JCPOLI -->
+      <!-- <div class="nav-info">
         <div id="logo-nav-bar">
           <a href="/"><img id="logo" src="assets/img/logoj.png" style="width: 200px; height: auto;"> alt/></a>
   
@@ -55,7 +56,8 @@
             <i class="fas fa-bars"></i>
           </label>
         </div>
-      </div>
+      </div> -->
+      
       <div class="nav-container desktop">
         <ul>
           <router-link to="/JCPOLI" tag="li">Home</router-link>
