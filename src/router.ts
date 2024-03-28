@@ -30,6 +30,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "account" */ "./views/Ferramentas.vue")
     },
+    {
+      path: "/form",
+      name: "form",
+      component: () =>
+        import(/* webpackChunkName: "account" */ "./views/Form.vue")
+    },
     // Pagina da JCPOLI - Página de manutenção
     // {
     //   path: "/manutencao",
