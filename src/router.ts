@@ -24,6 +24,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "account" */ "./views/Maintenance.vue")
     },
+    {
+      path: "/ferramentas",
+      name: "ferramentas",
+      component: () =>
+        import(/* webpackChunkName: "account" */ "./views/Ferramentas.vue")
+    },
     // Pagina da JCPOLI - Página de manutenção
     // {
     //   path: "/manutencao",
