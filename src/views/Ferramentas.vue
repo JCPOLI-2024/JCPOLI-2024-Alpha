@@ -1,28 +1,13 @@
 <template>
   <div>
-  <b-card title="Card title" sub-title="Card subtitle">
+  <b-card title="Card title">
     <b-card-text>
       Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
       content.
     </b-card-text>
-
-    <b-card-text>A second paragraph of text in the card.</b-card-text>
-
     <a href="#" class="card-link">Card link</a>
     <b-link href="#" class="card-link">Another link</b-link>
   </b-card>
-<!--</div>
-  <div class="container">
-    <div class="what-is-up">
-      
-      <div class="spinny-cogs">
-        <i class="fa fa-cog" aria-hidden="true"></i>
-        <i class="fa fa-5x fa-cog fa-spin" aria-hidden="true"></i>
-        <i class="fa fa-3x fa-cog" aria-hidden="true"></i>
-      </div>
-      <h1 class="maintenance">FERRAMENTAS EM MENUTENCAO</h1>
-      <h2>Trabalhando com firebase [manutencao].</h2>
-    </div>-->
   </div>
 </template>
 <script>
