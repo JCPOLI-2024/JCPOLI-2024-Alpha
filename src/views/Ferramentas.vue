@@ -1,13 +1,18 @@
 <template>
   <div>
-  <b-card title="Card title">
-    <b-card-text>
-      Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
-      content.
-    </b-card-text>
-    <a href="#" class="card-link">Card link</a>
-    <b-link href="#" class="card-link">Another link</b-link>
-  </b-card>
+    <div class="d-flex justify-content-center">
+      <div class="col-6 mt-2">
+        <b-card title="Card title">
+          <b-card-text>
+            Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
+            content.
+          </b-card-text>
+
+          <b-button variant="info" class="mr-2">Editar</b-button>
+          <b-button variant="danger" class="mr-2">Excluir</b-button>
+        </b-card>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -17,106 +22,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped >
-* {
-  margin: 0;
-  padding: 0;
-}
 
-html,
-body {
-  height: 100%;
-  // background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_fish_skin.png);
-  color: white;
-  font-family: "Inconsolata", monospace;
-  font-size: 100%;
-}
-.ferramentas {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
-.container {
-  display: table;
-  margin: 0 auto;
-  max-width: 1024px;
-  width: 100%;
-  height: 100%;
-  align-content: center;
-  position: relative;
-  box-sizing: border-box;
-  .what-is-up {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-   // vertical-align: middle;
-    text-align: center;
-    box-sizing: border-box;
-    .spinny-cogs {
-      display: block;
-      margin-bottom: 2rem;
-      .fa {
-        &:nth-of-type(1) {
-          @extend .fa-spin-one;
-        }
-        &:nth-of-type(3) {
-          @extend .fa-spin-two;
-        }
-      }
-    }
-  }
-}
+<style>
 
-@-webkit-keyframes fa-spin-one {
-  0% {
-    -webkit-transform: translateY(-2rem) rotate(0deg);
-    transform: translateY(-2rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-2rem) rotate(-359deg);
-    transform: translateY(-2rem) rotate-(359deg);
-  }
-}
-@keyframes fa-spin-one {
-  0% {
-    -webkit-transform: translateY(-2rem) rotate(0deg);
-    transform: translateY(-2rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-2rem) rotate(-359deg);
-    transform: translateY(-2rem) rotate-(359deg);
-  }
-}
-.fa-spin-one {
-  -webkit-animation: fa-spin-one 1s infinite linear;
-  animation: fa-spin-one 1s infinite linear;
-}
-
-@-webkit-keyframes fa-spin-two {
-  0% {
-    -webkit-transform: translateY(-0.5rem) translateY(1rem) rotate(0deg);
-    transform: translateY(-0.5rem) translateY(1rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-0.5rem) translateY(1rem) rotate(-359deg);
-    transform: translateY(-0.5rem) translateY(1rem) rotate(-359deg);
-  }
-}
-@keyframes fa-spin-two {
-  0% {
-    -webkit-transform: translateY(-0.5rem) translateY(1rem) rotate(0deg);
-    transform: translateY(-0.5rem) translateY(1rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-0.5rem) translateY(1rem) rotate(-359deg);
-    transform: translateY(-0.5rem) translateY(1rem) rotate(-359deg);
-  }
-}
-
-.fa-spin-two {
-  -webkit-animation: fa-spin-two 2s infinite linear;
-  animation: fa-spin-two 2s infinite linear;
-}
 </style>
