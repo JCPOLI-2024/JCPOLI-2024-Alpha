@@ -38,6 +38,7 @@
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
         <router-link to="/JCPOLI" tag="li">JCPOLI</router-link>
+        <router-link to="/manutencao" tag="li">FERRAMENTA</router-link>
       </ul>
       </div>
     </div>
