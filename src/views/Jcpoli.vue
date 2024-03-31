@@ -1,8 +1,4 @@
 <template>
-    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-</template>
-
-<template>
     <v-app class="home" id="inspire">
       <Carousel />
   

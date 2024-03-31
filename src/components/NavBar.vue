@@ -64,7 +64,7 @@
     <div class="logo-jcpoli">
       <a href="/JCPOLI">
         <!-- <img src="assets/img/logoj.png" alt="logo da puc" style=" transform: scale(1.1, 1.1); max-width: 356px; height: 108px;  margin-left: 4rem; position: absolute;"> -->
-        <img src="assets/img/logoj.png" alt="logo da puc">
+        <img src="assets/img/logoJCPOLI.png" alt="logo da puc">
       </a>
     </div>
     
@@ -155,59 +155,23 @@ export default class NavBar extends Vue {
 
 .logo-jcpoli {
 
-  /* 0º Opção de tamanho de logo sem posição absoluta (logo pequena)*/
-  transform: scale(0.19, 0.2);
+  /* 1º Opção de tamanho de logo sem posição absoluta (logo pequena)*/
+  /* transform: scale(0.25, 0.25);
   max-width: 30px;
   height: 0px;
   top: 0rem;
-  margin-right: 16rem;
+  margin-right: 18rem;
   margin-left: auto;
-  margin-top: -0.35rem;
+  margin-top: -1.5rem; */
 
-  /* 1º Opção de tamanho de logo sem posição absoluta */
-  /* transform: scale(0.21, 0.21);
-  max-width: 90px;
+   /* 2º Opção de tamanho de logo (maior que a ultima logo, ou seja, mais visivel o letreiro)*/
+  transform: scale(0.25, 0.26);
+  max-width: 16px;
   height: 0px;
   top: 0rem;
-  margin-right: 16rem;
+  margin-right: 19rem;
   margin-left: auto;
-  margin-top: -0.76rem; */
-
-  /* 2º Opção de tamanho de logo sem posição absoluta e um pouco maior que a ultima logo */
-  /* transform: scale(0.25, 0.23);
-  max-width: 80px;
-  height: 0px;
-  top: 0rem;
-  margin-right: 17rem;
-  margin-left: auto;
-  margin-top: -1.6rem; */
-
-  /* 3º Opção de tamanho de logo sem posição absoluta e alinhada com o final da logo da puc  (Precisa cortar a parte branca)*/
-  /* transform: scale(0.22, 0.23);
-  max-width: 90px;
-  height: 0px;
-  top: 0rem;
-  margin-right: 14rem;
-  margin-left: auto;
-  margin-top: -0.76rem; */
-
-  /* 4º Opção de tamanho de logo alinhado com o topo da logo da puc */
-  /* transform: scale(0.23, 0.23);
-  width: 22px;
-  height: 0px;
-  position: absolute;
-  bottom: 9.5rem;
-  right: 0;
-  margin-right: 17.6rem; */
-
-  /* 5º Opção de tamanho de logo alinhado com o topo e com o final da logo da puc (Precisa cortar a parte branca) */
-  /* transform: scale(0.26, 0.26);
-  width: 22px;
-  height: 0px;
-  position: absolute;
-  bottom: 9.5rem;
-  right: 0;
-  margin-right: 18.2rem; */
+  margin-top: -1.8rem;
 }
 
 
