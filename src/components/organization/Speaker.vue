@@ -52,9 +52,16 @@ export default class Speaker extends Vue {
       : "100%";
   }
 
-  private showProfile(name: string) {
-    this.$router.push({ path: "/profile", query: { name } });
-  }
+  // Pra quando clicar em "Leia completo", abrir a página do palestrante sem abrir uma nova aba (mais rápido pra abrir)
+   private showProfile(name: string) {
+     this.$router.push({ path: "/profile", query: { name } });
+   }
+
+  // Pra quando clicar em "Leia completo", abrir a página do palestrante em uma nova aba (Porém demora mais pra abrir)
+  //  private showProfile(name: string) {
+  //    const profileUrl = this.$router.resolve({ path: "/profile", query: { name } }).href;
+  //    window.open(profileUrl, '_blank');
+  //  }
 }
 </script>
 

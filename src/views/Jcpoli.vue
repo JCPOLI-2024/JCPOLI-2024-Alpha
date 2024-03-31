@@ -112,7 +112,7 @@
   import Dates from '@/components/home/Datesj.vue'
   //import Supporters from '@/components/organization/Supporters.vue'
   
-  //import { speakers_list } from '@/storage/programacao/speakers1JCPOLI'
+  //import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
   
   @Component({
     components: {
@@ -129,6 +129,12 @@
   })
   export default class Jcpoli extends Vue {
     private speakersList: any = null
+
+    // Tentativa de tirar os dados dessa pagina de código e puxar do storage, porém acaba bugando os palestrantes (eles não aparecem quando se entra na página pela 1º vez, só quando da refresh)
+    // constructor(){
+    //   super()
+    //    this.speakersList = speakers_jcpoli1
+    // }
   
     constructor() {
       super()

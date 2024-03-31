@@ -165,7 +165,7 @@ export default class NavBar extends Vue {
   margin-top: -1.5rem; */
 
    /* 2º Opção de tamanho de logo (maior que a ultima logo, ou seja, mais visivel o letreiro)*/
-  transform: scale(0.25, 0.26);
+  transform: scale(0.251, 0.26);
   max-width: 16px;
   height: 0px;
   top: 0rem;
