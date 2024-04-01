@@ -24,7 +24,7 @@
         <router-link to="/jges" tag="li">JGES</router-link>
         <router-link to="/cadastro" tag="li">Inscrição</router-link>
         -->
-        <router-link to="/orientacoesj" tag="li">Orientações</router-link>
+        <router-link to="/manutencao" tag="li">Orientações</router-link>
       </ul>
     </div>
     
@@ -94,7 +94,7 @@
         -->
         <router-link to="/orientacoesj" tag="li">Orientações</router-link>
         <!-- Rascunho para aba de edições -->
-        <!-- <router-link to="/orientacoesj" tag="li">Edições</router-link> -->
+        <router-link to="/manutencao" tag="li">Edições</router-link>
       </ul>
     </div>
   </div>
@@ -167,6 +167,7 @@ export default class NavBarJCPOLI extends Vue {}
   justify-content: center;
 }
 .navbar-h .nav-container > ul {
+  font-size: 14.2px;
   display: flex;
   list-style: none;
   padding: 0;
@@ -175,7 +176,7 @@ export default class NavBarJCPOLI extends Vue {}
 }
 .navbar-h .nav-container > ul li {
   position: relative;
-  padding: 15px 45px;
+  padding: 15px 38px;
   font-family: 'Montserrat', sans-serif;
   color: #576574;
   transition: all 50ms ease;
