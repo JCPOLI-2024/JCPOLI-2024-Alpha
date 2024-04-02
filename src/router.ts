@@ -26,12 +26,12 @@ const router = new Router({
         import(/* webpackChunkName: "account" */ "./views/Maintenance.vue")
     },
     // Pagina da JCPOLI - Página de manutenção
-    // {
-    //   path: "/manutencao",
-    //   name: "manutencao",
-    //   component: () =>
-    //     import(/* webpackChunkName: "account" */ "./views/Maintenance.vue")
-    // },
+     {
+       path: "/manutencaoj",
+       name: "manutencaoj",
+       component: () =>
+         import(/* webpackChunkName: "account" */ "./views/Maintenancej.vue")
+     },
     {
       path: "/TCC",
       name: "TCC",

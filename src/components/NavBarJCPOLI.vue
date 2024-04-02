@@ -94,7 +94,7 @@
         -->
         <router-link to="/orientacoesj" tag="li">Orientações</router-link>
         <!-- Rascunho para aba de edições -->
-        <router-link to="/manutencao" tag="li">Edições</router-link>
+        <router-link to="/manutencaoj" tag="li">Edições</router-link>
       </ul>
     </div>
   </div>
