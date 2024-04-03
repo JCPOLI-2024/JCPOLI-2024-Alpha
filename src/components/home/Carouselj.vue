@@ -18,7 +18,7 @@
   
                   <div>
                     <div>
-                      <span class="date">09 a 11 de Maio</span>
+                      <span class="date">09 a 11 de Maio de 2022</span>
                     </div>
                     <hr />
                     <div>

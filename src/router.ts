@@ -129,6 +129,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesj.vue")
     },
+    {
+      path: "/edicoesj",
+      name: "edicoesj",
+      component: () =>
+        import(/* webpackChunkName: "edicoes" */ "./views/Edicoesj.vue")
+    },
 
 //########################################## Pagina da JCPOLI e Escola Politecnica de Artes - Rotas ativas, porém de dificil acesso ##########################################
     // Para a página de programação da Escola Politecnica
