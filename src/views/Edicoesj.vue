@@ -11,7 +11,7 @@
             <v-container fill-height class="d-flex flex-column">
                 
                 <!-- 1º Edição -->
-                <div class="banner">
+                <router-link to="/JCPOLI" class="banner">
                   <div>
                     <div>
                       <span class="date">09 a 11 de Maio de 2022</span>
@@ -30,10 +30,10 @@
                       <span id="description">CULTURA, INOVAÇÃO e EMPREENDEDORISMO</span>
                     </div>
                   </div>
-                </div>
+                </router-link>
                 
                 <!-- 2º Edição -->
-                <div class="banner">
+                <router-link to="/edicoesj" class="banner">
                   <div>
                     <div>
                       <span class="date">08 a 10 de Maio de 2023</span>
@@ -54,13 +54,13 @@
                       </span>
                     </div>
                   </div>
-                </div>
+                </router-link>
 
                 <!-- 3º Edição -->
-                <div class="banner">
+                <router-link to="/edicoesj" class="banner">
                   <div>
                     <div>
-                      <span class="date">17 a 20 de Maio de 2023</span>
+                      <span class="date">17 a 20 de Maio de 2024</span>
                     </div>
                     <hr />
                     <div>
@@ -74,11 +74,11 @@
                     <hr />
                     <div>
                       <span id="description">
-                        O uso da Inteligência Artificial e serviço da sociedade
+                       Inovações Tecnológicas para o desenvolvimento humano integral
                       </span>
                     </div>
                   </div>
-                </div>
+                </router-link>
                 
 
             </v-container>
