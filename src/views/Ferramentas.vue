@@ -8,7 +8,7 @@
           </b-card-text>
 
           <b-button variant="info" class="mr-2" @click="editTask(task)">Editar</b-button>
-          <b-button variant="danger" class="mr-2">Excluir</b-button>
+          <b-button variant="danger" class="mr-2" @click="deleteTask(task)">Excluir</b-button>
         </b-card>
       </div>
     </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { getDatabase, ref, onValue } from "firebase/database";
+import { getDatabase, ref, onValue, remove } from "firebase/database";
 
 export default {
   data() {
@@ -39,9 +39,21 @@ export default {
       }
     });
   },
+
   methods: {
     editTask(task) {
       this.$router.push({ name: 'form', params: { task: task } });
+    },
+
+    deleteTask(task) {
+      const db = getDatabase();
+      remove(ref(db, 'tasks/' + task.id))
+        .then(() => {
+          console.log("Tarefa removida com sucesso");
+        })
+        .catch((error) => {
+          console.error("Erro ao remover tarefa:", error);
+        });
     },
   }
 };
