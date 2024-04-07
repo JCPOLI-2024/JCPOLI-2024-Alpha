@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div class="d-flex justify-content-center">
-      <div class="col-6 mt-2">
-        <b-card title="Card title">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div class="col-6 mt-2" v-for="task in tasks" :key="task.id">
+        <b-card :title="task.subject">
           <b-card-text>
-            Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
-            content.
+            {{ task.description }}
           </b-card-text>
 
           <b-button variant="info" class="mr-2">Editar</b-button>
@@ -15,11 +14,31 @@
     </div>
   </div>
 </template>
+
 <script>
+import { getDatabase, ref, onValue } from "firebase/database";
+
 export default {
-  mounted: function() {
-    console.log(this.$route.path);
-  }
+  data() {
+    return {
+      tasks: [],
+    };
+  },
+
+  mounted() {
+    const db = getDatabase();
+    const tasksRef = ref(db, 'tasks');
+
+    onValue(tasksRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        this.tasks = Object.keys(data).map((key) => ({
+          id: key,
+          ...data[key],
+        }));
+      }
+    });
+  },
 };
 </script>
 
