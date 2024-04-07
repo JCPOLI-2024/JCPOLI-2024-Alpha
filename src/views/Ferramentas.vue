@@ -7,7 +7,7 @@
             {{ task.description }}
           </b-card-text>
 
-          <b-button variant="info" class="mr-2">Editar</b-button>
+          <b-button variant="info" class="mr-2" @click="editTask(task)">Editar</b-button>
           <b-button variant="danger" class="mr-2">Excluir</b-button>
         </b-card>
       </div>
@@ -39,6 +39,11 @@ export default {
       }
     });
   },
+  methods: {
+    editTask(task) {
+      this.$router.push({ name: 'form', params: { task: task } });
+    },
+  }
 };
 </script>
 

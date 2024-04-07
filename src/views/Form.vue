@@ -41,59 +41,77 @@
 </template>
 
 <script>
-  import { db } from '../firebaseDB';
-  import Vue from "vue"
-  import { getDatabase, ref, set } from "firebase/database";  
+import { db } from '../firebaseDB';
+import Vue from "vue"
+import { getDatabase, ref, set, update } from "firebase/database";  
 
-  export default {
-    mounted: function() {
-      console.log(this.$route.path);
+export default {
+  data() {
+    return {
+      form: {
+        subject: '',
+        description: '',
+      },
+    }
+  },
+
+  watch: {
+    '$route.params.task': {
+      immediate: true,
+      handler(task) {
+        if (task) {
+          this.form = { ...task };
+        }
+      },
     },
+  },
 
-    data() {
-      return {
-        form: {
-          subject: '',
-          description: '',
-        },
+  methods: {
+    saveTask() {
+      const database = getDatabase();
+
+      if (this.$route.params.task) {
+        // Atualizar a tarefa existente
+        update(ref(database, 'tasks/' + this.$route.params.task.id), this.form)
+          .then(() => {
+            this.clearForm();
+            this.makeToast();
+            this.$router.push({ name: 'ferramentas' });
+          })
+          .catch(error => {
+            console.error("Erro ao atualizar tarefa:", error);
+          });
+      } else {
+        // Criar uma nova tarefa
+        set(ref(database, 'tasks/' + Date.now()), this.form)
+          .then(() => {
+            this.clearForm();
+            this.makeToast();
+            this.$router.push({ name: 'ferramentas' });
+          })
+          .catch(error => {
+            console.error("Erro ao salvar tarefa:", error);
+          });
       }
     },
 
-    methods: {
-      saveTask(){
-      console.log('saveTask method called');
-      
-      const database = getDatabase(); // Inicializando o banco de dados Firebase
-      
-      // Gravando os dados usando set()
-      set(ref(database, 'tasks/' + Date.now()), { // Usando um timestamp para criar uma nova chave única
-        subject: this.form.subject,
-        description: this.form.description
-      }).then(() => {
-        this.clearForm();
-        this.makeToast();
-        this.$router.push({name: 'ferramentas'})
-      }).catch(error => {
-        console.error("Erro ao salvar tarefa:", error);
-      });
+    clearForm() {
+      this.form.subject = '';
+      this.form.description = '';
     },
 
-      clearForm(){
-        this.form.subject = '';
-        this.form.description = '';
-      },
-
-      makeToast(){
-        const vm = new Vue();
-        vm.$bvToast.toast('Tarefa Salva com sucesso', {
-          title: 'Sucesso',
-          autoHideDelay: 5000,
-          variant: 'success'
+    makeToast() {
+      const vm = new Vue();
+      vm.$bvToast.toast('Tarefa Salva com sucesso', {
+        title: 'Sucesso',
+        autoHideDelay: 5000,
+        variant: 'success'
       })
     }
   }
 }
 </script>
+
 
 <style>
 
