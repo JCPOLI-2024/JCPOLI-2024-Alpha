@@ -39,6 +39,7 @@
     "vuex-persist": "^2.0.1"
   },
   "devDependencies": {
+    "@types/webpack-env": "^1.18.4",
     "@vue/cli-plugin-typescript": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
     "@vue/runtime-dom": "^3.4.21",
