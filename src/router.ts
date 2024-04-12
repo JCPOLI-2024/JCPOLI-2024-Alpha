@@ -36,6 +36,18 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "account" */ "./views/Form.vue")
     },
+    {
+      path: "/leituraEManipulacaoDB",
+      name: "leituraEManipulacaoDB",
+      component: () =>
+        import(/* webpackChunkName: "account" */ "./views/LeituraEManipulacaoDB.vue")
+    },
+    {
+      path: "/insercaoJCPOLI1",
+      name: "insercaoJCPOLI1",
+      component: () =>
+        import(/* webpackChunkName: "account" */ "./views/InsercaoJCPOLI1.vue")
+    },
     // Pagina da JCPOLI - Página de manutenção
     // {
     //   path: "/manutencao",
