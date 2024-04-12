@@ -74,9 +74,9 @@ export default {
     },
 
     editItem(item) {
-      this.$router.push({ name: 'form', params: { item: item } });
+      this.$router.push({ name: 'edicaoDados', params: { item: item, databaseRef: this.databaseRef } });
     },
-
+    
     deleteItem(item) {
       const db = getDatabase();
       remove(ref(db, this.databaseRef + '/' + item.id)) // Use a referência ao banco de dados aqui

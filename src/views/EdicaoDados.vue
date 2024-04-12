@@ -2,33 +2,9 @@
   <div>
     <b-form class="mt-2">
       <b-row>
-        <b-col class="col-6 offset-sm-3">
-              <b-form-group
-                  label="Tarefa:"
-                  label-for="subject"
-              >
-              <b-form-input
-                  id="subject"
-                  v-model="form.subject"
-                  type="text"
-                  required       
-              >
-            </b-form-input>
-          </b-form-group>
-        </b-col>
-
-        <b-col class="col-6 offset-sm-3">
-              <b-form-group
-                  label="Descricao:"
-                  label-for="description"
-              >
-              <b-form-textarea
-                  id="description"
-                  v-model="form.description"
-                  type="text"
-                  required       
-              >
-              </b-form-textarea>
+        <b-col class="col-6 offset-sm-3" v-for="(value, key) in form" :key="key">
+          <b-form-group :label="key + ':'" :label-for="key">
+            <b-form-input :id="key" v-model="form[key]" type="text" required></b-form-input>
           </b-form-group>
         </b-col>
         <b-col class="col-6 offset-sm-3">
@@ -41,50 +17,55 @@
 </template>
 
 <script>
-import { db } from '../firebaseDB';
-import Vue from "vue"
-import { getDatabase, ref, set, update } from "firebase/database";  
+import { getDatabase, ref, set, update } from "firebase/database";
+import Vue from "vue"  
 
 export default {
   data() {
     return {
-      form: {
-        // substituir aqui os campos de acordo com arquivo forneceido
-        subject: '',
-        description: '',
-      },
-    }
+      form: {},
+      databaseRef: '', // Adicione a referência ao banco de dados aqui
+    };
   },
 
   watch: {
-    '$route.params.task': {
+    '$route.params.item': {
       immediate: true,
-      handler(task) {
-        if (task) {
-          this.form = { ...task };
+      handler(item) {
+        if (item) {
+          this.form = { ...item };
+        }
+      },
+    },
+    '$route.params.databaseRef': {
+      immediate: true,
+      handler(databaseRef) {
+        if (databaseRef) {
+          this.databaseRef = databaseRef;
         }
       },
     },
   },
 
+
   methods: {
     saveTask() {
       const database = getDatabase();
 
-      if (this.$route.params.task) {
-        // Atualiza a palestra existente
-        update(ref(database, 'versao1/palestras/' + this.$route.params.task.id), this.form)
+      if (this.$route.params.item) {
+        // Atualiza o item existente
+        update(ref(database, this.databaseRef + '/' + this.$route.params.item.id), this.form)
           .then(() => {
             this.clearForm();
             this.makeToast();
             this.$router.push({ name: 'leituraEManipulacaoDB' });
           })
           .catch(error => {
-            console.error("Erro ao atualizar tarefa:", error);
+            console.error("Erro ao atualizar item:", error);
           });
       } else {
-        // Criar uma nova palestra
-        set(ref(database, 'versao1/palestras/' + Date.now()), this.form)
+        // Criar um novo item
+        set(ref(database, this.databaseRef + '/' + Date.now()), this.form)
           .then(() => {
             this.clearForm();
             this.makeToast();
@@ -97,8 +78,7 @@ export default {
     },
 
     clearForm() {
-      this.form.subject = '';
-      this.form.description = '';
+      this.form = {};
     },
 
     makeToast() {
@@ -112,7 +92,6 @@ export default {
   }
 }
 </script>
-
 
 <style>
 
