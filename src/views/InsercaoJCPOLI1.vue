@@ -43,16 +43,6 @@ export default {
             this.makeErrorToast();
           }
         };
-
-        /*reader.onload = (event) => {
-          // Parseia o conteúdo do arquivo
-          const data = JSON.parse(event.target.result);
-
-          // Extrai a referência ao banco de dados e as palestras
-          this.databaseRef = data.databaseRef;
-          this.palestras = data.palestras;
-        };*/
-
         // Lê o arquivo
         reader.readAsText(newFile);
       }

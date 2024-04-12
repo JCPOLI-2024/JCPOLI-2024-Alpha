@@ -77,7 +77,7 @@ export default {
           .then(() => {
             this.clearForm();
             this.makeToast();
-            this.$router.push({ name: 'ferramentas' });
+            this.$router.push({ name: 'leituraEManipulacaoDB' });
           })
           .catch(error => {
             console.error("Erro ao atualizar tarefa:", error);
@@ -88,7 +88,7 @@ export default {
           .then(() => {
             this.clearForm();
             this.makeToast();
-            this.$router.push({ name: 'ferramentas' });
+            this.$router.push({ name: 'leituraEManipulacaoDB' });
           })
           .catch(error => {
             console.error("Erro ao salvar dados:", error);

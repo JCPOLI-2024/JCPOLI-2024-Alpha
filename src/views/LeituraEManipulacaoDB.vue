@@ -1,16 +1,13 @@
 <template>
   <div>
     <div class="d-flex flex-column justify-content-center align-items-center">
-      <div class="col-6 mt-2" v-for="palestra in palestras" :key="palestra.id">
-        <b-card :title="palestra.date + ' - ' + palestra.time">
-          <b-card-text>
-            Palestra: {{ palestra.description }}<br>
-            Local: {{ palestra.place }}<br>
-            Palestrante: {{ palestra.speaker }}
-          </b-card-text>
+      <b-form-select v-model="databaseRef" :options="['versao1/palestras', 'versao1/anais']"></b-form-select>
+      <div class="col-6 mt-2" v-for="item in items" :key="item.id">
+        <b-card :title="getTitle(item)">
+          <b-card-text v-html="getContent(item)"></b-card-text>
 
-          <b-button variant="info" class="mr-2" @click="editPalestra(palestra)">Editar</b-button>
-          <b-button variant="danger" class="mr-2" @click="deletePalestra(palestra)">Excluir</b-button>
+          <b-button variant="info" class="mr-2" @click="editItem(item)">Editar</b-button>
+          <b-button variant="danger" class="mr-2" @click="deleteItem(item)">Excluir</b-button>
         </b-card>
       </div>
     </div>
@@ -23,44 +20,76 @@ import { getDatabase, ref, onValue, remove } from "firebase/database";
 export default {
   data() {
     return {
-      palestras: [],
+      items: [],
+      databaseRef: 'versao1/palestras', // Adicione a referência ao banco de dados aqui
     };
   },
 
-  mounted() {
-    const db = getDatabase();
-    const palestrasRef = ref(db, 'versao1/palestras');
+  watch: {
+    databaseRef() {
+      this.loadItems();
+    },
+  },
 
-    onValue(palestrasRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        this.palestras = Object.keys(data).map((key) => ({
-          id: key,
-          ...data[key],
-        }));
-      }
-    });
+  mounted() {
+    this.loadItems();
   },
 
   methods: {
-    editPalestra(palestra) {
-      this.$router.push({ name: 'form', params: { palestra: palestra } });
+    loadItems() {
+      const db = getDatabase();
+      const itemsRef = ref(db, this.databaseRef); // Use a referência ao banco de dados aqui
+
+      onValue(itemsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          this.items = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+          }));
+        }
+      });
     },
 
-    deletePalestra(palestra) {
+    getTitle(item) {
+      // Personalize o título do cartão com base na estrutura do item
+      if (this.databaseRef === 'versao1/palestras') {
+        return item.date + ' - ' + item.time;
+      } else if (this.databaseRef === 'versao1/anais') {
+        return item.title;
+      }
+    },
+
+    getContent(item) {
+      // Personalize o conteúdo do cartão com base na estrutura do item
+      if (this.databaseRef === 'versao1/palestras') {
+        return `Palestra: ${item.description}<br>
+                Local: ${item.place}<br>
+                Palestrante: ${item.speaker}`;
+      } else if (this.databaseRef === 'versao1/anais') {
+        return `Título: ${item.title}<br>
+                Autor: ${item.autor}<br>
+                Caminho: ${item.path}`;
+      }
+    },
+
+    editItem(item) {
+      this.$router.push({ name: 'form', params: { item: item } });
+    },
+
+    deleteItem(item) {
       const db = getDatabase();
-      remove(ref(db, 'versao1/palestras/' + palestra.id))
+      remove(ref(db, this.databaseRef + '/' + item.id)) // Use a referência ao banco de dados aqui
         .then(() => {
-          console.log("Palestra removida com sucesso");
+          console.log("Item removido com sucesso");
         })
         .catch((error) => {
-          console.error("Erro ao remover palestra:", error);
+          console.error("Erro ao remover item:", error);
         });
     },
   }
 };
 </script>
-
 
 <style>
 

@@ -31,10 +31,10 @@ const router = new Router({
         import(/* webpackChunkName: "account" */ "./views/Ferramentas.vue")
     },
     {
-      path: "/form",
-      name: "form",
+      path: "/edicaoDados",
+      name: "edicaoDados",
       component: () =>
-        import(/* webpackChunkName: "account" */ "./views/Form.vue")
+        import(/* webpackChunkName: "account" */ "./views/EdicaoDados.vue")
     },
     {
       path: "/leituraEManipulacaoDB",
