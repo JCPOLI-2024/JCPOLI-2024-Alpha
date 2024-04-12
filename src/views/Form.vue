@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       form: {
+        // substituir aqui os campos de acordo com arquivo forneceido
         subject: '',
         description: '',
       },
@@ -71,8 +72,8 @@ export default {
       const database = getDatabase();
 
       if (this.$route.params.task) {
-        // Atualizar a tarefa existente
-        update(ref(database, 'tasks/' + this.$route.params.task.id), this.form)
+        // Atualiza a palestra existente
+        update(ref(database, 'versao1/palestras/' + this.$route.params.task.id), this.form)
           .then(() => {
             this.clearForm();
             this.makeToast();
@@ -82,15 +83,15 @@ export default {
             console.error("Erro ao atualizar tarefa:", error);
           });
       } else {
-        // Criar uma nova tarefa
-        set(ref(database, 'tasks/' + Date.now()), this.form)
+        // Criar uma nova palestra
+        set(ref(database, 'versao1/palestras/' + Date.now()), this.form)
           .then(() => {
             this.clearForm();
             this.makeToast();
             this.$router.push({ name: 'ferramentas' });
           })
           .catch(error => {
-            console.error("Erro ao salvar tarefa:", error);
+            console.error("Erro ao salvar dados:", error);
           });
       }
     },
@@ -102,7 +103,7 @@ export default {
 
     makeToast() {
       const vm = new Vue();
-      vm.$bvToast.toast('Tarefa Salva com sucesso', {
+      vm.$bvToast.toast('Dados salvos com sucesso', {
         title: 'Sucesso',
         autoHideDelay: 5000,
         variant: 'success'
