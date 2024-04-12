@@ -105,6 +105,14 @@ const router = new Router({
         import(/* webpackChunkName: "minicurso" */ "./views/Palestrasj.vue")
     },
     // Pagina da JCPOLI -  Pagina de Minicuros
+
+    {
+      path: "/ciencia_em_casa",
+      name: "ciencia_em_casa",
+      component: () =>
+        import(/* webpackChunkName: "minicurso" */ "./views/CienciaEmCasa.vue")
+    },
+
     {
       path: "/minicursosj",
       name: "minicursosj",
