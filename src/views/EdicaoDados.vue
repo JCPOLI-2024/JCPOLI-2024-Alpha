@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { app } from '../firebaseDB';
 import { getDatabase, ref, set, update } from "firebase/database";
 import Vue from "vue"  
 
@@ -50,7 +51,7 @@ export default {
 
   methods: {
     saveTask() {
-      const database = getDatabase();
+      const database = getDatabase(app);
 
       if (this.$route.params.item) {
         // Atualiza o item existente

@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { app } from '../firebaseDB';
 import { getDatabase, ref, onValue, remove } from "firebase/database";
 
 export default {
@@ -37,7 +38,7 @@ export default {
 
   methods: {
     loadItems() {
-      const db = getDatabase();
+      const db = getDatabase(app);
       const itemsRef = ref(db, this.databaseRef); // Use a referência ao banco de dados aqui
 
       onValue(itemsRef, (snapshot) => {

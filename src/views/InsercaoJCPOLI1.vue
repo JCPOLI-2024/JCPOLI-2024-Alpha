@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { db } from '../firebaseDB';
+import { app } from '../firebaseDB';
 import Vue from "vue"
 import { getDatabase, ref, set, update } from "firebase/database";  
 
@@ -51,7 +51,7 @@ export default {
 
   methods: {
     saveTask() {
-      const database = getDatabase();
+      const database = getDatabase(app);
 
       // Itera sobre cada palestra no arquivo
       this.palestras.forEach((palestra, index) => {
