@@ -1,3 +1,27 @@
+<!--
+Este é um componente Vue que serve para criar ou editar itens em um banco de 
+dados Firebase Realtime Database.
+
++ Template: A parte do template contém um formulário para inserir ou editar um item. 
+O formulário é dinâmico, criando um campo de entrada para cada propriedade do item. 
+Também tem botões para salvar o item ou limpar o formulário.
+
++ Data: A função data retorna o estado inicial do componente. Isso inclui o objeto 
+do formulário (form) que armazena os dados do item e a referência ao banco de dados 
+onde o item será salvo (databaseRef).
+
++ Watch: A opção watch observa mudanças nos parâmetros da rota. Quando o item ou a 
+referência ao banco de dados da rota muda, ele atualiza o formulário ou a referência 
+ao banco de dados, respectivamente.
+
++ Methods: A opção methods contém várias funções:
+  - saveTask: Esta função é chamada quando o botão “Salvar” é clicado. Ela verifica 
+    se um item foi passado pela rota. Se sim, atualiza o item existente. Se não, cria um novo item.
+  - clearForm: Esta função limpa o formulário, redefinindo o objeto do formulário 
+    para um objeto vazio.
+  - makeToast: Esta função exibe uma notificação de sucesso quando o item é salvo com sucesso.
+
+-->
 <template>
   <div>
     <!-- Formulário para inserir ou editar um item -->

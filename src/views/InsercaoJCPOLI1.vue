@@ -1,3 +1,24 @@
+<!--
+Este é um componente Vue que serve para carregar um arquivo JSON, extrair dados dele e salvar 
+esses dados no Firebase Realtime Database.
+
++ Template: A parte do template contém uma interface de usuário para carregar um arquivo e um 
+botão para salvar os dados no banco de dados.
+
++ Data: A função data retorna o estado inicial do componente. Isso inclui o arquivo carregado 
+(file1), a referência ao banco de dados onde os dados serão salvos (databaseRef) e os dados extraídos do arquivo (dados).
+
++ Watch: A opção watch observa mudanças no arquivo carregado. Quando um novo arquivo é carregado, 
+ele lê o arquivo, extrai os dados e atualiza o estado do componente.
+
++ Methods: A opção methods contém várias funções:
+  - saveTask: Esta função é chamada quando o botão “Salvar” é clicado. Ela itera sobre cada dado 
+    extraído do arquivo e salva no banco de dados Firebase.
+  - makeToast: Esta função exibe uma notificação de sucesso quando os dados são salvos com sucesso.
+  - makeErrorToast: Esta função exibe uma notificação de erro se houver um erro ao ler o arquivo 
+    ou se o arquivo não estiver no formato JSON correto.
+-->
+
 <template>
   <div>
     <b-form-file

@@ -1,3 +1,32 @@
+<!--
+Este é um componente Vue que serve para exibir itens de um banco de dados Firebase 
+Realtime Database e fornecer opções para editar ou excluir esses itens.
+
++ Template: A parte do template contém uma interface de usuário para selecionar o 
+banco de dados e exibir os itens em cartões. Cada cartão contém o título e o conteúdo 
+do item, bem como botões para editar e excluir o item.
+
++ Data: A função data retorna o estado inicial do componente. Isso inclui um array para 
+armazenar os itens (items) e a referência ao banco de dados onde os itens estão 
+armazenados (databaseRef).
+
++ Watch: A opção watch observa mudanças na referência ao banco de dados. Quando a 
+referência ao banco de dados muda, ela recarrega os itens.
+
++ Mounted: A opção mounted é uma função que é chamada quando o componente é montado. 
+Ela chama a função loadItems para carregar os itens do banco de dados.
+
++ Methods: A opção methods contém várias funções:
+  - loadItems: Esta função carrega os itens do banco de dados. Ela cria uma referência 
+    para os itens no banco de dados e escuta as mudanças nos itens. Quando os itens mudam, 
+    ela atualiza o estado do componente.
+  - getTitle e getContent: Estas funções retornam o título e o conteúdo do item, respectivamente. 
+    Elas verificam a referência ao banco de dados para determinar como formatar o título e o conteúdo.
+  - editItem: Esta função é chamada quando o botão “Editar” é clicado. Ela navega para a 
+    página de edição com o item e a referência ao banco de dados.
+  - deleteItem: Esta função é chamada quando o botão “Excluir” é clicado. 
+    Ela remove o item do banco de dados.
+-->
 <template>
   <div>
     <!-- A interface do usuário para selecionar o banco de dados e exibir os itens -->
@@ -18,6 +47,50 @@
     </div>
   </div>
 </template>
+<!--
+Instrucoes de como adicionar mais caminhos para leitura do banco: 
+
+1 - Adicionar o novo caminho ao seletor: No componente Vue, 
+  você tem um seletor (b-form-select) que permite ao usuário escolher o caminho do banco de dados. 
+  Para adicionar um novo caminho, você precisa adicionar a nova opção à lista de opções do seletor. 
+  Por exemplo, se você quiser adicionar um caminho chamado versao2/workshops, você pode fazer isso da seguinte maneira:
+
+  <b-form-select v-model="databaseRef" :options="['versao1/palestras', 'versao1/anais', 'versao2/workshops']"></b-form-select>
+
+2 - Atualizar as funções getTitle e getContent: Essas funções são usadas para formatar o título e 
+  o conteúdo do item com base na estrutura do item. Se a estrutura dos itens no novo caminho for diferente, 
+  você precisará atualizar essas funções para lidar com a nova estrutura. Por exemplo, se os itens em 
+  versao2/workshops tiverem uma propriedade instructor em vez de speaker, você pode fazer isso da seguinte maneira:
+
+  getTitle(item) {
+  if (this.databaseRef === 'versao1/palestras') {
+    return item.date + ' - ' + item.time;
+  } else if (this.databaseRef === 'versao1/anais') {
+    return item.title;
+  } else if (this.databaseRef === 'versao2/workshops') {   <--- SEU NOVO FORMATO (CARTAO) ! ESSA FUNCAO E SO PARA O TITULO DO CARTAO 
+    return item.date + ' - ' + item.instructor;
+  }
+},
+
+getContent(item) {
+  if (this.databaseRef === 'versao1/palestras') {
+    return `Palestra: ${item.description}<br>
+            Local: ${item.place}<br>
+            Palestrante: ${item.speaker}`;
+  } else if (this.databaseRef === 'versao1/anais') {
+    return `Título: ${item.title}<br>
+            Autor: ${item.autor}<br>
+            Caminho: ${item.path}`;
+  } else if (this.databaseRef === 'versao2/workshops') { <--- O CORPO PARA SEU NOVO (CARTAO) ESPECIFICA-SE OS CAMPOS QUE SARAO LIDOS
+    return `Workshop: ${item.description}<br>
+            Local: ${item.place}<br>
+            Instrutor: ${item.instructor}`;
+  }
+},
+
+3 - Testar: Depois de fazer essas alterações, você deve testar o componente para garantir que ele possa ler, 
+  editar e excluir itens no novo caminho corretamente.
+-->
 
 <script>
 // Importando a instância do aplicativo Firebase
