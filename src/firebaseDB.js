@@ -14,7 +14,6 @@ const firebaseConfig = {
   appId: "1:156999694476:web:7f5bb5bf2bd9bc09efa3a9"
 };
 
-const app = initializeApp(firebaseConfig);
-//const db = getFirestore(app);
+const app = initializeApp(firebaseConfig); // inicializacao do link com banco de dados a apartir das chaves acima
 
-export { app };
+export { app }; // exportacao do app montado para que possa ser usado a referencia do banco em outros arquivos
