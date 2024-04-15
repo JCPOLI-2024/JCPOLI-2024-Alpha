@@ -16,10 +16,7 @@
       </template>
       <!-- 3º Edição da JCPOLI -->
       <template v-else-if="edicaoAtual === 3">
-        <CarouselJ2 />
-        <AboutJ2 />
-        <DatesJ2 />
-        <HomeJ1 />
+        <CarouselJ3 />
       </template>
      
      
@@ -41,7 +38,9 @@
   import CarouselJ2 from '@/components/home/Carouselj2.vue' // 2º Edição da JCPOLI
   import AboutJ2 from '@/components/home/Aboutj2.vue' // 2º Edição da JCPOLI
   import DatesJ2 from '@/components/home/Datesj2.vue' // 2º Edição da JCPOLI
-  import HomeJ2 from '@/components/home/Homej2.vue'
+  import HomeJ2 from '@/components/home/Homej2.vue' // 2º Edição da JCPOLI
+  import CarouselJ3 from '@/components/home/CarouselJ3.vue' // 2º Edição da JCPOLI
+
   
   //import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
   
@@ -50,6 +49,7 @@
       //HelloWorld,
       CarouselJ1,
       CarouselJ2,
+      CarouselJ3,
       //Speakers,
       AboutJ1,
       AboutJ2,
