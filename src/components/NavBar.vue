@@ -23,7 +23,7 @@
 
     <div class="logo">
       <a href="/">
-        <img src="assets/img/Poli_azul.png" alt="logo da puc">
+        <img src="/assets/img/Poli_azul.png" alt="logo da puc">
       </a>
     </div>
     
@@ -65,7 +65,7 @@
     <div class="logo-jcpoli">
       <a href="/JCPOLI">
         <!-- <img src="assets/img/logoj.png" alt="logo da puc" style=" transform: scale(1.1, 1.1); max-width: 356px; height: 108px;  margin-left: 4rem; position: absolute;"> -->
-        <img src="assets/img/logoJCPOLI.png" alt="logo da puc">
+        <img src="/assets/img/logoJCPOLI.png" alt="logo da puc">
       </a>
     </div>
     
