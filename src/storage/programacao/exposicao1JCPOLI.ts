@@ -11,7 +11,7 @@ const Exposicao_Design = [
       date: "09/05 até 11/05",
       time: "",
       place: "PROA, área II",
-      image: "assets/img/slider/expo_design.jpeg"
+      image: "/assets/img/slider/expo_design.jpeg"
     },
   ]
   
@@ -36,7 +36,7 @@ const Exposicao_Design = [
       date: "09/05 até 16/05",
       time: "Abertura da Exposição dia 09/05 às 18:00",
       place: "Foyer dos auditórios 2 e 3 na área II",
-      image: "assets/img/slider/expo_arqui.jpg"
+      image: "/assets/img/slider/expo_arqui.jpg"
     },
   ]
   

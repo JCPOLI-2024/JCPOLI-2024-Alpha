@@ -11,7 +11,7 @@
             <v-container fill-height class="d-flex flex-column">
                 
                 <!-- 1º Edição -->
-                <router-link to="/JCPOLI" class="banner">
+                <router-link :to="jcpoliLink(1)" class="banner">
                   <div>
                     <div>
                       <span class="date">09 a 11 de Maio de 2022</span>
@@ -33,7 +33,7 @@
                 </router-link>
                 
                 <!-- 2º Edição -->
-                <router-link to="/edicoesj" class="banner">
+                <router-link :to="jcpoliLink(2)" class="banner">
                   <div>
                     <div>
                       <span class="date">08 a 10 de Maio de 2023</span>
@@ -57,7 +57,7 @@
                 </router-link>
 
                 <!-- 3º Edição -->
-                <router-link to="/edicoesj" class="banner">
+                <router-link :to="jcpoliLink(3)" class="banner">
                   <div>
                     <div>
                       <span class="date">17 a 20 de Maio de 2024</span>
@@ -101,6 +101,11 @@
       this.items = [
         { src: '/assets/img/slider/3.jpeg' },
       ]
+    }
+
+    // Método para construir o link para cada edição da JCPOLI
+    jcpoliLink(edicao: number) {
+      return edicao >= 1 ? `/JCPOLI${edicao}` : '/JCPOLI';
     }
   }
   </script>

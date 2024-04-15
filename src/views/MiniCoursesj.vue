@@ -60,7 +60,7 @@
   
     private title = 'Minicursos'
     private description = 'Minicursos da jornada'
-    private background = 'assets/img/lab.jpg'
+    private background = '/assets/img/lab.jpg'
   
     filterCourses(e: any) {
       let data = e.target.innerText

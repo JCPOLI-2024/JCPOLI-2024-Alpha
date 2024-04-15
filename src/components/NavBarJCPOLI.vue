@@ -58,12 +58,13 @@
       </div>
     </div> -->
 
-    <div class="nav-info">
+    <!-- Antiga parte onde ficava e data em cima da NavBarJCPOLI -->
+    <!-- <div class="nav-info">
       <div class="nav-date">
         <span class="desktop" :style="{ textAlign: 'right' }">
-          <!-- 1º Edição - De 9 a 11 de Maio de 2022 -->
+           1º Edição - De 9 a 11 de Maio de 2022
           De 9 a 11 de Maio de 2022 
-          <!-- De 9/05 a 11/05 --> 
+           De 9/05 a 11/05  
         </span>
 
         <span class="mobile sm-device">
@@ -76,9 +77,26 @@
           <i class="fas fa-bars"></i>
         </label>
       </div>
+    </div> -->
+
+    <div class="nav-info">
+      <div class="nav-date">
+        <span class="desktop" :style="{ textAlign: 'right' }">
+          <!-- Exibe a data da edição atual da JCPOLI -->
+          {{ getDataEdicaoAtual() }}
+        </span>
+        <span class="mobile sm-device">
+          {{ getDataEdicaoAtual() }} PUC Goiás Goiânia-GO
+        </span>
+      </div>
+      <div class="mobile">
+        <label for="open-mmenu">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
     </div>
     
-    <div class="nav-container desktop">
+    <!-- <div class="nav-container desktop">
       <ul>
         <router-link to="/JCPOLI" tag="li">Home</router-link>
         <router-link to="/escolaj" tag="li">Escola</router-link>
@@ -87,16 +105,38 @@
         <router-link to="/competicoesj" tag="li">Competições</router-link>
         <router-link to="/exposicoesj" tag="li">Exposições</router-link>
         <router-link to="/anaisj" tag="li">Publicações</router-link>
-
-        <!--
-        <router-link to="/jges" tag="li">JGES</router-link>
-        <router-link to="/cadastro" tag="li">Inscrição</router-link>
-        -->
+        
+        //<router-link to="/jges" tag="li">JGES</router-link>
+        
+        
         <router-link to="/orientacoesj" tag="li">Orientações</router-link>
-        <!-- Rascunho para aba de edições -->
+        <router-link to="/edicoesj" tag="li">Edições</router-link>
+      </ul>
+    </div> -->
+
+
+    <div class="nav-container desktop">
+      <ul>
+        <!-- Link para a Home da JCPOLI -->
+        <router-link :to="jcpoliLink" tag="li">Home</router-link>
+        
+        <!-- Link para a Escola da JCPOLI -->
+        <router-link :to="escolaLink" tag="li">Escola</router-link>
+        
+        <!-- Link para as Palestras da JCPOLI -->
+        <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+
+        <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+        <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+        <router-link :to="anaisLink" tag="li">Publicações</router-link>
+        <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <!-- <router-link to="/jges" tag="li">JGES</router-link> -->
         <router-link to="/edicoesj" tag="li">Edições</router-link>
       </ul>
     </div>
+
+
   </div>
 </template>
 
@@ -104,7 +144,65 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
-export default class NavBarJCPOLI extends Vue {}
+export default class NavBarJCPOLI extends Vue {
+  // Para indentificar atraves do link em qual versão da JCPOLI tá
+  get edicaoAtual() {
+    // Obtém o caminho completo da rota atual
+    const caminho = this.$route.fullPath;
+    // Usa expressão regular para extrair o número da edição da rota
+    const match = caminho.match(/\/JCPOLI(\d+)/);
+    // Se houver uma correspondência, retorna o número da edição, caso contrário, retorna null
+    return match ? parseInt(match[1]) : null;
+  }
+
+  // Método para formatar a data da edição atual da JCPOLI
+  getDataEdicaoAtual() {
+    const edicao = this.edicaoAtual;
+    if (edicao === 1) {
+      return "De 9 a 11 de Maio de 2022";
+    } else if (edicao === 2) {
+      return "De 8 a 10 de Maio de 2023";
+    } else if (edicao === 3) {
+      return "De 17 a 20 de Abril de 2024";
+    } else {
+      return ""; // Caso a edição não seja encontrada ou não esteja definida
+    }
+  }
+   
+  // Método para construir o link para a Home da JCPOLI
+  get jcpoliLink() {
+    return `/JCPOLI${this.edicaoAtual}`;
+  }
+
+  // Método para construir o link para a Escola da edição atual da JCPOLI
+  get escolaLink() {
+    return `/JCPOLI${this.edicaoAtual}/escolaj`;
+  }
+
+  // Método para construir o link para as Palestras da edição atual da JCPOLI
+  get palestrasLink() {
+    return `/JCPOLI${this.edicaoAtual}/palestrasj`;
+  }
+ 
+   get minicursosLink() {
+     return `/JCPOLI${this.edicaoAtual}/minicursosj`;
+   }
+ 
+   get competicoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/competicoesj`;
+   }
+ 
+   get exposicoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/exposicoesj`;
+   }
+ 
+   get anaisLink() {
+     return `/JCPOLI${this.edicaoAtual}/anaisj`;
+   }
+   get orientacoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/orientacoesj`;
+   }
+}
 </script>
 
 <style scoped>

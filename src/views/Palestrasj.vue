@@ -60,7 +60,7 @@
   
     private title = 'Palestras'
     private description = 'Palestras da jornada'
-    private background = 'assets/img/slider/6.jpg'
+    private background = '/assets/img/slider/6.jpg'
   
     filterPalestras(e) {
       let data = e.target.innerText

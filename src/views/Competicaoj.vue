@@ -79,7 +79,7 @@
     private all_competicoes: any
   
     private title = 'Competições'
-    private background = 'assets/img/slider/logo-maratona.jpg'
+    private background = '/assets/img/slider/logo-maratona.jpg'
   
     constructor() {
       super()

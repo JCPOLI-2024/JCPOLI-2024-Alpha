@@ -9,7 +9,7 @@ const Competicao = [
     date: "11/05",
     time: "18:00 - 22:00",
     place: "Lab. 101C a 105C, área II",
-    image: "assets/img/slider/logo-maratona.jpeg"
+    image: "/assets/img/slider/logo-maratona.jpeg"
     },
     {
       title: "Desafio em Ciência de dados",
@@ -32,7 +32,7 @@ const Competicao = [
     place2: "Apresentação: Microsoft Teams",
     place3: "Premiação: Auditório 3 , aréa II",
     link: "https://teams.microsoft.com/l/team/19%3aHcrIGbRxMtaHnfgMUryabS_UEfdjPkoLxnMLYskgZ3k1%40thread.tacv2/conversations?groupId=9eb3658f-e5d0-4b9a-afcf-dcfbf5a8d97e&tenantId=73319f42-8908-4b89-9f8d-558cf4d5d776",
-    image: "assets/img/slider/logo-desafiodados.jpeg",
+    image: "/assets/img/slider/logo-desafiodados.jpeg",
     patrocinador: "FLEXSIM"
     },
   

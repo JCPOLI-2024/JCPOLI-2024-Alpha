@@ -39,7 +39,8 @@
         <router-link to="/hackathon" tag="li">Hackathon</router-link>
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
-        <router-link to="/JCPOLI" tag="li">JCPOLI</router-link>
+        <!-- <router-link to="/JCPOLI" tag="li">JCPOLI</router-link> -->
+        <router-link :to="jcpoliUltimaEdicaoLink" tag="li">JCPOLI</router-link>
 
         <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
         <!-- <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
@@ -90,6 +91,12 @@ export default class NavBar extends Vue {
       checkbox.checked = false
     }
     next()
+  }
+
+  get jcpoliUltimaEdicaoLink() {
+    // Defina aqui a lógica para determinar a última edição da JCPOLI
+    const ultimaEdicao = 3; // Por exemplo, assumindo que a última edição é a edição 3
+    return `/JCPOLI${ultimaEdicao}`;
   }
 
   created() {

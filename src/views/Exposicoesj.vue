@@ -69,7 +69,7 @@ export default class Exposicoesj extends Vue {
   private all_exposicoes: any
 
   private title = 'Exposições'
-  private background = 'assets/img/slider/expo_design.jpeg'
+  private background = '/assets/img/slider/expo_design.jpeg'
 
   constructor() {
     super()
