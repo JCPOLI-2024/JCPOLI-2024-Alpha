@@ -26,20 +26,20 @@
   <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
   //import HelloWorld from '@/components/HelloWorld.vue'
-  import CarouselJ1 from '@/components/home/Carouselj.vue'
+  import CarouselJ1 from '@/components/home/Carouselj.vue' // 1º Edição da JCPOLI
   //import Speakers from '@/components/organization/Speakers.vue'
-  import AboutJ1 from '@/components/home/Aboutj.vue'
+  import AboutJ1 from '@/components/home/Aboutj.vue' // 1º Edição da JCPOLI
   //import Robot from '@/components/home/Robot.vue'
   //import Main from '@/components/organization/Main.vue'
   //import Paragraph from '@/components/organization/Paragraph.vue'
-  import DatesJ1 from '@/components/home/Datesj.vue'
-  import HomeJ1 from '@/components/home/Homej.vue'
+  import DatesJ1 from '@/components/home/Datesj.vue' // 1º Edição da JCPOLI
+  import HomeJ1 from '@/components/abasJCPOLI/HomeJ1.vue' // 1º Edição da JCPOLI
   //import Supporters from '@/components/organization/Supporters.vue'
   import CarouselJ2 from '@/components/home/Carouselj2.vue' // 2º Edição da JCPOLI
   import AboutJ2 from '@/components/home/Aboutj2.vue' // 2º Edição da JCPOLI
   import DatesJ2 from '@/components/home/Datesj2.vue' // 2º Edição da JCPOLI
-  import HomeJ2 from '@/components/home/Homej2.vue' // 2º Edição da JCPOLI
-  import CarouselJ3 from '@/components/home/CarouselJ3.vue' // 2º Edição da JCPOLI
+  import HomeJ2 from '@/components/abasJCPOLI/HomeJ2.vue' // 2º Edição da JCPOLI
+  import CarouselJ3 from '@/components/home/CarouselJ3.vue' // 3º Edição da JCPOLI
 
   
   //import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
