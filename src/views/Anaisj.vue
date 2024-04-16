@@ -1,85 +1,51 @@
-<!-- Pagina da JCPOLI -  Pagina das Publicações/Anais -->
 <template>
-    <div class="obs-page view">
-      <Main>
-        <h3>Anais da IV Jornada Científica da ECEC</h3>
-        <table>
-          <tbody>
-            <tr>
-              <th>Título</th>
-              <th>Autor</th>
-            </tr>
-            <tr v-for="(props, index) in all_anais" :key="index">
-              <td class="title">
-                <a :href="props.path" target="_blank" class="text-justify">
-                  {{ props.title }}
-                </a>
-              </td>
-              <td class="autor">
-                {{ props.autor }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </Main>
-    </div>
-  </template>
-  
-  <script lang="ts">
-  import { Component, Vue, Prop } from 'vue-property-decorator'
-  import Main from '../components/organization/Main.vue'
-  //Para pegar as publicações/anais que estavam na JCPOLI
-  import { Anais } from '@/storage/programacao/anais1JCPOLI'
-  
-  @Component({
-    components: {
-      Main
-    }
-  })
-  export default class anaisj extends Vue {
-    private all_anais: any
-  
-    private title = 'Anais'
-  
-    constructor() {
-      super()
-  
-      this.all_anais = Anais
-    }
+  <v-app class="home" id="inspire">
+    <!-- 1º Edição da JCPOLI -->
+    <template v-if="edicaoAtual === 1">
+      <AnaisJ1 />
+    </template>
+    <!-- 2º Edição da JCPOLI -->
+    <template v-else-if="edicaoAtual === 2">
+      <AnaisJ2 />
+    </template>
+    <!-- 3º Edição da JCPOLI -->
+    <template v-else-if="edicaoAtual === 3">
+      <AnaisJ3 />
+    </template>
+   
+   
+  </v-app>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import AnaisJ1 from '@/components/abasJCPOLI/AnaisJ1.vue' // 1º Edição da JCPOLI
+import AnaisJ2 from '@/components/abasJCPOLI/AnaisJ2.vue' // 2º Edição da JCPOLI
+import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // 3º Edição da JCPOLI
+
+//import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
+
+@Component({
+  components: {
+    AnaisJ1,
+    AnaisJ2,
+    AnaisJ3
   }
-  </script>
-  
-  <style scoped>
-  tr,
-  a,
-  td {
-    font-size: 1.3rem;
-    text-transform: uppercase;
+})
+export default class Jcpoli extends Vue {
+
+  // Para indentificar atraves do link em qual versão da JCPOLI tá
+  get edicaoAtual() {
+    // Obtém o caminho completo da rota atual
+    const caminho = this.$route.fullPath;
+    // Usa expressão regular para extrair o número da edição da rota
+    const match = caminho.match(/\/JCPOLI(\d+)/);
+    // Se houver uma correspondência, retorna o número da edição, caso contrário, retorna null
+    return match ? parseInt(match[1]) : null;
   }
-  
-  th,
-  td {
-    padding: 0.5rem;
-    text-align: left;
-  }
-  
-  table {
-    margin-top: 2rem;
-    width: 60vw;
-  }
-  
-  @media screen and (max-width: 425px) {
-    a,
-    tr {
-      font-size: 0.8rem;
-    }
-  
-    table {
-      width: 90vw;
-    }
-  
-    .autor {
-      font-size: 0.9rem;
-    }
-  }
-  </style>
+
+}
+</script>
+
+<style>
+</style>

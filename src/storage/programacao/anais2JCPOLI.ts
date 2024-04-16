@@ -1,4 +1,4 @@
-// Storage para as publicações/anais que estavam na página da 1 JCPOLI
+// Storage para as publicações/anais que estavam na página da 2 JCPOLI
 export const Anais = [
     {
       title: 'ANÁLISE DE IMAGENS PARA A QUANTIFICAÇÃO DE COLÔNIAS DE BACTÉRIAS',
@@ -46,7 +46,7 @@ export const Anais = [
       path: '/assets/anais/MODELAGEM DE SISTEMA DE PARTIDA E PARADA EM REDES PETRI (1).pdf'
     },
     {
-      title: 'PREDIÇÃO DA ALTURA DE QUEDAanal DA USINA DE JIRAU UTILIZANDO REDES NEURAIS ARTIFICIAIS RECORRENTES LSTM',
+      title: 'PREDIÇÃO DA ALTURA DE QUEDA DA USINA DE JIRAU UTILIZANDO REDES NEURAIS ARTIFICIAIS RECORRENTES LSTM',
       autor: 'Silva, D. F. C.',
       path: '/assets/anais/Diogof_pronto.pdf'    
     },
@@ -55,6 +55,43 @@ export const Anais = [
       autor: 'Brandão, H. M. de L.',
       path: '/assets/anais/Leonardo_pronto.pdf'    
   
+    },
+      
+  ]
+  
+  /*Exportar aqui os anais da JCPOLI V, para exportar os anais da JCPOLIVI criar outro export e referenciar esse export em Anais.VUE*/
+  export const Anais2 = [
+    {
+      title: 'ESTUDO DA VARIABILIDADE NO TEMPO DE EXECUÇÃO COM MAPA DE FLUXO DE VALOR',
+      autor: 'Fraga, S. S, Mendes, G. M. & Rodrigues, P. B. F.',
+      path: '/assets/anais/suellen.pdf'
+    },{
+      title: 'ESTUDO DA VIABILIDADE TECNICA DO USO DE BLOCOS DE CONCRETO PERMEÁVEIS COMO ALTERNATIVA PARA A REDUÇÃO DO ESCOAMENTO SUPERFICIAL NO MUNICÍPIO DE GOIÂNIA',
+      autor: 'Gomes, I. M. Queiroz, J.J.D.F',
+      path: '/assets/anais/joão.pdf'
+    },  
+  
+  ]
+  
+  export const Anais3 = [
+    {
+      title: 'Análise Preditiva com Redes Neurais Convolucionais Para o Geoprocessamentoo de Imagens',
+      autor: 'Cavalcante, E. S, Sousa, M. A',
+      path: '/assets/anais/redesneurais.pdf'
+    },
+    {
+      title: 'Uso das normas NBR ISO-IEC 27017 e 27018 para garantir a segurança da computação em nuvem',
+      autor: 'Souza, H, Silva, S.',
+      path: '/assets/anais/usodasnormas.pdf'
+    },
+  
+  ]
+  
+  export const livros = [
+    {
+      title: 'PLANEJAMENTO E CONTROLE DE OBRA INTEGRADO AO BIM, COM FOCO NO PROCESSO DE CONHECIMENTO',
+      autor: `MARQUES, A. C. A. & SILVA, S.`,
+      path: 'https://studiespublicacoes.com.br/cat.php?bk=VDQ2zh9Z9288v5lHuXE1G4jyaS60Wr37'
     },
       
   ]
