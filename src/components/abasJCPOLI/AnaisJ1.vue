@@ -36,7 +36,7 @@
       Main
     }
   })
-  export default class anaisj extends Vue {
+  export default class AnaisJ1 extends Vue {
     private all_anais: any
   
     private title = 'Anais'

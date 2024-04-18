@@ -110,7 +110,7 @@ import { Competicoes } from '@/storage/programacao/competicao2JCPOLI'
     MiniCourse
   }
 })
-export default class competicoes extends Vue {
+export default class CompeticoesJ2 extends Vue {
   private all_competicoes: any
 
   private title = 'Competições'

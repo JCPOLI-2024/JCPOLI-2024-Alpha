@@ -65,7 +65,7 @@ import { Exposicao_Cursos } from '@/storage/programacao/exposicao1JCPOLI'
     MiniCourse
   }
 })
-export default class Exposicoesj extends Vue {
+export default class ExposicoesJ1 extends Vue {
   private all_exposicoes: any
 
   private title = 'Exposições'

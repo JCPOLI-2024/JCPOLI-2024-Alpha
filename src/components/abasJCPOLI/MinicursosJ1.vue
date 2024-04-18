@@ -54,7 +54,7 @@
       MiniCourse
     }
   })
-  export default class MiniCourses extends Vue {
+  export default class MinicurosJ1 extends Vue {
     private coursesList: any
     private filtered_courses: any
   

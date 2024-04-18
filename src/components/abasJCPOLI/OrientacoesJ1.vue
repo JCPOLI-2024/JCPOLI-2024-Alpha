@@ -602,7 +602,7 @@
   //     Login
   //   }
   // })
-  export default class SubmissionRulesj extends mixins(LoaderMixin) {
+  export default class OrientacoesJ1 extends mixins(LoaderMixin) {
     private panel = [true, false, false, false]
   
     //   private async created() {

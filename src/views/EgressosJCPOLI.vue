@@ -51,7 +51,7 @@
       //Supporters
     }
   })
-  export default class Escola extends Vue {
+  export default class EgressosJCPOLI extends Vue {
     private speakers: any = null
     private photos: any
   

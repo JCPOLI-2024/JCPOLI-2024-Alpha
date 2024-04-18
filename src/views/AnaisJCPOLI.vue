@@ -32,7 +32,7 @@ import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // 3º Edição da JCP
     AnaisJ3
   }
 })
-export default class Jcpoli extends Vue {
+export default class AnaisJCPOLI extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

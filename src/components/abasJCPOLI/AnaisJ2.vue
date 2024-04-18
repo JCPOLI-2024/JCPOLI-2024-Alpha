@@ -96,7 +96,7 @@
       Main
     }
   })
-  export default class anais extends Vue {
+  export default class AnaisJ2 extends Vue {
     private all_anais: any
     private all_anais2: any
     private all_anais3: any

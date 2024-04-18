@@ -63,7 +63,7 @@
       //Supporters
     }
   })
-  export default class Jcpoli extends Vue {
+  export default class JCPOLI extends Vue {
 
     // Para indentificar atraves do link em qual versão da JCPOLI tá
     get edicaoAtual() {

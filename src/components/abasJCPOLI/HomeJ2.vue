@@ -122,7 +122,7 @@
       //Supporters
     }
   })
-  export default class Home extends Vue {
+  export default class HomeJ2 extends Vue {
     private speakersList: any = null
   
     constructor() {

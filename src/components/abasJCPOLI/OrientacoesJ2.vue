@@ -626,7 +626,7 @@
   //     Login
   //   }
   // })
-  export default class SubmissionRules extends mixins(LoaderMixin) {
+  export default class OrientacoesJ2 extends mixins(LoaderMixin) {
     private panel = [true, false, false, false]
   
     //   private async created() {

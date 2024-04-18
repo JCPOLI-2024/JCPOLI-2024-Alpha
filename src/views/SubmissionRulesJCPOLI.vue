@@ -32,7 +32,7 @@ import OrientacoesJ3 from '@/components/abasJCPOLI/OrientacoesJ3.vue' // 3º Edi
     OrientacoesJ3
   }
 })
-export default class Jcpoli extends Vue {
+export default class SubmissionRulesJCPOLI extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

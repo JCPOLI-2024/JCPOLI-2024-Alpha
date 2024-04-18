@@ -52,7 +52,7 @@
       Supporters
     }
   })
-  export default class Programacao extends Vue {
+  export default class ProgramacaoJCPOLI extends Vue {
   
       private palestras: any;
       private trabalhos: any;

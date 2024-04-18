@@ -224,7 +224,7 @@
       //Supporters
     }
   })
-  export default class Escola extends Vue {
+  export default class EscolaJ2 extends Vue {
     private speakers: any = null
   
     constructor() {

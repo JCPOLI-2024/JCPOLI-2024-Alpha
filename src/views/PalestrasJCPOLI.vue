@@ -2,15 +2,15 @@
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
     <template v-if="edicaoAtual === 1">
-      <ExposicoesJ1 />
+      <PalestrasJ1 />
     </template>
     <!-- 2º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 2">
-      <ExposicoesJ2 />
+      <PalestrasJ2 />
     </template>
     <!-- 3º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 3">
-      <ExposicoesJ3 />
+      <PalestrasJ3 />
     </template>
    
    
@@ -19,20 +19,20 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // 1º Edição da JCPOLI
-import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // 2º Edição da JCPOLI
-import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // 3º Edição da JCPOLI
+import PalestrasJ1 from '@/components/abasJCPOLI/PalestrasJ1.vue' // 1º Edição da JCPOLI
+import PalestrasJ2 from '@/components/abasJCPOLI/PalestrasJ2.vue' // 2º Edição da JCPOLI
+import PalestrasJ3 from '@/components/abasJCPOLI/PalestrasJ3.vue' // 3º Edição da JCPOLI
 
 //import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
 
 @Component({
   components: {
-    ExposicoesJ1,
-    ExposicoesJ2,
-    ExposicoesJ3
+    PalestrasJ1,
+    PalestrasJ2,
+    PalestrasJ3
   }
 })
-export default class Jcpoli extends Vue {
+export default class PalestrasJCPOLI extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

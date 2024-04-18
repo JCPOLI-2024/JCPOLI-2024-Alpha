@@ -116,7 +116,7 @@
       //Supporters
     }
   })
-  export default class Jcpoli extends Vue {
+  export default class HomeJ1 extends Vue {
     private speakersList: any = null
 
     // Tentativa de tirar os dados dessa pagina de código e puxar do storage, porém acaba bugando os palestrantes (eles não aparecem quando se entra na página pela 1º vez, só quando da refresh)

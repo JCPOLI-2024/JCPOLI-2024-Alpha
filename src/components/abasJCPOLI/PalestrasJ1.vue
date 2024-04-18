@@ -54,7 +54,7 @@
       MiniCourse
     }
   })
-  export default class Palestrasj extends Vue {
+  export default class PalestrasJ1 extends Vue {
     private all_palestras
     private filtered_palestras
   

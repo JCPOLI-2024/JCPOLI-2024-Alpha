@@ -12,7 +12,7 @@
       </div>
       <ul>
         <router-link to="/JCPOLI" tag="li">Home</router-link>
-        <router-link to="/escolaj" tag="li">Escola</router-link>
+        <router-link to="/EscolaJCPOLI" tag="li">Escola</router-link>
         <router-link to="/palestrasj" tag="li">Palestras</router-link>
         <router-link to="/minicursosj" tag="li">Minicursos</router-link>
         <router-link to="/competicoesj" tag="li">Competições</router-link>
@@ -132,7 +132,7 @@
         <router-link :to="anaisLink" tag="li">Publicações</router-link>
         <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
         <!-- <router-link to="/jges" tag="li">JGES</router-link> -->
-        <router-link to="/edicoesj" tag="li">Edições</router-link>
+        <router-link to="/Edicoes" tag="li">Edições</router-link>
       </ul>
     </div>
 
@@ -176,31 +176,31 @@ export default class NavBarJCPOLI extends Vue {
 
   // Método para construir o link para a Escola da edição atual da JCPOLI
   get escolaLink() {
-    return `/JCPOLI${this.edicaoAtual}/escolaj`;
+    return `/JCPOLI${this.edicaoAtual}/Escola`;
   }
 
   // Método para construir o link para as Palestras da edição atual da JCPOLI
   get palestrasLink() {
-    return `/JCPOLI${this.edicaoAtual}/palestrasj`;
+    return `/JCPOLI${this.edicaoAtual}/Palestras`;
   }
  
    get minicursosLink() {
-     return `/JCPOLI${this.edicaoAtual}/minicursosj`;
+     return `/JCPOLI${this.edicaoAtual}/Minicursos`;
    }
  
    get competicoesLink() {
-     return `/JCPOLI${this.edicaoAtual}/competicoesj`;
+     return `/JCPOLI${this.edicaoAtual}/Competicoes`;
    }
  
    get exposicoesLink() {
-     return `/JCPOLI${this.edicaoAtual}/exposicoesj`;
+     return `/JCPOLI${this.edicaoAtual}/Exposicoes`;
    }
  
    get anaisLink() {
-     return `/JCPOLI${this.edicaoAtual}/anaisj`;
+     return `/JCPOLI${this.edicaoAtual}/Anais`;
    }
    get orientacoesLink() {
-     return `/JCPOLI${this.edicaoAtual}/orientacoesj`;
+     return `/JCPOLI${this.edicaoAtual}/Orientacoes`;
    }
 }
 </script>

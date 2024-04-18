@@ -65,7 +65,7 @@
       MiniCourse
     }
   })
-  export default class Exposicoes extends Vue {
+  export default class ExposicoesJ2 extends Vue {
     private all_exposicoes: any
   
     private title = 'Exposições'
