@@ -66,7 +66,7 @@
   //import { Competicoes } from '@/storage/programacao/competicao'
   
   //Para pegar as competições que estavam na JCPOLI
-  import { Competicoes } from '@/storage/programacao/competicao1JCPOLI'
+  import { Competicoes } from '@/storage/programacao/storageJCPOLI/competicao1JCPOLI'
   
   @Component({
     components: {

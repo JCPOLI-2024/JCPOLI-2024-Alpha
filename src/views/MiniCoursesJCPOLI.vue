@@ -23,7 +23,7 @@ import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // 1º Ediç
 import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // 2º Edição da JCPOLI
 import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
+//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 
 @Component({
   components: {

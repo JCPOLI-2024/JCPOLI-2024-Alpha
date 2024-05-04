@@ -38,7 +38,7 @@
   import Columns from "@/components/organization/Columns.vue";
   import Organization from "@/components/organization/Names.vue";
   import Supporters from "@/components/organization/Supporters.vue";
-  import speakers from "@/models/speakersJCPOLI";
+  import speakers from "@/models/modelsJCPOLI/speakersJCPOLI";
   
   @Component({
     components: {
@@ -68,12 +68,12 @@
         // Os storages "trabalhos1JCPOLI", "jges1JCPOLI", "oficina1JCPOLI" são as da JCPOLI
         // Os storage "palestras" e "minicursos"são iguais para Escola Politecnica e JCPOLI, porém é bom dividir
         // O storage "hackton1JCPOLI" é o que estava na JCPOLI (Já "hackaton" é o storage com dados que estavam na EScola Politecnica) 
-        this.palestras = require('@/storage/programacao/palestras1JCPOLI').default;
-        this.trabalhos = require('@/storage/programacao/trabalhos1JCPOLI').default;
-        this.jges = require('@/storage/programacao/jges1JCPOLI').default;
-        this.minicursos = require('@/storage/programacao/minicursos1JCPOLI').default;
-        this.oficina = require('@/storage/programacao/oficina1JCPOLI').default;
-        this.hackaton = require('@/storage/programacao/hackaton1JCPOLI').default;
+        this.palestras = require('@/storage/programacao/storageJCPOLI/palestras1JCPOLI').default;
+        this.trabalhos = require('@/storage/programacao/storageJCPOLI/trabalhos1JCPOLI').default;
+        this.jges = require('@/storage/programacao/storageJCPOLI/jges1JCPOLI').default;
+        this.minicursos = require('@/storage/programacao/storageJCPOLI/minicursos1JCPOLI').default;
+        this.oficina = require('@/storage/programacao/storageJCPOLI/oficina1JCPOLI').default;
+        this.hackaton = require('@/storage/programacao/storageJCPOLI/hackaton1JCPOLI').default;
   
         this.events = [
           {

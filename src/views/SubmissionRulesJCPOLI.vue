@@ -23,7 +23,7 @@ import OrientacoesJ1 from '@/components/abasJCPOLI/OrientacoesJ1.vue' // 1º Edi
 import OrientacoesJ2 from '@/components/abasJCPOLI/OrientacoesJ2.vue' // 2º Edição da JCPOLI
 import OrientacoesJ3 from '@/components/abasJCPOLI/OrientacoesJ3.vue' // 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
+//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 
 @Component({
   components: {

@@ -29,7 +29,7 @@
   import { Component, Vue, Prop } from 'vue-property-decorator'
   import Main from '@/components/organization/Main.vue'
   //Para pegar as publicações/anais que estavam na JCPOLI
-  import { Anais } from '@/storage/programacao/anais1JCPOLI'
+  import { Anais } from '@/storage/programacao/storageJCPOLI/anais1JCPOLI'
   
   @Component({
     components: {

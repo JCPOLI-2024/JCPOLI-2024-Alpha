@@ -23,7 +23,7 @@ import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // 1º Ediç
 import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // 2º Edição da JCPOLI
 import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
+//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 
 @Component({
   components: {

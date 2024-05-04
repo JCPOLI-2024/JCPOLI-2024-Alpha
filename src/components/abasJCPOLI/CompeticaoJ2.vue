@@ -101,7 +101,7 @@ import Main from '@/components/organization/Main.vue'
 import MiniCourse from '@/components/miniCourse/index.vue'
 import SectionCourse from '@/components/organization/SectionCourse.vue'
 
-import { Competicoes } from '@/storage/programacao/competicao2JCPOLI'
+import { Competicoes } from '@/storage/programacao/storageJCPOLI/competicao2JCPOLI'
 
 @Component({
   components: {

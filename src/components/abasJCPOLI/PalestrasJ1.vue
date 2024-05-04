@@ -45,7 +45,7 @@
   //import { Palestras_Cursos } from '@/storage/programacao/palestras_new'
 
   //Para pegar as palestras que estavam na JCPOLI
-  import { Palestras_Cursos } from '@/storage/programacao/palestras_new_1JCPOLI'
+  import { Palestras_Cursos } from '@/storage/programacao/storageJCPOLI/palestras_new_1JCPOLI'
   
   @Component({
     components: {

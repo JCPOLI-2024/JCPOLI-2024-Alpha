@@ -67,7 +67,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
-import speakers from "@/models/speakersJCPOLI";
+import speakers from "@/models/modelsJCPOLI/speakersJCPOLI";
 
 @Component
 export default class SpeakerProfile extends Vue {

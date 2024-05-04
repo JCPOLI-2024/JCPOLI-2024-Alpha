@@ -36,7 +36,7 @@
   import PhotoHeader from '@/components/organization/PhotoHeader.vue'
   import Main from '@/components/organization/Main.vue'
   import MiniCourse from '@/components/miniCourse/index.vue'
-  import { miniCourses_Section } from '@/models/miniCourses2JCPOLI'
+  import { miniCourses_Section } from '@/models/modelsJCPOLI/miniCourses2JCPOLI'
   
   @Component({
     components: {

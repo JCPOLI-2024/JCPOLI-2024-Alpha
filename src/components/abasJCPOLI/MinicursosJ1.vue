@@ -45,7 +45,7 @@
   //import { miniCourses_Section } from '@/models/miniCourses'
   
   //Para pegar os minicursos que estavam na 1 JCPOLI
-  import { miniCourses_Section } from '@/models/miniCourses1JCPOLI'
+  import { miniCourses_Section } from '@/models/modelsJCPOLI/miniCourses1JCPOLI'
   
   @Component({
     components: {

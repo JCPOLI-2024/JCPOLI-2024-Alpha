@@ -23,7 +23,7 @@ import EscolaJ1 from '@/components/abasJCPOLI/EscolaJ1.vue' // 1º Edição da J
 import EscolaJ2 from '@/components/abasJCPOLI/EscolaJ2.vue' // 2º Edição da JCPOLI
 import EscolaJ3 from '@/components/abasJCPOLI/EscolaJ3.vue' // 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/speakers1JCPOLI'
+//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 
 @Component({
   components: {

@@ -38,7 +38,7 @@
   import MiniCourse from '@/components/miniCourse/index.vue'
   import SectionCourse from '@/components/organization/SectionCourse.vue'
   
-  import { Palestras_Cursos } from '@/storage/programacao/palestras_new_2JCPOLI'
+  import { Palestras_Cursos } from '@/storage/programacao/storageJCPOLI/palestras_new_2JCPOLI'
   
   @Component({
     components: {
