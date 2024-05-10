@@ -3,9 +3,9 @@
   <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
   <!-- <div class="navbar-h mx-auto"> -->
 
+    <!-- Abas da Politécnica e JCPOLI de quando está no mobile -->
     <input type="checkbox" id="open-mmenu" :style="{ display: 'none' }" />
-
-    <div class="mobile menu-mobile"> <!-- barra lateral -->
+    <div  class="mobile menu-mobile"> <!-- barra lateral -->
       <div>
         <dir>
           <label for="open-mmenu">
@@ -13,11 +13,26 @@
           </label>
         </dir>
       </div>
-      <ul>
+    <!-- Mostra as abas de quando está da Politécnica -->
+      <ul  v-if="!isSpecialRoute()">
         <router-link to="/" tag="li">Home</router-link>  
         <router-link to="/hackathon" tag="li">Hackathon</router-link>
         <router-link to="/manutencao" tag="li">Desafios</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
+        <router-link :to="jcpoliUltimaEdicaoLink" tag="li">JCPOLI</router-link>
+      </ul>
+      <!-- Mostra as abas de quando está na rota JCPOLI -->
+      <ul v-else>
+        <router-link to="/" tag="li">Politécnica</router-link>
+        <router-link :to="jcpoliLink" tag="li">Home</router-link>
+        <router-link :to="escolaLink" tag="li">Escola</router-link>
+        <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+        <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+        <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+        <router-link :to="anaisLink" tag="li">Publicações</router-link>
+        <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <router-link to="/Edicoes" tag="li">Edições</router-link>
       </ul>
     </div>
 
@@ -31,6 +46,7 @@
       
     </div>
 
+    <!-- Abas da Politécnica de quando está não está no mobile -->
     <div class="titulo-e-nav">      
       <p>Pontifícia Universidade Católica de Goiás</p>
       <div class="nav-container desktop">
@@ -39,7 +55,6 @@
         <router-link to="/hackathon" tag="li">Hackathon</router-link>
         <router-link to="/manutencao" tag="li">Desafio CD</router-link>
         <router-link to="/TCC" tag="li">TCC</router-link>
-        <!-- <router-link to="/JCPOLI" tag="li">JCPOLI</router-link> -->
         <router-link :to="jcpoliUltimaEdicaoLink" tag="li">JCPOLI</router-link>
 
         <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
@@ -61,10 +76,9 @@
     </div>
 
     <!-- Nova posição da logo da JCPOLI -->
-    <!-- <div class="logo-jcpoli"> -->
     <div class="logo-jcpoli">
-      <a href="/JCPOLI">
-        <!-- <img src="assets/img/logoj.png" alt="logo da puc" style=" transform: scale(1.1, 1.1); max-width: 356px; height: 108px;  margin-left: 4rem; position: absolute;"> -->
+      <!-- Mostra a edição atual da JCPOLI -->
+      <a :href="jcpoliUltimaEdicaoLink">
         <img src="/assets/img/logoJCPOLI.png" alt="logo da puc">
       </a>
     </div>
@@ -92,22 +106,68 @@ export default class NavBar extends Vue {
     }
     next()
   }
-
+  // Pra poder pegar a ultima edição da JCPOLI
   get jcpoliUltimaEdicaoLink() {
     // Defina aqui a lógica para determinar a última edição da JCPOLI
     const ultimaEdicao = 3; // Por exemplo, assumindo que a última edição é a edição 3
     return `/JCPOLI${ultimaEdicao}`;
   }
 
+  // A partir daqui é toda a lógica para poder mostrar as abas epecificas da JCPOLI no formato mobile
+  
+  // Pra poder identificar se está na rota da JCPOLI
+  isSpecialRoute() {
+    // Verifica se a rota atual está relacionada à JCPOLI
+    return this.$route.path.startsWith("/JCPOLI");
+  }
+
+  // Para indentificar atraves do link em qual versão da JCPOLI tá
+  get edicaoAtual() {
+    // Obtém o caminho completo da rota atual
+    const caminho = this.$route.fullPath;
+    // Usa expressão regular para extrair o número da edição da rota
+    const match = caminho.match(/\/JCPOLI(\d+)/);
+    // Se houver uma correspondência, retorna o número da edição, caso contrário, retorna null
+    return match ? parseInt(match[1]) : null;
+  }
+   
+  // Método para construir o link para a Home da JCPOLI
+  get jcpoliLink() {
+    return `/JCPOLI${this.edicaoAtual}`;
+  }
+  // Método para construir o link para a Escola da edição atual da JCPOLI
+  get escolaLink() {
+    return `/JCPOLI${this.edicaoAtual}/Escola`;
+  }
+  // Método para construir o link para as Palestras da edição atual da JCPOLI
+  get palestrasLink() {
+    return `/JCPOLI${this.edicaoAtual}/Palestras`;
+  }
+  // Método para construir o link para a Minicursos da edição atual da JCPOLI
+   get minicursosLink() {
+     return `/JCPOLI${this.edicaoAtual}/Minicursos`;
+   }
+  // Método para construir o link para a Competicoes da edição atual da JCPOLI
+   get competicoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/Competicoes`;
+   }
+  // Método para construir o link para a Exposicoes da edição atual da JCPOLI
+   get exposicoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/Exposicoes`;
+   }
+  // Método para construir o link para a Anais da edição atual da JCPOLI
+   get anaisLink() {
+     return `/JCPOLI${this.edicaoAtual}/Anais`;
+   }
+  // Método para construir o link para a Orientacoes da edição atual da JCPOLI
+   get orientacoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/Orientacoes`;
+   }
+  // Termino toda a lógica para poder mostrar as abas epecificas da JCPOLI no formato mobile
+
   created() {
     this.$router.beforeEach(this.closeMenuOnRouteChange)    
   }
-  // Rascunho para uma futura possivel dropdown na parte de abas
-  // data() {
-  //   return {
-  //     showDropdown: false // Variável para controlar a exibição do dropdown
-  //   };
-  // }
   
   mounted() {    
     window.addEventListener("resize", this.centralizar);
@@ -131,6 +191,12 @@ export default class NavBar extends Vue {
     espacador.style.width = largura_espacador + "px";                
   }
 
+  // Rascunho para uma futura possivel dropdown na parte de abas
+  // data() {
+  //   return {
+  //     showDropdown: false // Variável para controlar a exibição do dropdown
+  //   };
+  // }
 
 
 }
