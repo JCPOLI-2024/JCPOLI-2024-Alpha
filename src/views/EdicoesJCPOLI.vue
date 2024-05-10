@@ -171,9 +171,10 @@
   }
   
   @media only screen and (max-width: 760px) {
-    .jcecec-slider {
-      display: none;
-    }
+    .banner {
+    padding: 1rem; /* Ajuste do padding para dispositivos móveis */
+    margin-bottom: 10px; /* Espaçamento entre os banners reduzido */
+  }
   }
   </style>
   
