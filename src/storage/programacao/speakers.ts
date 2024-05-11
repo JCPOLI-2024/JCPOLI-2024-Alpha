@@ -1,3 +1,4 @@
+// Storage para os Palestrantes que estavam na Politécnica 
 export const speakers_list = [  
 
 ];

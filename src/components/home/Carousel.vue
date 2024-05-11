@@ -1,3 +1,4 @@
+<!-- Carousel para a página da aba "Home" da Politécnica -->
 <template>
   <v-layout row wrap class="jcecec-slider" v-if="test.length > 0">
     <v-flex xs12>

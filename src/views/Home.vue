@@ -1,3 +1,4 @@
+<!-- Pagina da Politécnica -  Pagina da aba "Home"  -->
 <template>
   <v-app class="home" id="inspire">
     <Carousel />

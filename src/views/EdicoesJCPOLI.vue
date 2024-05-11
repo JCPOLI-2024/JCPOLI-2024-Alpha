@@ -1,6 +1,11 @@
+<!-- Pagina da JCPOLI -  Pagina da aba de "Edições" -->
+<!-- Por conta do css, não deu pra simplismente importar o carrosel de cada edição -->
+<!-- Então foi feito essa página com um novo layout de banner/carrosel para que eles ficassem um embaixo do outro -->
 <template>
     <v-layout column wrap class="jcecec-slider">
       <v-flex xs12>
+        <!-- A medida que se vai adicionando novas edições, mexer no valor do "height", para que ele comporte mais banner das edições uma embaixo da outra -->
+        <!-- Uma possivel solução pra isso, é fazer um novo layout para que os banners fiquem um embaixo do outro, e um embaixo do outro -->
         <v-carousel hide-controls hide-delimiters height="1300">
           <v-carousel-item
             v-for="(item, i) in items"
@@ -79,6 +84,7 @@
                     </div>
                   </div>
                 </router-link>
+                
                 
 
             </v-container>

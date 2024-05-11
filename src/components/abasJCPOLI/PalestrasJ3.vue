@@ -1,0 +1,2 @@
+<!-- Pagina da JCPOLI - Pagina para Palestras da 3º JCPOLI -->
+<!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas as palestras são as que estavam na JCPOLI -->

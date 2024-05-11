@@ -1,4 +1,4 @@
-<!-- Página JCPOLI - Carousel -->
+<!-- Página JCPOLI - Carousel para a página da aba "Home" da 3º JCPOLI -->
 <template>
     <v-layout row wrap class="jcecec-slider">
       <v-flex xs12>

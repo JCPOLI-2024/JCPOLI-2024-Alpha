@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI - Pagina para Home da 2º JCPOLI-->
 <template>
     <v-app class="home" id="inspire">
   

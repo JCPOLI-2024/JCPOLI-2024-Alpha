@@ -1,3 +1,5 @@
+// Storage para as palestras que estavam na 1º JCPOLI
+// Porém o que está sendo utilizado são as "palestras_new_"... para exibir os dados das palestras
 export default [{
     date: "11/11",
     description: "Abertura / O meu futuro \"uma nova abordagem\"",

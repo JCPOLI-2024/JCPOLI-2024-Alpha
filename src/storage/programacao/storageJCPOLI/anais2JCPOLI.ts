@@ -1,4 +1,4 @@
-// Storage para as publicações/anais que estavam na página da 2 JCPOLI
+// Storage para as publicações/anais que estavam na 2º JCPOLI
 export const Anais = [
     {
       title: 'ANÁLISE DE IMAGENS PARA A QUANTIFICAÇÃO DE COLÔNIAS DE BACTÉRIAS',

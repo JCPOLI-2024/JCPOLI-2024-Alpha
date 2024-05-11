@@ -1,4 +1,5 @@
-<!-- Pagina da JCPOLI -  Pagina das Exposicoes --><template>
+<!-- Pagina da JCPOLI -  Pagina para Exposicoes da 1º JCPOLI -->
+<template>
   <div>
     <Main>
       <div v-for="(props, index) in all_exposicoes" :key="index">

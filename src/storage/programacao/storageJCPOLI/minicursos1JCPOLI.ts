@@ -1,3 +1,6 @@
+// Storage para as minicursos que estavam na 1º JCPOLI
+// Porém, o que é utilizado são os storages que estão na pasta modelsJCPOLI dentro da pasta models
+// "src\models\modelsJCPOLI\miniCourses1JCPOLI.ts" e "src\models\modelsJCPOLI\miniCourses2JCPOLI.ts"
 export default [
     {
       date: "12/11",

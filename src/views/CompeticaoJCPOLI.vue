@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI -  Pagina da aba "Competições"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
@@ -19,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import CompeticaoJ1 from '@/components/abasJCPOLI/CompeticaoJ1.vue' // 1º Edição da JCPOLI
-import CompeticaoJ2 from '@/components/abasJCPOLI/CompeticaoJ2.vue' // 2º Edição da JCPOLI
-import CompeticaoJ3 from '@/components/abasJCPOLI/CompeticaoJ3.vue' // 3º Edição da JCPOLI
+import CompeticaoJ1 from '@/components/abasJCPOLI/CompeticaoJ1.vue' // Página das Competições da 1º Edição da JCPOLI
+import CompeticaoJ2 from '@/components/abasJCPOLI/CompeticaoJ2.vue' // Página das Competições da 2º Edição da JCPOLI
+import CompeticaoJ3 from '@/components/abasJCPOLI/CompeticaoJ3.vue' // Página das Competições da 3º Edição da JCPOLI
 
 //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 

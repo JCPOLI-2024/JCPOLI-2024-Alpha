@@ -1,3 +1,4 @@
+<!-- Index para a aba de Minicursos -->
 <template>
   <div class="miniCourse">
     <div class="title">

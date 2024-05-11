@@ -1,4 +1,4 @@
-// Storage para as competições que estavam na página da 1 JCPOLI
+// Storage para as competições que estavam na 1º JCPOLI
 const Competicao = [
     {
       title: "Maratona de Programação",

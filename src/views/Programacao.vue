@@ -1,3 +1,5 @@
+<!-- Pagina da Politécnica -  Pagina da aba "Programação" -->
+<!-- Por enquanto essa página não é utilizada no site -->
 <template>
   <div class="programacao">    
     <Main>

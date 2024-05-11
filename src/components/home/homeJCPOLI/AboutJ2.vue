@@ -1,3 +1,4 @@
+<!-- Página JCPOLI - About para a página da aba "Home" da 2º JCPOLI -->
 <template>
     <div id="container-sobre">
       <v-layout p-3 row wrap>

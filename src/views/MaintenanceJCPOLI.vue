@@ -1,4 +1,4 @@
-<!-- Página em manutenção da JCPOLI -->
+<!-- Página de "em manutenção" da JCPOLI -->
 <template>
     <div class="container">
       <div class="what-is-up">

@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI - Pagina para Competições da 2º JCPOLI-->
 <template>
   <div>
     <Main>

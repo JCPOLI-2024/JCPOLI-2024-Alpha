@@ -1,4 +1,5 @@
-// Historico da lista de ex palestrantes/participantes da 1 JCPOLI
+// Historico da lista de ex palestrantes/participantes da 1º JCPOLI
+// Porém o que está sendo utilizado são os dados locais dentro do componentes da Home e Escola da JCPOLI
 export const speakers_jcpoli1 = [
   {
     name: 'Michael Machado',

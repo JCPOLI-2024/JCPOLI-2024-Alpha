@@ -1,3 +1,4 @@
+<!-- Página Politécnica -Navbar para as abas da Politécnica -->
 <template>
   <div class="navbar-h">
   <!-- Rascunho para uma futura possivel dropdown na parte de abas -->

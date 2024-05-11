@@ -1,3 +1,6 @@
+<!-- Pagina da Politécnica -  Pagina da aba "Escola"  -->
+<!-- Essa aba não é utilizada no site da Politécnica, e não sei o por que foi criado -->
+<!-- Talvez como inicio de se adicionar as coisas da JCPOLI, porém deixei aqui caso seja usado na parte da politécnica futuramente -->
 <template>
   <div class="obs-page view">
     <!-- <PhotoHeader

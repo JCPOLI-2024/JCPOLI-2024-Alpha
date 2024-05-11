@@ -33,7 +33,7 @@ export default class App extends Vue {
 }
 </script> -->
 
-<!-- Lógica improvisada (até ter um loyout) para manter o navbar da politecnica e o navbar da jcpoli(aparecer só nas abas da jcpoli) no site -->
+<!-- Nova Lógica para manter o navbar da politecnica e o navbar da jcpoli(aparecer só rota da JCPOLI) no site -->
 <template>
   <v-app id="app">
     <!-- Renderiza o NavBar -->

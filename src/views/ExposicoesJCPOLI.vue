@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI -  Pagina da aba "Exposições"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
@@ -19,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // 1º Edição da JCPOLI
-import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // 2º Edição da JCPOLI
-import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // 3º Edição da JCPOLI
+import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // Página das Exposições 1º Edição da JCPOLI
+import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // Página das Exposições 2º Edição da JCPOLI
+import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // Página das Exposições 3º Edição da JCPOLI
 
 //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 

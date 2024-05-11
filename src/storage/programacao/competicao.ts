@@ -1,3 +1,4 @@
+// Storage para as competições que estavam na Politécnica 
 const Competicao = [
   {
     title: "Maratona de Programação - Primeiro Período",

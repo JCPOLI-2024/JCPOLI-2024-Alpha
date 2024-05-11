@@ -1,4 +1,4 @@
-
+// Storage para os Hackatons que estavam na Politécnica 
 export default [
     {date: "17/10",
     description: "Checkpoint 1",

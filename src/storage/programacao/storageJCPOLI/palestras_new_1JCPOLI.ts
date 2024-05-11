@@ -1,4 +1,4 @@
-// Storage para as palestras que estavam na página da 1 JCPOLI
+// Storage para as palestras que estavam na 1º JCPOLI
 let Palestras = [
     {
       title: "Carreiras Digitais no grupo HAUS",

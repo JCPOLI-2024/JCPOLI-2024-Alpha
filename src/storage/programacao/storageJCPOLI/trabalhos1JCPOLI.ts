@@ -1,4 +1,4 @@
-// Storage para os trabalhos que estavam na página da 1 JCPOLI
+// Storage para os trabalhos que estavam na 1º JCPOLI
 export default [
     {
         date: '12/11',

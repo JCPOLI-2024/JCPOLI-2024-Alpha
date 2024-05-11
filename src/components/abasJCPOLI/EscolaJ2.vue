@@ -1,3 +1,4 @@
+<!-- Página JCPOLI - Página para Escola da 2º JCPOLI-->
 <template>
     <div class="obs-page view">
       <PhotoHeader

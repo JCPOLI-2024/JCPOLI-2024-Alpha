@@ -1,3 +1,4 @@
+// Storage para as Palestras que estavam na Politécnica 
 let Palestras = [
   {
     title: "Processo construtivo da parede de concreto e produtividade",

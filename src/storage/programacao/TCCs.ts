@@ -1,3 +1,4 @@
+// Storage para os TCC's que estavam na Politécnica 
 enum enum_tcc {
   TCC1 = 1,
   TCC2

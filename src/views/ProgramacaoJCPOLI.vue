@@ -1,4 +1,5 @@
-<!-- Pagina da JCPOLI -  Pagina das Programações -->
+<!-- Pagina da JCPOLI -  Pagina da aba "Programação" -->
+<!-- Por enquanto essa página não é utilizada no site -->
 <template>
     <div class="programacao">
       <Main>

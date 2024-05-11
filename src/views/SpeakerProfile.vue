@@ -1,3 +1,4 @@
+<!-- Página para exibir a página dos perfis dos palestrantes -->
 <template>
   <div>
     <header class="banner" :style="{backgroundImage: `url(${defaults.bgBanner})`}">

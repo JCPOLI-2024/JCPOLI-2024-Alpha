@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI -  Pagina da aba "Publicações"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
@@ -19,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import AnaisJ1 from '@/components/abasJCPOLI/AnaisJ1.vue' // 1º Edição da JCPOLI
-import AnaisJ2 from '@/components/abasJCPOLI/AnaisJ2.vue' // 2º Edição da JCPOLI
-import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // 3º Edição da JCPOLI
+import AnaisJ1 from '@/components/abasJCPOLI/AnaisJ1.vue' // Página das Publicações da 1º Edição da JCPOLI
+import AnaisJ2 from '@/components/abasJCPOLI/AnaisJ2.vue' // Página das Publicações da 2º Edição da JCPOLI
+import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // Página das Publicações da 3º Edição da JCPOLI
 
 //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 

@@ -1,4 +1,4 @@
-<!-- 2º Edição JCPOLI -->
+<!-- Página JCPOLI - Carousel para a página da aba "Home" da 2º JCPOLI -->
 <template>
     <v-layout row wrap class="jcecec-slider">
       <v-flex xs12>

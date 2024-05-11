@@ -1,3 +1,4 @@
+// Storage para os palestrantes que estavam em todas as edições da JCPOLI
 const speakers_jcpoli = [
   {
     name: 'PMe. Alberto Vilela Chaer',

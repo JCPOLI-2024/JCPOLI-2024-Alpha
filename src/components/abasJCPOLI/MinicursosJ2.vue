@@ -1,3 +1,5 @@
+<!-- Pagina da JCPOLI -  Pagina para Minicuros da 2º JCPOLI -->
+<!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas os minicursos são as que estavam na JCPOLI -->
 <template>
     <div>
       <PhotoHeader

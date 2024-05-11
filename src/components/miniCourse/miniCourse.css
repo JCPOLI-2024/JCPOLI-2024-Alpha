@@ -1,3 +1,4 @@
+/* CSS para a aba de Minicursos */
 .miniCourse {
   display: grid;
   grid-template-columns: 380px 1fr;

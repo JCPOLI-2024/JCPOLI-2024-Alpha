@@ -1,4 +1,4 @@
-// Storage para as palestras que estavam na página da 2 JCPOLI
+// Storage para as palestras que estavam na 2º JCPOLI
 let Palestras = [
     {
       title: "Processo construtivo da parede de concreto e produtividade",

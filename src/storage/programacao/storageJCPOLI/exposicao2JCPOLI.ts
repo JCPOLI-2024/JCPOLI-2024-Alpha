@@ -1,4 +1,4 @@
-// Storage para as exposições que estavam na página da 2 JCPOLI
+// Storage para as exposições que estavam na 2º JCPOLI
 const Exposicao_Design = [
     {
       title: "Pormade Portas Showroom de materiais e equipamentos",

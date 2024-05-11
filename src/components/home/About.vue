@@ -1,3 +1,4 @@
+<!-- About para a página da aba "Home" da Politécnica -->
 <template>
   <div id="container-sobre">
     <v-layout p-3 row wrap>

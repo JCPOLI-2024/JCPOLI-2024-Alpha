@@ -1,4 +1,5 @@
-<!-- Pagina da JCPOLI -  Pagina de Egressos -->
+<!-- Pagina da JCPOLI -  Pagina da aba de "Egressos" -->
+<!-- Por enquanto essa página não é utilizada no site -->
 <template>
     <div class="obs-page view">
       <Main>

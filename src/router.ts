@@ -1,3 +1,5 @@
+// Esse arquivo é destinado para criar rotas do site
+// Aqui se situam tanto rotas da Politécnica, quanto rotas da JCPOLI
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
@@ -64,69 +66,76 @@ const router = new Router({
         import(/* webpackChunkName: "ops" */ "./views/four04.vue")
     },
 ///////////////////////////////////////////////// Pagina da JCPOLI - Rotas que estão na JCPOLI ///////////////////////////////////////////////////////////////////////////////
-    // Rota para a sub-aba "Escolaj" dentro da aba JCPOLI
+    // Adicionado lógica para que antes de cada aba selecionada, tenhamos em qual edição da JCPOLI está sendo selecionada
+    // Ou seja, temos uma unica rota para as abas "Home", "Escoal", "Palestras". Porém o que vai determinar qual informação que será exibida é o número da edição
+    // Assim, podendo ter a rota "JCPOLI1/Palestras" para exibir as palestras que ocorrer na 1º edição da JCPOLI. 
+    // Ou, "JCPOLI2/Palestras" para exibir as palestras que ocorrer na 2º edição da JCPOLI
+    // E assim sucessivamente
     {
-      path: "/JCPOLI:edicao", // Definindo o parâmetro :edicao
-      //name: "Homej",
+      path: "/JCPOLI:edicao", // Definindo o parâmetro :edicao, assim, toda rota da Home vai ser: JCPOLI1, JCPOLI2, JCPOLI3, seguindo de acordo com qual edição vai estar selecionada 
+      //name: "Home",
       component: () =>
         import(/* webpackChunkName: "JCPOLI" */"./views/JCPOLI.vue"),
     },
-    // Rota para a sub-aba "Palestrasj" dentro da aba JCPOLI
+    // Rota para a aba "Escola" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Escola",
       name: "Escola",
       component: () =>
         import(/* webpackChunkName: "escola" */ "./views/EscolaJCPOLI.vue")
     },
+    // Rota para a aba "Palestras" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Palestras",
       name: "Palestras",
       component: () =>
         import(/* webpackChunkName: "palestra" */ "./views/PalestrasJCPOLI.vue")
     },
-    // Pagina da JCPOLI -  Pagina de Minicuros
+   // Rota para a aba "Minicursos" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Minicursos",
       name: "Minicursos",
       component: () =>
         import(/* webpackChunkName: "minicurso" */ "./views/MiniCoursesJCPOLI.vue")
     },
-    // Pagina da JCPOLI -  Pagina de Competições
+   // Rota para a aba "Competições" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Competicoes",
       name: "Competicoes",
       component: () =>
         import(/* webpackChunkName: "programacao" */ "./views/CompeticaoJCPOLI.vue")
     },
-    // Pagina da JCPOLI -  Pagina de Exposições
+    // Rota para a aba "Exposições" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Exposicoes",
       name: "Exposicoes",
       component: () =>
         import(/* webpackChunkName: "exposicoes" */ "./views/ExposicoesJCPOLI.vue")
     },
-    // Pagina da JCPOLI -  Pagina de Publicações/Anais
+    // Rota para a aba "Publicações" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Anais",
       name: "Anais",
       component: () =>
         import(/* webpackChunkName: "egressos" */ "./views/AnaisJCPOLI.vue")
     },
-    // Pagina da JCPOLI -  Pagina de Orientações
+    // Rota para a aba "Orientações" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Orientacoes",
       name: "Orientacoes",
       component: () =>
         import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesJCPOLI.vue")
     },
-       
+    // Rota para a aba do perfil dos palestrantes dentro da aba JCPOLI
+    // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
     {
       path: "/profile",
       name: "speakerProfile",
       component: () =>
         import(/* webpackChunkName: "speakerProfile" */ "./views/SpeakerProfile.vue")
     },
-
+    // Rota para a aba do "Edições" dos palestrantes dentro da aba JCPOLI
+    // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
     {
       path: "/Edicoes",
       name: "Edicoes",
@@ -134,7 +143,7 @@ const router = new Router({
         import(/* webpackChunkName: "edicoes" */ "./views/EdicoesJCPOLI.vue")
     },
 
-// //########################################## Pagina da JCPOLI e Escola Politecnica de Artes - Rotas ativas, porém de dificil acesso ##########################################
+// //########################################## Pagina da JCPOLI e Escola Politecnica de Artes - Rotas inativas de abas não utilizadas por enquanto ##########################################
 //     // Para a página de programação da Escola Politecnica
 //     {
 //       path: "/programacao",

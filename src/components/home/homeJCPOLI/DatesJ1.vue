@@ -1,4 +1,4 @@
-<!-- Página JCPOLI - Datas -->
+<!-- Página JCPOLI - Datas para a página da aba "Home" da 1º JCPOLI -->
 <template>
     <div style="margin:40px 0">
       <div>

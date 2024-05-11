@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI -  Pagina da aba "Minicursos"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
@@ -19,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // 1º Edição da JCPOLI
-import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // 2º Edição da JCPOLI
-import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // 3º Edição da JCPOLI
+import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // Página de Minicursos da 1º Edição da JCPOLI
+import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // Página de Minicursos da 2º Edição da JCPOLI
+import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // Página de Minicursos da 3º Edição da JCPOLI
 
 //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
 

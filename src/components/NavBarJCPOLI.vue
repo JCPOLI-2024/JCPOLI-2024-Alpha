@@ -1,4 +1,4 @@
-<!-- Página JCPOLI -Navbar de abas da JCPOLI -->
+<!-- Página JCPOLI -Navbar para as abas da JCPOLI -->
 <template>
   <div class="navbar-h mx-auto">
 

@@ -1,3 +1,4 @@
+<!-- Pagina da JCPOLI - Pagina para Publicações/Anais da 2º JCPOLI-->
 <template>
     <div class="obs-page view">
       <Main>

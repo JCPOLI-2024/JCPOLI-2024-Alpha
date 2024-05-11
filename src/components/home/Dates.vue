@@ -1,4 +1,4 @@
- 
+<!-- Datas para a página da aba "Home" da Politécnica --> 
 <template>
   <div style="margin:40px 0">
     <div>

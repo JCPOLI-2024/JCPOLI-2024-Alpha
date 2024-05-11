@@ -1,3 +1,4 @@
+// Storage para os Minicursos que estavam na Politécnica 
 export default [
   {
     date: "12/11",
