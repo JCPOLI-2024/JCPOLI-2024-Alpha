@@ -75,7 +75,7 @@ const router = new Router({
       path: "/JCPOLI:edicao", // Definindo o parâmetro :edicao, assim, toda rota da Home vai ser: JCPOLI1, JCPOLI2, JCPOLI3, seguindo de acordo com qual edição vai estar selecionada 
       //name: "Home",
       component: () =>
-        import(/* webpackChunkName: "JCPOLI" */"./views/JCPOLI.vue"),
+        import(/* webpackChunkName: "JCPOLI" */"./views/Jcpoli.vue"),
     },
     // Rota para a aba "Escola" dentro da aba JCPOLI
     {
