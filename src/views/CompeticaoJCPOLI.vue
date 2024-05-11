@@ -24,8 +24,6 @@ import CompeticaoJ1 from '@/components/abasJCPOLI/CompeticaoJ1.vue' // Página d
 import CompeticaoJ2 from '@/components/abasJCPOLI/CompeticaoJ2.vue' // Página das Competições da 2º Edição da JCPOLI
 import CompeticaoJ3 from '@/components/abasJCPOLI/CompeticaoJ3.vue' // Página das Competições da 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
-
 @Component({
   components: {
     CompeticaoJ1,

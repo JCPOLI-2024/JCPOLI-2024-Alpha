@@ -24,6 +24,9 @@
       <!-- 3º Edição da JCPOLI -->
       <template v-else-if="edicaoAtual === 3">
         <CarouselJ3 />
+        <AboutJ3 />
+        <DatesJ3 />
+        <HomeJ3 />
       </template>
     </v-app>
   </template>
@@ -42,12 +45,15 @@
   import DatesJ1 from '@/components/home/homeJCPOLI/DatesJ1.vue' // Datas da 1º Edição da JCPOLI
   import HomeJ1 from '@/components/abasJCPOLI/HomeJ1.vue' // Página de Home da 1º Edição da JCPOLI
   // 2º Edição da JCPOLI
-  import CarouselJ2 from '@/components/home/homeJCPOLI/CarouselJ2.vue' // Carosel da 1º Edição da JCPOLI
-  import AboutJ2 from '@/components/home/homeJCPOLI/AboutJ2.vue' // About da 1º Edição da JCPOLI
-  import DatesJ2 from '@/components/home/homeJCPOLI/DatesJ2.vue' // Datas da 1º Edição da JCPOLI
-  import HomeJ2 from '@/components/abasJCPOLI/HomeJ2.vue' // Página de Home da 1º Edição da JCPOLI
+  import CarouselJ2 from '@/components/home/homeJCPOLI/CarouselJ2.vue' // Carosel da 2º Edição da JCPOLI
+  import AboutJ2 from '@/components/home/homeJCPOLI/AboutJ2.vue' // About da 2º Edição da JCPOLI
+  import DatesJ2 from '@/components/home/homeJCPOLI/DatesJ2.vue' // Datas da 2º Edição da JCPOLI
+  import HomeJ2 from '@/components/abasJCPOLI/HomeJ2.vue' // Página de Home da 2º Edição da JCPOLI
   // 3º Edição da JCPOLI
   import CarouselJ3 from '@/components/home/homeJCPOLI/CarouselJ3.vue' // Carosel 3º Edição da JCPOLI
+  import AboutJ3 from '@/components/home/homeJCPOLI/AboutJ3.vue' // About da 2º Edição da JCPOLI
+  import DatesJ3 from '@/components/home/homeJCPOLI/DatesJ3.vue' // Datas da 2º Edição da JCPOLI
+  import HomeJ3 from '@/components/abasJCPOLI/HomeJ3.vue' // Página de Home da 2º Edição da JCPOLI
 
   
   //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
@@ -61,13 +67,16 @@
       //Speakers,
       AboutJ1,
       AboutJ2,
+      AboutJ3,
       //Robot,
       //Main,
       //Paragraph,
       DatesJ1,
       DatesJ2,
+      DatesJ3,
       HomeJ1,
       HomeJ2,
+      HomeJ3,
       //Supporters
     }
   })

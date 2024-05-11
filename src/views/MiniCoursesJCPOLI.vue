@@ -24,8 +24,6 @@ import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // Página d
 import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // Página de Minicursos da 2º Edição da JCPOLI
 import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // Página de Minicursos da 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
-
 @Component({
   components: {
     MinicursosJ1,

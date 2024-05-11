@@ -42,7 +42,7 @@
                       id="cienciaemcasa"
                       src="assets/img/cienciaemcasa_preto-removebg.png"
                     />
-                    <img id="logo" src="assets/img/logo_full_JCPOLI.png" />
+                    <img id="logo" src="assets/img/logoJCPOLI.png" />
                   </div>
                 </div>
               </v-layout>
@@ -124,7 +124,10 @@
   }
   
   #logo {
-    width: 6rem;
+    width: 10rem;
+    height: 6rem;
+    position:relative;
+    right: 1rem;
   }
   
   #cienciaemcasa {

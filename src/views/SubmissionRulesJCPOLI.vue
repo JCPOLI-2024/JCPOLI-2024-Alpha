@@ -24,8 +24,6 @@ import OrientacoesJ1 from '@/components/abasJCPOLI/OrientacoesJ1.vue' // Página
 import OrientacoesJ2 from '@/components/abasJCPOLI/OrientacoesJ2.vue' // Página das Orientações da 2º Edição da JCPOLI
 import OrientacoesJ3 from '@/components/abasJCPOLI/OrientacoesJ3.vue' // Página das Orientações da 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
-
 @Component({
   components: {
     OrientacoesJ1,

@@ -24,8 +24,6 @@ import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // Página d
 import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // Página das Exposições 2º Edição da JCPOLI
 import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // Página das Exposições 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
-
 @Component({
   components: {
     ExposicoesJ1,

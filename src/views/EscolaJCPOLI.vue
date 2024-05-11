@@ -24,8 +24,6 @@ import EscolaJ1 from '@/components/abasJCPOLI/EscolaJ1.vue' // Págiana da Escol
 import EscolaJ2 from '@/components/abasJCPOLI/EscolaJ2.vue' // Págiana da Escola da 2º Edição da JCPOLI
 import EscolaJ3 from '@/components/abasJCPOLI/EscolaJ3.vue' // Págiana da Escola da 3º Edição da JCPOLI
 
-//import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
-
 @Component({
   components: {
     EscolaJ1,

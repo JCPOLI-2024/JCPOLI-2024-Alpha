@@ -1,4 +1,4 @@
-<!-- Página JCPOLI - Datas para a página da aba "Home" da 1º JCPOLI -->
+ 
 <template>
     <div style="margin:40px 0">
       <div>
@@ -31,6 +31,7 @@
     </div>
   </template>
   
+  
   <script lang="ts">
   import { Component, Vue, Prop } from 'vue-property-decorator'
   
@@ -55,18 +56,18 @@
   
     private dates = [
       {
-        date: 'Até 26 de Maio de 2022',
-        event: 'Período para encaminhamento dos artigos',
+        date: '01 a 23 de março de 2024',
+        event: 'Período para encaminhamento dos artigos e resumos expandidos',
         disabled: false
       },
       {
-        date: 'até 06 de Junho de 2022',
-        event: 'Período para avaliação, revisão e correção dos artigos',
+        date: '24 de março até 01 de abril de 2024',
+        event: 'Período para avaliação, revisão e correção dos artigos e resumos expandidos',
         disabled: false
       },
       {
-        date: '06 a 15 de Junho de 2022',
-        event: 'Apresentação do artigo durante as apresentações de TCC',
+        date: '19 de abril de 2024',
+        event: 'Apresentação dos artigos e resumos expandidos na III JCPOLI',
         disabled: false
       }
     ]
@@ -89,4 +90,3 @@
     font-size: 16px;
   }
   </style>
-  
