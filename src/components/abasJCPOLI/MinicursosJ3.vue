@@ -50,8 +50,8 @@
   //Para pegar os minicursos que estavam na Escola Politécnica e de Artes
   //import { miniCourses_Section } from '@/models/miniCourses'
   
-  //Para pegar os minicursos que estavam na 1 JCPOLI
-  import { miniCourses_Section } from '@/models/modelsJCPOLI/miniCourses3JCPOLI'
+  //Para pegar os minicursos que estavam na 3 JCPOLI
+  import { miniCourses_Section } from '@/models/miniCourses3JCPOLI'
   @Component({
     components: {
       PhotoHeader,
