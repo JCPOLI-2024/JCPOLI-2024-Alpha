@@ -25,70 +25,70 @@ const router = new Router({
       path: "/JCPOLI:edicao/Escola",
       name: "Escola",
       component: () =>
-        import(/* webpackChunkName: "escola" */ "./views/EscolaJCPOLI.vue")
+        import(/* webpackChunkName: "escola" */ "./views/Escola.vue")
     },
     // Rota para a aba "Palestras" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Palestras",
       name: "Palestras",
       component: () =>
-        import(/* webpackChunkName: "palestra" */ "./views/PalestrasJCPOLI.vue")
+        import(/* webpackChunkName: "palestra" */ "./views/Palestras.vue")
     },
    // Rota para a aba "Minicursos" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Minicursos",
       name: "Minicursos",
       component: () =>
-        import(/* webpackChunkName: "minicurso" */ "./views/MiniCoursesJCPOLI.vue")
+        import(/* webpackChunkName: "minicurso" */ "./views/MiniCourses.vue")
     },
    // Rota para a aba "Competições" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Competicoes",
       name: "Competicoes",
       component: () =>
-        import(/* webpackChunkName: "programacao" */ "./views/CompeticaoJCPOLI.vue")
+        import(/* webpackChunkName: "programacao" */ "./views/Competicao.vue")
     },
     // Rota para a aba "Ciencia em Casa" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/CienciaEmCasa",
       name: "CienciaEmCasa",
       component: () =>
-        import(/* webpackChunkName: "programacao" */ "./views/CienciaEmCasaJCPOLI.vue")
+        import(/* webpackChunkName: "programacao" */ "./views/CienciaEmCasa.vue")
     },
     // Rota para a aba "Exposições" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Exposicoes",
       name: "Exposicoes",
       component: () =>
-        import(/* webpackChunkName: "exposicoes" */ "./views/ExposicoesJCPOLI.vue")
+        import(/* webpackChunkName: "exposicoes" */ "./views/Exposicoes.vue")
     },
     // Rota para a aba "Publicações" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Anais",
       name: "Anais",
       component: () =>
-        import(/* webpackChunkName: "egressos" */ "./views/AnaisJCPOLI.vue")
+        import(/* webpackChunkName: "egressos" */ "./views/Anais.vue")
     },
     // Rota para a aba "Orientações" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Orientacoes",
       name: "Orientacoes",
       component: () =>
-        import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesJCPOLI.vue")
+        import(/* webpackChunkName: "orientacoes" */ "./views/Orientacoes.vue")
     },
     // Rota para a aba "Fotos" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Fotos",
       name: "Fotos",
       component: () =>
-        import(/* webpackChunkName: "orientacoes" */ "./views/FotosJCPOLI.vue")
+        import(/* webpackChunkName: "orientacoes" */ "./views/Fotos.vue")
     },
     // Rota para a aba do "Edições" dos palestrantes dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Edicoes",
       name: "Edicoes",
       component: () =>
-        import(/* webpackChunkName: "edicoes" */ "./views/EdicoesJCPOLI.vue")
+        import(/* webpackChunkName: "edicoes" */ "./views/Edicoes.vue")
     },
     // Rota para a aba do perfil dos palestrantes dentro da aba JCPOLI
     // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
@@ -124,13 +124,13 @@ const router = new Router({
 //     {
 //       path: "/Programacao",
 //       component: () =>
-//         import(/* webpackChunkName: "programacao" */ "./views/ProgramacaoJCPOLI.vue")
+//         import(/* webpackChunkName: "programacao" */ "./views/Programacao.vue")
 //     },
 //     //Pagina da JCPOLI -  Pagina de Egressos
 //     {
 //       path: "/Egressos",
 //       component: () =>
-//         import(/* webpackChunkName: "egressos" */ "./views/EgressosJCPOLI.vue")
+//         import(/* webpackChunkName: "egressos" */ "./views/Egressos.vue")
 //     },
 
 ////////////////////////////////////////////////// Pagina da JCPOLI - Rascunho para lógica de rotas usando children (não consegui dar certo) ////////////////////////////////////////////////////////////////////////////////

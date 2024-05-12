@@ -27,7 +27,7 @@
       CienciaEmCasaJ3,
     }
   })
-  export default class CienciaEmCasaJCPOLI extends Vue {
+  export default class CienciaEmCasa extends Vue {
   
     // Para indentificar atraves do link em qual versão da JCPOLI tá
     get edicaoAtual() {

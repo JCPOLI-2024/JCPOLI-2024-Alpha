@@ -1,17 +1,17 @@
-<!-- Pagina da JCPOLI -  Pagina da aba "Exposições"  -->
+<!-- Pagina da JCPOLI -  Pagina da aba "Orientações"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
     <template v-if="edicaoAtual === 1">
-      <ExposicoesJ1 />
+      <OrientacoesJ1 />
     </template>
     <!-- 2º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 2">
-      <ExposicoesJ2 />
+      <OrientacoesJ2 />
     </template>
     <!-- 3º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 3">
-      <ExposicoesJ3 />
+      <OrientacoesJ3 />
     </template>
    
    
@@ -20,18 +20,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // Página das Exposições 1º Edição da JCPOLI
-import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // Página das Exposições 2º Edição da JCPOLI
-import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // Página das Exposições 3º Edição da JCPOLI
+import OrientacoesJ1 from '@/components/abasJCPOLI/OrientacoesJ1.vue' // Página das Orientações da 1º Edição da JCPOLI
+import OrientacoesJ2 from '@/components/abasJCPOLI/OrientacoesJ2.vue' // Página das Orientações da 2º Edição da JCPOLI
+import OrientacoesJ3 from '@/components/abasJCPOLI/OrientacoesJ3.vue' // Página das Orientações da 3º Edição da JCPOLI
 
 @Component({
   components: {
-    ExposicoesJ1,
-    ExposicoesJ2,
-    ExposicoesJ3
+    OrientacoesJ1,
+    OrientacoesJ2,
+    OrientacoesJ3
   }
 })
-export default class ExposicoesJCPOLI extends Vue {
+export default class Orientacoes extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

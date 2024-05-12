@@ -28,7 +28,7 @@
       FotosJ3,
     }
   })
-  export default class FotosJCPOLI extends Vue {
+  export default class Fotos extends Vue {
   
     // Para indentificar atraves do link em qual versão da JCPOLI tá
     get edicaoAtual() {

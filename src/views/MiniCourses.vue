@@ -1,17 +1,17 @@
-<!-- Pagina da JCPOLI -  Pagina da aba "Palestras"  -->
+<!-- Pagina da JCPOLI -  Pagina da aba "Minicursos"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
     <template v-if="edicaoAtual === 1">
-      <PalestrasJ1 />
+      <MinicursosJ1 />
     </template>
     <!-- 2º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 2">
-      <PalestrasJ2 />
+      <MinicursosJ2 />
     </template>
     <!-- 3º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 3">
-      <PalestrasJ3 />
+      <MinicursosJ3 />
     </template>
    
    
@@ -20,18 +20,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import PalestrasJ1 from '@/components/abasJCPOLI/PalestrasJ1.vue' // Página de Palestras da 1º Edição da JCPOLI
-import PalestrasJ2 from '@/components/abasJCPOLI/PalestrasJ2.vue' // Página de Palestras da 2º Edição da JCPOLI
-import PalestrasJ3 from '@/components/abasJCPOLI/PalestrasJ3.vue' // Página de Palestras da 3º Edição da JCPOLI
+import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // Página de Minicursos da 1º Edição da JCPOLI
+import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // Página de Minicursos da 2º Edição da JCPOLI
+import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // Página de Minicursos da 3º Edição da JCPOLI
 
 @Component({
   components: {
-    PalestrasJ1,
-    PalestrasJ2,
-    PalestrasJ3
+    MinicursosJ1,
+    MinicursosJ2,
+    MinicursosJ3
   }
 })
-export default class PalestrasJCPOLI extends Vue {
+export default class MiniCourses extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

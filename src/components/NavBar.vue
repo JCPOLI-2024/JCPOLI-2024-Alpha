@@ -41,7 +41,7 @@
     <!-- Nova forma para exibir a logo e data da edição atual da JCPOLI -->
     <div class="nav-info">
       <div id="logo">
-        <a href="/">
+        <a href="/JCPOLI3">
           <img id="logo" src="/assets/img/logoJCPOLI.png" style="width: 270px; left: 30px; height: auto; position: absolute; float: right; top: -35px; ">
         </a>
         <span class="title"></span>

@@ -1,17 +1,17 @@
-<!-- Pagina da JCPOLI -  Pagina da aba "Publicações"  -->
+<!-- Pagina da JCPOLI -  Pagina da aba "Competições"  -->
 <template>
   <v-app class="home" id="inspire">
     <!-- 1º Edição da JCPOLI -->
     <template v-if="edicaoAtual === 1">
-      <AnaisJ1 />
+      <CompeticaoJ1 />
     </template>
     <!-- 2º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 2">
-      <AnaisJ2 />
+      <CompeticaoJ2 />
     </template>
     <!-- 3º Edição da JCPOLI -->
     <template v-else-if="edicaoAtual === 3">
-      <AnaisJ3 />
+      <CompeticaoJ3 />
     </template>
    
    
@@ -20,18 +20,18 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import AnaisJ1 from '@/components/abasJCPOLI/AnaisJ1.vue' // Página das Publicações da 1º Edição da JCPOLI
-import AnaisJ2 from '@/components/abasJCPOLI/AnaisJ2.vue' // Página das Publicações da 2º Edição da JCPOLI
-import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // Página das Publicações da 3º Edição da JCPOLI
+import CompeticaoJ1 from '@/components/abasJCPOLI/CompeticaoJ1.vue' // Página das Competições da 1º Edição da JCPOLI
+import CompeticaoJ2 from '@/components/abasJCPOLI/CompeticaoJ2.vue' // Página das Competições da 2º Edição da JCPOLI
+import CompeticaoJ3 from '@/components/abasJCPOLI/CompeticaoJ3.vue' // Página das Competições da 3º Edição da JCPOLI
 
 @Component({
   components: {
-    AnaisJ1,
-    AnaisJ2,
-    AnaisJ3
+    CompeticaoJ1,
+    CompeticaoJ2,
+    CompeticaoJ3
   }
 })
-export default class AnaisJCPOLI extends Vue {
+export default class Competicao extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {

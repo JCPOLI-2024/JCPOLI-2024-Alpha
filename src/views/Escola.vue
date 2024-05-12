@@ -31,7 +31,7 @@ import EscolaJ3 from '@/components/abasJCPOLI/EscolaJ3.vue' // Págiana da Escol
     EscolaJ3
   }
 })
-export default class EscolaJCPOLI extends Vue {
+export default class Escola extends Vue {
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {
