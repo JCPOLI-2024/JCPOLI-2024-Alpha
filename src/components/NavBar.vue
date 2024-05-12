@@ -1,10 +1,7 @@
-<!-- Página Politécnica -Navbar para as abas da Politécnica -->
+<!-- Página JCPOLI -Navbar para as abas da JCPOLI -->
 <template>
-  <div class="navbar-h">
-  <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
-  <!-- <div class="navbar-h mx-auto"> -->
-
-    <!-- Abas da Politécnica e JCPOLI de quando está no mobile -->
+  <div class="navbar-h mx-auto">
+    <!-- Abas da JCPOLI de quando está no mobile -->
     <input type="checkbox" id="open-mmenu" :style="{ display: 'none' }" />
     <div  class="mobile menu-mobile"> <!-- barra lateral -->
       <div>
@@ -14,17 +11,8 @@
           </label>
         </dir>
       </div>
-    <!-- Mostra as abas de quando está da Politécnica -->
+      <!-- Mostra as abas de quando está na 1º ou 2º JCPOLI -->
       <ul  v-if="!isSpecialRoute()">
-        <router-link to="/" tag="li">Home</router-link>  
-        <router-link to="/hackathon" tag="li">Hackathon</router-link>
-        <router-link to="/manutencao" tag="li">Desafios</router-link>
-        <router-link to="/TCC" tag="li">TCC</router-link>
-        <router-link :to="jcpoliUltimaEdicaoLink" tag="li">JCPOLI</router-link>
-      </ul>
-      <!-- Mostra as abas de quando está na rota JCPOLI -->
-      <ul v-else>
-        <router-link to="/" tag="li">Politécnica</router-link>
         <router-link :to="jcpoliLink" tag="li">Home</router-link>
         <router-link :to="escolaLink" tag="li">Escola</router-link>
         <router-link :to="palestrasLink" tag="li">Palestras</router-link>
@@ -35,63 +23,76 @@
         <router-link :to="anaisLink" tag="li">Publicações</router-link>
         <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
         <router-link :to="fotosLink" tag="li">Fotos</router-link>
-        <router-link to="/Edicoes" tag="li">Edições</router-link>
+        <router-link :to="edicoesLink" tag="li">Edições</router-link>
+      </ul>
+      <!-- Mostra as abas de quando está na <3º JCPOLI -->
+      <ul v-else>
+        <router-link :to="jcpoliLink" tag="li">Home</router-link>
+        <router-link :to="escolaLink" tag="li">Escola</router-link>
+        <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+        <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+        <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+        <router-link :to="anaisLink" tag="li">Publicações</router-link>
+        <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <router-link :to="edicoesLink" tag="li">Edições</router-link>
       </ul>
     </div>
-
-    <div class="logo">
-      <a href="/">
-        <img src="/assets/img/Poli_azul.png" alt="logo da puc">
-      </a>
-    </div>
-    
-    <div id="espacador">
-      
-    </div>
-
-    <!-- Abas da Politécnica de quando está não está no mobile -->
-    <div class="titulo-e-nav">      
-      <p>Pontifícia Universidade Católica de Goiás</p>
-      <div class="nav-container desktop">
-      <ul>
-        <router-link to="/" tag="li">Home</router-link>  
-        <router-link to="/hackathon" tag="li">Hackathon</router-link>
-        <router-link to="/manutencao" tag="li">Desafio CD</router-link>
-        <router-link to="/TCC" tag="li">TCC</router-link>
-        <router-link :to="jcpoliUltimaEdicaoLink" tag="li">JCPOLI</router-link>
-
-        <!-- Rascunho para uma futura possivel dropdown na parte de abas -->
-        <!-- <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-          JCPOLI III
-          <ul v-if="showDropdown" class="dropdown-content">
-            <router-link to="/JCPOLI" tag="li">Home</router-link>
-            <router-link to="/escolaj" tag="li">Escola</router-link>
-            <router-link to="/palestrasj" tag="li">Palestras</router-link>
-            <router-link to="/minicursosj" tag="li">Minicursos</router-link>
-            <router-link to="/competicoesj" tag="li">Competições</router-link>
-            <router-link to="/exposicoesj" tag="li">Exposições</router-link>
-            <router-link to="/anaisj" tag="li">Publicações</router-link>
-          </ul>
-        </li> -->
-      
-      </ul>
+    <!-- Nova forma para exibir a logo e data da edição atual da JCPOLI -->
+    <div class="nav-info">
+      <div id="logo">
+        <a href="/">
+          <img id="logo" src="assets/img/logoJCPOLI.png" style="width: 270px; left: 30px; height: auto; position: absolute; float: right; top: -35px; ">
+        </a>
+        <span class="title"></span>
+        <br />
+        <span>
+        </span>
+      </div>
+      <div class="nav-date">
+        <span class="desktop" :style="{ textAlign: 'right' }">
+          <!-- Exibe a data da edição atual da JCPOLI -->
+          {{ getDataEdicaoAtual() }}
+          <br />PUC Goiás <br />Goiânia-GO
+        </span>
+        <span class="mobile sm-device">
+          {{ getDataEdicaoAtual() }} PUC Goiás Goiânia-GO
+        </span>
+      </div>
+      <div class="mobile">
+        <label for="open-mmenu">
+          <i class="fas fa-bars"></i>
+        </label>
       </div>
     </div>
-
-    <!-- Nova posição da logo da JCPOLI -->
-    <div class="logo-jcpoli">
-      <!-- Mostra a edição atual da JCPOLI -->
-      <a :href="jcpoliUltimaEdicaoLink">
-        <img src="/assets/img/logoJCPOLI.png" alt="logo da puc">
-      </a>
+    <div class="nav-container desktop">
+      <!-- Mostra as abas de quando está na 1º ou 2º JCPOLI -->
+      <ul  v-if="!isSpecialRoute()">
+        <router-link :to="jcpoliLink" tag="li">Home</router-link>
+        <router-link :to="escolaLink" tag="li">Escola</router-link>
+        <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+        <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+        <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="cienciaemcasaLink" tag="li">Ciência em Casa</router-link>
+        <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+        <router-link :to="anaisLink" tag="li">Publicações</router-link>
+        <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <router-link :to="fotosLink" tag="li">Fotos</router-link>
+        <router-link :to="edicoesLink" tag="li">Edições</router-link>
+      </ul>
+      <!-- Mostra as abas de quando está na <3º JCPOLI -->
+      <ul v-else>
+        <router-link :to="jcpoliLink" tag="li">Home</router-link>
+        <router-link :to="escolaLink" tag="li">Escola</router-link>
+        <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+        <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+        <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+        <router-link :to="anaisLink" tag="li">Publicações</router-link>
+        <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <router-link :to="edicoesLink" tag="li">Edições</router-link>
+      </ul>
     </div>
-    
-    <div id="barra-mobile" class="mobile"> <!-- imagem do amburguer -->
-        <label for="open-mmenu">
-          <i class="fas fa-bars fa-3x"></i>
-        </label>
-    </div>
-
   </div>
 </template>
 
@@ -116,13 +117,27 @@ export default class NavBar extends Vue {
     return `/JCPOLI${ultimaEdicao}`;
   }
 
-  // A partir daqui é toda a lógica para poder mostrar as abas epecificas da JCPOLI no formato mobile
-  
-  // Pra poder identificar se está na rota da JCPOLI
-  isSpecialRoute() {
-    // Verifica se a rota atual está relacionada à JCPOLI
-    return this.$route.path.startsWith("/JCPOLI");
+  // Método para formatar a data da edição atual da JCPOLI
+  getDataEdicaoAtual() {
+    const edicao = this.edicaoAtual;
+    if (edicao === 1) {
+      return "De 9 a 11 de Maio de 2022";
+    } else if (edicao === 2) {
+      return "De 8 a 10 de Maio de 2023";
+    } else if (edicao === 3) {
+      return "De 17 a 20 de Abril de 2024";
+    } else {
+      return ""; // Caso a edição não seja encontrada ou não esteja definida
+    }
   }
+  
+  // Pra poder identificar se está na rota é a 1º ou 2º JCPOLI
+  isSpecialRoute() {
+    // Verifica se a rota atual está relacionada à JCPOLI1 ou JCPOLI2
+    return this.$route.path.startsWith("/JCPOLI1") || this.$route.path.startsWith("/JCPOLI2");
+  }
+
+   // A partir daqui é toda a lógica para poder ter as lógicas das rotas JCPOLI:Edição/"aba"
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {
@@ -174,6 +189,10 @@ export default class NavBar extends Vue {
    get fotosLink() {
      return `/JCPOLI${this.edicaoAtual}/Fotos`;
    }
+   // Método para construir o link para página de Edicoes JCPOLI
+   get edicoesLink() {
+     return `/JCPOLI${this.edicaoAtual}/Edicoes`;
+   }
   // Termino toda a lógica para poder mostrar as abas epecificas da JCPOLI no formato mobile
 
   created() {
@@ -212,53 +231,60 @@ export default class NavBar extends Vue {
 
 }
 </script>
-
 <style scoped>
+#logo {
+  left: -6rem;
+  height: 5rem;
+  top: -0.5rem;
+}
 
-
+#logo-nav-bar {
+  text-align: left;
+}
 
 .navbar-h {
   position: relative;
   padding: 20px 0;
-  padding-left: 10px;
   background-color: white;
-  width: 100%;
+  max-width: 2000px;
+}
+
+.navbar-h .nav-info {
+  color: #576574;
   display: flex;
-  justify-content: baseline;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-
-.titulo-e-nav p {
-  font-size: 1.5rem;
-  margin-bottom: 0px;
-  
+.navbar-h .nav-info img {
+  position: absolute;
+  height: 113px;
+  left: -80px;
 }
-
-.logo {
-  margin-right: 1rem;
+.navbar-h .nav-info .title {
+  font-size: 30px;
 }
-
-.logo-jcpoli {
-
-  /* 1º Opção de tamanho de logo sem posição absoluta (logo pequena)*/
-  /* transform: scale(0.25, 0.25);
-  max-width: 30px;
-  height: 0px;
-  top: 0rem;
-  margin-right: 18rem;
-  margin-left: auto;
-  margin-top: -1.5rem; */
-
-   /* 2º Opção de tamanho de logo (maior que a ultima logo, ou seja, mais visivel o letreiro)*/
-  transform: scale(0.251, 0.26);
-  max-width: 16px;
-  height: 0px;
-  top: 0rem;
-  margin-right: 19rem;
-  margin-left: auto;
-  margin-top: -1.8rem;
+.navbar-h .nav-info > div {
+  position: relative;
 }
-
-
+.navbar-h .nav-info > div:nth-child(2) {
+  text-align: left;
+}
+.navbar-h .nav-info > div:last-child {
+  text-align: right;
+}
+.navbar-h .nav-info span,
+.navbar-h .nav-info p,
+.navbar-h .nav-info h1,
+.navbar-h .nav-info h2,
+.navbar-h .nav-info h3 {
+  color: inherit;
+}
+.navbar-h .nav-date {
+  font-style: italic;
+  font-size: smaller;
+  display: flex;
+  align-items: flex-end;
+}
 .navbar-h .nav-container {
   display: flex;
   justify-content: center;
@@ -270,9 +296,10 @@ export default class NavBar extends Vue {
   margin: 0;
   border-top: 2px solid #576574;
 }
+/* padding que altera as dimensões dentro da navbar */
 .navbar-h .nav-container > ul li {
   position: relative;
-  padding: 15px 45px;
+  padding: 15px 18px;
   font-family: 'Montserrat', sans-serif;
   color: #576574;
   transition: all 50ms ease;
@@ -299,45 +326,65 @@ export default class NavBar extends Vue {
   border: none;
   text-decoration: none;
 }
-
-
 @media screen and (max-width: 768px) {
   .navbar-h {
     position: unset;
-    padding: 10px 0;    
-  }  
-
-  #barra-mobile {
-    left: 150px;
+    padding: 10px 0;
+    margin: 0 15px;
+  }
+  .navbar-h .nav-info {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 'lg t1 mn' 'lg t2 mn';
+  }
+  .navbar-h .nav-info label {
+    margin: 0;
+  }
+  .navbar-h .nav-info img {
+    grid-area: lg;
+    position: unset;
+    left: unset;
+    height: 90px;
+    margin-right: 22px;
+  }
+  .navbar-h .nav-info > div {
+    grid-area: t1;
+  }
+  .navbar-h .nav-info > div:last-child {
+    grid-area: mn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22pt;
+  }
+  .navbar-h .nav-info > div:last-child i {
+    margin: 15px;
+  }
+  .navbar-h .nav-info .nav-date {
+    grid-area: t2;
   }
 }
-
-@media screen and (max-width: 570px) {
-  #barra-mobile {
-    left: 100px;
+@media screen and (max-width: 425px) {
+  .navbar-h .nav-info > div:last-child i {
+    margin: 5px;
   }
 }
-
-@media screen and (max-width: 533px) {  
-  .titulo-e-nav {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 455px) {
-  #barra-mobile {
-    left: 50px;
-  }
-}
-
-
 @media screen and (max-width: 375px) {
-  #barra-mobile {
-    left: 20px;
+  .navbar-h .nav-info span {
+    font-size: 12px;
+    text-align: left;
   }
-
 }
-
+@media screen and (max-width: 320px) {
+  .navbar-h {
+    margin: 0 5px;
+  }
+  .navbar-h .nav-info img {
+    margin-right: 10px;
+  }
+}
 
 #open-mmenu:checked + div {
   right: 0;
@@ -352,12 +399,11 @@ export default class NavBar extends Vue {
   right: -100%;
   bottom: 0;
   box-shadow: -2px -2px 16px;
-  transition: right 800ms ease-in-out;  
+  transition: right 800ms ease-in-out;
 }
 .menu-mobile ul {
   padding: 0;
   margin: 0;
-  list-style-type: none;
 }
 .menu-mobile ul li {
   padding: 15px;
@@ -387,107 +433,29 @@ export default class NavBar extends Vue {
   text-decoration: none;
 }
 
-/* Rascunho para uma futura possivel dropdown na parte de abas */
-/* Estilos para o dropdown */
-/*
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding: 0;
-}
-
-.dropdown-content li {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: inline-block; /* Exibir as abas na horizontal 
-}
-
-.dropdown-content li:hover {
-  background-color: #f1f1f1;
-}
-
-/* Mostra o dropdown quando o mouse está sobre a aba "JCPOLI" 
-.nav-container.desktop .dropdown:hover .dropdown-content {
-  display: block;
-}
-*/
-
-@media screen and (min-width: 926px) {
+@media screen and (min-width: 769px) {
   .mobile {
     display: none !important;
   }
 }
-
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 768px) {
   .desktop {
     display: none !important;
   }
-  .navbar-h {
-    justify-content: space-between;
-    padding-right: 1rem;
-  }
-
-  #barra-mobile {
-    display: flex;
-    justify-content: center; /* Alinhar horizontalmente ao centro */
-    align-items: center;    
-  }
-
-
 }
-
-@media screen and (max-width: 356px) {
-
-  .logo {
-    margin-right: 0px;
-  }
-
-
-}
-
-@media screen and (max-width: 341px) {
-
-
-  .logo, .logo img {
-    transform: scale(0.9, 0.9);
-  }
-
-  .logo {
-    margin-left: -1rem;
-  }
-
-  #barra-mobile {
-    margin-left: -8rem;
-  }
-  
-
-}
-
-@media screen and (max-width: 328px) {
-
-  .logo a {
-    right: 2rem;
-  }
-
-  #barra-mobile {
-    z-index: 1;
+@media screen and (max-width: 425px) {
+  .lg-device {
+    display: none !important;
   }
 }
-
+@media screen and (max-width: 375px) {
+  .md-device {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 320px) {
-
-  #barra-mobile {
-    left: 90px;
+  .sm-device {
+    display: none !important;
   }
 }
-
 </style>

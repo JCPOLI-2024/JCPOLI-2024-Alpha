@@ -140,6 +140,13 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "orientacoes" */ "./views/FotosJCPOLI.vue")
     },
+    // Rota para a aba do "Edições" dos palestrantes dentro da aba JCPOLI
+    {
+      path: "/JCPOLI:edicao/Edicoes",
+      name: "Edicoes",
+      component: () =>
+        import(/* webpackChunkName: "edicoes" */ "./views/EdicoesJCPOLI.vue")
+    },
     // Rota para a aba do perfil dos palestrantes dentro da aba JCPOLI
     // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
     {
@@ -147,14 +154,6 @@ const router = new Router({
       name: "speakerProfile",
       component: () =>
         import(/* webpackChunkName: "speakerProfile" */ "./views/SpeakerProfile.vue")
-    },
-    // Rota para a aba do "Edições" dos palestrantes dentro da aba JCPOLI
-    // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
-    {
-      path: "/Edicoes",
-      name: "Edicoes",
-      component: () =>
-        import(/* webpackChunkName: "edicoes" */ "./views/EdicoesJCPOLI.vue")
     },
 
 // //########################################## Pagina da JCPOLI e Escola Politecnica de Artes - Rotas inativas de abas não utilizadas por enquanto ##########################################
