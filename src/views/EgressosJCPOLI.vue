@@ -36,7 +36,7 @@
   import HorizontalList from '@/components/organization/HorizontalList.vue'
   import Speakers from '@/components/organization/Speakers.vue'
   import Columns from '@/components/organization/Columns.vue'
-  import Organization from '@/components/organization/Names.vue'
+  //import Organization from '@/components/organization/Names.vue'
   //import Supporters from '@/components/organization/Supporters.vue'
   //import { speakers_list } from '@/storage/programacao/speakers'
   
@@ -48,7 +48,7 @@
       Paragraph,
       Speakers,
       Columns,
-      Organization
+      //Organization
       //Supporters
     }
   })

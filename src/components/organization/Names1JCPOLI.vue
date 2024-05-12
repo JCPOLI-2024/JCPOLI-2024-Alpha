@@ -1,3 +1,6 @@
+<!-- SOLUÇÃO TEMPORARIA de como dividir os nomes dos participantes de cada JCPOLI (que é chamado em "EscolaJ1", "EscolaJ2" e"EscolaJ3") -->
+<!-- Assim, foi criado o "Names1JCPOLI.vue", "Names2JCPOLI.vue" e "Names3JCPOLI.vue" -->
+<!-- Cada um chamando uma a parte especifica do "comites.ts" de cada edição -->
 <template>
   <div class="organization-container">
     <div>
@@ -59,8 +62,8 @@ import PhotoHeader from '@/components/organization/PhotoHeader.vue'
 import Main from '@/components/organization/Main.vue'
 import Comissao from '@/components/dialogs/Comissao.vue'
 import {
-  ComiteListOrganization,
-  ComiteListCientific
+  ComiteListOrganizationJCPOLI1,
+  ComiteListCientificJCPOLI1
 } from '@/storage/programacao/comites'
 
 @Component({
@@ -73,8 +76,8 @@ import {
 export default class Organization extends Vue {
   private showComissao = false
   private comite = {}
-  private organizacao = ComiteListOrganization
-  private cientific = ComiteListCientific
+  private organizacao = ComiteListOrganizationJCPOLI1
+  private cientific = ComiteListCientificJCPOLI1
   private showInfo(organizador: any) {
     if (organizador.participantes) {
       this.comite = organizador
