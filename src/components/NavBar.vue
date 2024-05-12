@@ -30,9 +30,11 @@
         <router-link :to="palestrasLink" tag="li">Palestras</router-link>
         <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
         <router-link :to="competicoesLink" tag="li">Competições</router-link>
+        <router-link :to="cienciaemcasaLink" tag="li">Ciência em Casa</router-link>
         <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
         <router-link :to="anaisLink" tag="li">Publicações</router-link>
         <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+        <router-link :to="fotosLink" tag="li">Fotos</router-link>
         <router-link to="/Edicoes" tag="li">Edições</router-link>
       </ul>
     </div>
@@ -152,6 +154,10 @@ export default class NavBar extends Vue {
    get competicoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Competicoes`;
    }
+   // Método para construir o link para a Ciencia Em Casa a partir da 3º edição JCPOLI
+   get cienciaemcasaLink() {
+     return `/JCPOLI${this.edicaoAtual}/CienciaEmCasa`;
+   }
   // Método para construir o link para a Exposicoes da edição atual da JCPOLI
    get exposicoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Exposicoes`;
@@ -163,6 +169,10 @@ export default class NavBar extends Vue {
   // Método para construir o link para a Orientacoes da edição atual da JCPOLI
    get orientacoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Orientacoes`;
+   }
+   // Método para construir o link para as Fotos a partir da 3º edição JCPOLI
+   get fotosLink() {
+     return `/JCPOLI${this.edicaoAtual}/Fotos`;
    }
   // Termino toda a lógica para poder mostrar as abas epecificas da JCPOLI no formato mobile
 

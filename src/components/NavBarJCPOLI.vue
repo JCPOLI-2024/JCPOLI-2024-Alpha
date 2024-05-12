@@ -93,7 +93,21 @@
       </div>
       <!-- Abas da JCPOLI de quando está não está no mobile -->
       <div class="nav-container desktop">
-        <ul>
+        <ul  v-if="!isSpecialRoute()">
+          <router-link :to="jcpoliLink" tag="li">Home</router-link>
+          <router-link :to="escolaLink" tag="li">Escola</router-link>
+          <router-link :to="palestrasLink" tag="li">Palestras</router-link>
+          <router-link :to="minicursosLink" tag="li">Minicursos</router-link>
+          <router-link :to="competicoesLink" tag="li">Competições</router-link>
+          <router-link :to="cienciaemcasaLink" tag="li">Ciência em Casa</router-link>
+          <router-link :to="exposicoesLink" tag="li">Exposições</router-link>
+          <router-link :to="anaisLink" tag="li">Publicações</router-link>
+          <router-link :to="orientacoesLink" tag="li">Orientações</router-link>
+          <router-link :to="fotosLink" tag="li">Fotos</router-link>
+          <!-- <router-link to="/jges" tag="li">JGES</router-link> -->
+          <router-link to="/Edicoes" tag="li">Edições</router-link>
+        </ul>
+        <ul v-else>
           <router-link :to="jcpoliLink" tag="li">Home</router-link>
           <router-link :to="escolaLink" tag="li">Escola</router-link>
           <router-link :to="palestrasLink" tag="li">Palestras</router-link>
@@ -134,6 +148,13 @@ export default class NavBarJCPOLI extends Vue {
   // created() {
   //   this.$router.beforeEach(this.closeMenuOnRouteChange)    
   // }
+
+  // Pra poder identificar se está na rota é a 1º ou 2º JCPOLI
+  isSpecialRoute() {
+  // Verifica se a rota atual está relacionada à JCPOLI1 ou JCPOLI2
+  return this.$route.path.startsWith("/JCPOLI1") || this.$route.path.startsWith("/JCPOLI2");
+}
+
 
   // Para indentificar atraves do link em qual versão da JCPOLI tá
   get edicaoAtual() {
@@ -179,6 +200,10 @@ export default class NavBarJCPOLI extends Vue {
    get competicoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Competicoes`;
    }
+   // Método para construir o link para a Ciencia Em Casa a partir da 3º edição JCPOLI
+   get cienciaemcasaLink() {
+     return `/JCPOLI${this.edicaoAtual}/CienciaEmCasa`;
+   }
   // Método para construir o link para a Exposicoes da edição atual da JCPOLI
    get exposicoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Exposicoes`;
@@ -190,6 +215,10 @@ export default class NavBarJCPOLI extends Vue {
   // Método para construir o link para a Orientacoes da edição atual da JCPOLI
    get orientacoesLink() {
      return `/JCPOLI${this.edicaoAtual}/Orientacoes`;
+   }
+   // Método para construir o link para as Fotos a partir da 3º edição JCPOLI
+   get fotosLink() {
+     return `/JCPOLI${this.edicaoAtual}/Fotos`;
    }
 }
 </script>
@@ -261,9 +290,10 @@ export default class NavBarJCPOLI extends Vue {
   margin: 0;
   border-top: 2px solid #576574;
 }
+/* padding que altera as dimensões dentro da navbar */
 .navbar-h .nav-container > ul li {
   position: relative;
-  padding: 15px 38px;
+  padding: 15px 23px; 
   font-family: 'Montserrat', sans-serif;
   color: #576574;
   transition: all 50ms ease;

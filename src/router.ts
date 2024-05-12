@@ -105,6 +105,13 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "programacao" */ "./views/CompeticaoJCPOLI.vue")
     },
+    // Rota para a aba "Ciencia em Casa" dentro da aba JCPOLI
+    {
+      path: "/JCPOLI:edicao/CienciaEmCasa",
+      name: "CienciaEmCasa",
+      component: () =>
+        import(/* webpackChunkName: "programacao" */ "./views/CienciaEmCasaJCPOLI.vue")
+    },
     // Rota para a aba "Exposições" dentro da aba JCPOLI
     {
       path: "/JCPOLI:edicao/Exposicoes",
@@ -125,6 +132,13 @@ const router = new Router({
       name: "Orientacoes",
       component: () =>
         import(/* webpackChunkName: "orientacoes" */ "./views/SubmissionRulesJCPOLI.vue")
+    },
+    // Rota para a aba "Fotos" dentro da aba JCPOLI
+    {
+      path: "/JCPOLI:edicao/Fotos",
+      name: "Fotos",
+      component: () =>
+        import(/* webpackChunkName: "orientacoes" */ "./views/FotosJCPOLI.vue")
     },
     // Rota para a aba do perfil dos palestrantes dentro da aba JCPOLI
     // Como não é algo que depende da edição para aparecer, então não tema lógica da JCPOLI:Edição
