@@ -892,7 +892,7 @@
     }
   
     private goToSubmission() {
-      this.$router.push('/orientacoesj')
+      this.$router.push('/JCPOLI1/Orientacoes')
     }
   }
   </script>

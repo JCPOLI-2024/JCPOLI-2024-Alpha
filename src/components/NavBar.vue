@@ -42,7 +42,7 @@
     <div class="nav-info">
       <div id="logo">
         <a href="/">
-          <img id="logo" src="assets/img/logoJCPOLI.png" style="width: 270px; left: 30px; height: auto; position: absolute; float: right; top: -35px; ">
+          <img id="logo" src="/assets/img/logoJCPOLI.png" style="width: 270px; left: 30px; height: auto; position: absolute; float: right; top: -35px; ">
         </a>
         <span class="title"></span>
         <br />
