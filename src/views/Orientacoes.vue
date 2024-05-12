@@ -20,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import OrientacoesJ1 from '@/components/abasJCPOLI/OrientacoesJ1.vue' // Página das Orientações da 1º Edição da JCPOLI
-import OrientacoesJ2 from '@/components/abasJCPOLI/OrientacoesJ2.vue' // Página das Orientações da 2º Edição da JCPOLI
-import OrientacoesJ3 from '@/components/abasJCPOLI/OrientacoesJ3.vue' // Página das Orientações da 3º Edição da JCPOLI
+import OrientacoesJ1 from '@/components/abasJCPOLI/1_JCPOLI/OrientacoesJ1.vue' // Página das Orientações da 1º Edição da JCPOLI
+import OrientacoesJ2 from '@/components/abasJCPOLI/2_JCPOLI/OrientacoesJ2.vue' // Página das Orientações da 2º Edição da JCPOLI
+import OrientacoesJ3 from '@/components/abasJCPOLI/3_JCPOLI/OrientacoesJ3.vue' // Página das Orientações da 3º Edição da JCPOLI
 
 @Component({
   components: {

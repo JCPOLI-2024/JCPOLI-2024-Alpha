@@ -20,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import ExposicoesJ1 from '@/components/abasJCPOLI/ExposicoesJ1.vue' // Página das Exposições 1º Edição da JCPOLI
-import ExposicoesJ2 from '@/components/abasJCPOLI/ExposicoesJ2.vue' // Página das Exposições 2º Edição da JCPOLI
-import ExposicoesJ3 from '@/components/abasJCPOLI/ExposicoesJ3.vue' // Página das Exposições 3º Edição da JCPOLI
+import ExposicoesJ1 from '@/components/abasJCPOLI/1_JCPOLI/ExposicoesJ1.vue' // Página das Exposições 1º Edição da JCPOLI
+import ExposicoesJ2 from '@/components/abasJCPOLI/2_JCPOLI/ExposicoesJ2.vue' // Página das Exposições 2º Edição da JCPOLI
+import ExposicoesJ3 from '@/components/abasJCPOLI/3_JCPOLI/ExposicoesJ3.vue' // Página das Exposições 3º Edição da JCPOLI
 
 @Component({
   components: {

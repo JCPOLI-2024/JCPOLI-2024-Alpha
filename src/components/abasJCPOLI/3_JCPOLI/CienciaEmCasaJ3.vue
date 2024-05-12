@@ -45,7 +45,7 @@ import PhotoHeader from '@/components/organization/PhotoHeader.vue'
 import Main from '@/components/organization/Main.vue'
 import MiniCourse from '@/components/miniCourse/index.vue'
 import SectionCourse from '@/components/organization/SectionCourse.vue'
-import { Palestras_Cursos } from '@/storage/programacao/storageJCPOLI/ciencia_em_casa3JCPOLI'
+import { Palestras_Cursos } from '@/storage/programacao/3_JCPOLI/ciencia_em_casa3JCPOLI'
 
 @Component({
   components: {

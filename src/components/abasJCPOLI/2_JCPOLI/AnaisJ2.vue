@@ -90,7 +90,7 @@
   <script lang="ts">
   import { Component, Vue, Prop } from 'vue-property-decorator'
   import Main from '@/components/organization/Main.vue'
-  import { Anais, Anais2, Anais3, livros } from '@/storage/programacao/storageJCPOLI/anais2JCPOLI'
+  import { Anais, Anais2, Anais3, livros } from '@/storage/programacao/2_JCPOLI/anais2JCPOLI'
   
   @Component({
     components: {

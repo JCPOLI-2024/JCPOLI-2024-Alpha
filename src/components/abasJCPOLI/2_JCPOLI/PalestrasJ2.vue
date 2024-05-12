@@ -1,4 +1,4 @@
-<!-- Pagina da JCPOLI - Pagina para Palestras da 3º JCPOLI -->
+<!-- Pagina da JCPOLI - Pagina para Palestras da 2º JCPOLI -->
 <!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas as palestras são as que estavam na JCPOLI -->
 <template>
     <div>
@@ -9,28 +9,14 @@
         offset="calc((-150/500)*100vw + 67.304015296px)"
       ></PhotoHeader>
   
-      <head>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-      </head>
-  
       <Main>
-        <h4 class="text-center">Agenda JCPOLI</h4>
-        <!--
+        <h4 class="text-center">Agenda 2º JCPOLI</h4>
         <h3 class="text-center">Doe alimento não perecível durante as atividades presenciais e participe do bazar promovido pela Escola em parceria com a Coordenação de Extensão da PUC Goiás (CDEX/PROEX)</h3>
-        -->
         <div class="button-container">
           <button class="button" v-on:click="clearFilter">Todas as datas</button>
-          <!--
-          <button class="button" v-on:click="filterPalestras">11/04</button>
-          <button class="button" v-on:click="filterPalestras">12/04</button>
-          <button class="button" v-on:click="filterPalestras">15/04</button>
-          <button class="button" v-on:click="filterPalestras">16/04</button>
-          -->
-          <button class="button" v-on:click="filterPalestras">17/04</button>
-          <button class="button" v-on:click="filterPalestras">18/04</button>
-          <button class="button" v-on:click="filterPalestras">19/04</button>
+          <button class="button" v-on:click="filterPalestras">08/05</button>
+          <button class="button" v-on:click="filterPalestras">09/05</button>
+          <button class="button" v-on:click="filterPalestras">10/05</button>
           <!--<button class="button" v-on:click="filterPalestras">12/05</button>
           <button class="button" v-on:click="filterPalestras">13/05</button>-->
         </div>
@@ -54,10 +40,7 @@
   import MiniCourse from '@/components/miniCourse/index.vue'
   import SectionCourse from '@/components/organization/SectionCourse.vue'
   
-  //Para pegar as palestras que estavam na Escola Politécnica e de Artes
-  //import { Palestras_Cursos } from '@/storage/programacao/palestras_new'
-  
-  import { Palestras_Cursos } from '@/storage/programacao/storageJCPOLI/palestras_new_3JCPOLI'
+  import { Palestras_Cursos } from '@/storage/programacao/2_JCPOLI/palestras_new_2JCPOLI'
   
   @Component({
     components: {
@@ -66,7 +49,7 @@
       MiniCourse
     }
   })
-  export default class Palestras extends Vue {
+  export default class PalestrasJ2 extends Vue {
     private all_palestras
     private filtered_palestras
   

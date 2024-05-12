@@ -1,4 +1,4 @@
-<!-- Pagina da JCPOLI - Pagina para Competições da 1º JCPOLI-->
+<!-- Pagina da JCPOLI - Pagina para Competições da 3º JCPOLI-->
 <template>
     <div>
       <Main>
@@ -24,15 +24,54 @@
               <img :src="comp.image" id="maratona-photo" />
   
               <div class="desc-text">
-                <P>
-                  {{ comp.desc }}
-                </P>
-                <h5 :title="comp.instructor">Instrutor: {{ comp.instructor }}</h5>
+                <p v-html= comp.desc></p>
+                <h5 :title="comp.instructor">Comissão Organizadora: {{ comp.instructor }}</h5>
                 <h6 class="patrocinador" v-if="comp.patrocinador">
                   Patrocinador: {{ comp.patrocinador }}
                 </h6>
               </div>
             </div>
+            <div v-if="comp.inscrevase">
+                  <p> 
+                    <v-btn 
+                    color="primary"
+                    :href="comp.inscrevase">inscreva-se
+                  </v-btn>
+                  {{comp.datainscri}}
+                  </p>
+                </div>
+                <div v-if="comp.comissjulgadora">
+                  <p> 
+                    <v-btn 
+                    color="primary"
+                    :href="comp.comissjulgadora">comissão julgadora
+                  </v-btn>
+                  </p>
+                </div>
+                <div v-if="comp.editprorog">
+                  <p> 
+                    <v-btn 
+                    color="primary"
+                    :href="comp.editprorog">Edital de prorrogação da inscrição
+                  </v-btn>
+                  </p>
+                </div>
+                <div v-if="comp.editais">
+                  <p> 
+                    <v-btn 
+                    color="primary"
+                    :href="comp.editais">Edital
+                  </v-btn>
+                  </p>
+                </div>
+                <div v-if="comp.vencedor">
+                      <p> 
+                        <v-btn 
+                        color="primary"
+                        :href="comp.vencedor">Resultado da competição.
+                      </v-btn>
+                      </p>
+                    </div>
             <div class="info-h">
               <div class="date-time-place">
                 <i class="far fa-calendar-alt"></i>
@@ -57,16 +96,13 @@
   </template>
   
   <script lang="ts">
-  import { Component, Vue, Prop } from 'vue-property-decorator'
-  import PhotoHeader from '@/components/organization/PhotoHeader.vue'
-  import Main from '@/components/organization/Main.vue'
-  import MiniCourse from '@/components/miniCourse/index.vue'
-  import SectionCourse from '@/components/organization/SectionCourse.vue'
-  //Para pegar as competições que estavam na Escola Politécnica e de Artes
-  //import { Competicoes } from '@/storage/programacao/competicao'
-  
-  //Para pegar as competições que estavam na JCPOLI
-  import { Competicoes } from '@/storage/programacao/storageJCPOLI/competicao1JCPOLI'
+import { Component, Vue, Prop } from 'vue-property-decorator'
+import PhotoHeader from '@/components/organization/PhotoHeader.vue'
+import Main from '@/components/organization/Main.vue'
+import MiniCourse from '@/components/miniCourse/index.vue'
+import SectionCourse from '@/components/organization/SectionCourse.vue'
+
+import { Competicoes } from '@/storage/programacao/3_JCPOLI/competicao3JCPOLI'
   
   @Component({
     components: {
@@ -75,7 +111,7 @@
       MiniCourse
     }
   })
-  export default class CompeticoesJ1 extends Vue {
+  export default class competicoes extends Vue {
     private all_competicoes: any
   
     private title = 'Competições'
@@ -87,6 +123,7 @@
       this.all_competicoes = Competicoes
     }
   }
+  
   </script>
   
   <style scoped>
@@ -147,7 +184,7 @@
   }
   .competicoes .info-h > div:first-child h5,
   .competicoes .info-h > div:first-child h6 {
-    white-space: nowrap;
+    /*white-space: nowrap;*/
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -179,6 +216,7 @@
     font-size: 1.2rem;
     text-align: right;
     text-transform: capitalize;
+    /*white-space: nowrap;*/
   }
   
   .competicoes {

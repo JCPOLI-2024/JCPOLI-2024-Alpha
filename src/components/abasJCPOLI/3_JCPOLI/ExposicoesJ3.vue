@@ -57,7 +57,7 @@
   import MiniCourse from '@/components/miniCourse/index.vue'
   import SectionCourse from '@/components/organization/SectionCourse.vue'
   
-  import { Exposicao_Cursos } from '@/storage/programacao/storageJCPOLI/exposicao3JCPOLI'
+  import { Exposicao_Cursos } from '@/storage/programacao/3_JCPOLI/exposicao3JCPOLI'
   
   @Component({
     components: {

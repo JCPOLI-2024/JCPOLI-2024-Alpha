@@ -69,12 +69,12 @@
         // Os storages "trabalhos1JCPOLI", "jges1JCPOLI", "oficina1JCPOLI" são as da JCPOLI
         // Os storage "palestras" e "minicursos"são iguais para Escola Politecnica e JCPOLI, porém é bom dividir
         // O storage "hackton1JCPOLI" é o que estava na JCPOLI (Já "hackaton" é o storage com dados que estavam na EScola Politecnica) 
-        this.palestras = require('@/storage/programacao/storageJCPOLI/palestras1JCPOLI').default;
-        this.trabalhos = require('@/storage/programacao/storageJCPOLI/trabalhos1JCPOLI').default;
-        this.jges = require('@/storage/programacao/storageJCPOLI/jges1JCPOLI').default;
-        this.minicursos = require('@/storage/programacao/storageJCPOLI/minicursos1JCPOLI').default;
-        this.oficina = require('@/storage/programacao/storageJCPOLI/oficina1JCPOLI').default;
-        this.hackaton = require('@/storage/programacao/storageJCPOLI/hackaton1JCPOLI').default;
+        this.palestras = require('@/storage/programacao/1_JCPOLI/palestras1JCPOLI').default;
+        this.trabalhos = require('@/storage/programacao/1_JCPOLI/trabalhos1JCPOLI').default;
+        this.jges = require('@/storage/programacao/1_JCPOLI/jges1JCPOLI').default;
+        this.minicursos = require('@/storage/programacao/1_JCPOLI/minicursos1JCPOLI').default;
+        this.oficina = require('@/storage/programacao/1_JCPOLI/oficina1JCPOLI').default;
+        this.hackaton = require('@/storage/programacao/1_JCPOLI/hackaton1JCPOLI').default;
   
         this.events = [
           {

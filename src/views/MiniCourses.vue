@@ -20,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import MinicursosJ1 from '@/components/abasJCPOLI/MinicursosJ1.vue' // Página de Minicursos da 1º Edição da JCPOLI
-import MinicursosJ2 from '@/components/abasJCPOLI/MinicursosJ2.vue' // Página de Minicursos da 2º Edição da JCPOLI
-import MinicursosJ3 from '@/components/abasJCPOLI/MinicursosJ3.vue' // Página de Minicursos da 3º Edição da JCPOLI
+import MinicursosJ1 from '@/components/abasJCPOLI/1_JCPOLI/MinicursosJ1.vue' // Página de Minicursos da 1º Edição da JCPOLI
+import MinicursosJ2 from '@/components/abasJCPOLI/2_JCPOLI/MinicursosJ2.vue' // Página de Minicursos da 2º Edição da JCPOLI
+import MinicursosJ3 from '@/components/abasJCPOLI/3_JCPOLI/MinicursosJ3.vue' // Página de Minicursos da 3º Edição da JCPOLI
 
 @Component({
   components: {

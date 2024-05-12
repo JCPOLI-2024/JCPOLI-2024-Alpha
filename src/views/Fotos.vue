@@ -21,7 +21,7 @@
   
   <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import FotosJ3 from '@/components/abasJCPOLI/FotosJ3.vue' // Página de Fotos da 1º Edição da JCPOLI
+  import FotosJ3 from '@/components/abasJCPOLI/3_JCPOLI/FotosJ3.vue' // Página de Fotos da 1º Edição da JCPOLI
   
   @Component({
     components: {

@@ -20,7 +20,7 @@
   
   <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import CienciaEmCasaJ3 from '@/components/abasJCPOLI/CienciaEmCasaJ3.vue' // Página de CienciaEmCasa da 1º Edição da JCPOLI
+  import CienciaEmCasaJ3 from '@/components/abasJCPOLI/3_JCPOLI/CienciaEmCasaJ3.vue' // Página de CienciaEmCasa da 1º Edição da JCPOLI
   
   @Component({
     components: {

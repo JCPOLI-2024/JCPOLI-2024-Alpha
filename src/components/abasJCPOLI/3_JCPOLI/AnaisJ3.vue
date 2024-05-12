@@ -119,8 +119,8 @@
   import PhotoHeader from '@/components/organization/PhotoHeader.vue'
   import Main from '@/components/organization/Main.vue'
   import MiniCourse from '@/components/miniCourse/index.vue'
-  import { Anais, Anais2, Anais3, livros } from '@/storage/programacao/storageJCPOLI/anais3JCPOLI'
-  import { Palestras_Cursos } from '@/storage/programacao/storageJCPOLI/artigos_aprovados3JCPOLI'
+  import { Anais, Anais2, Anais3, livros } from '@/storage/programacao/3_JCPOLI/anais3JCPOLI'
+  import { Palestras_Cursos } from '@/storage/programacao/3_JCPOLI/artigos_aprovados3JCPOLI'
   
   @Component({
     components: {

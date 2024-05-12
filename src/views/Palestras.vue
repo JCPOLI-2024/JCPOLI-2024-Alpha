@@ -20,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import PalestrasJ1 from '@/components/abasJCPOLI/PalestrasJ1.vue' // Página de Palestras da 1º Edição da JCPOLI
-import PalestrasJ2 from '@/components/abasJCPOLI/PalestrasJ2.vue' // Página de Palestras da 2º Edição da JCPOLI
-import PalestrasJ3 from '@/components/abasJCPOLI/PalestrasJ3.vue' // Página de Palestras da 3º Edição da JCPOLI
+import PalestrasJ1 from '@/components/abasJCPOLI/1_JCPOLI/PalestrasJ1.vue' // Página de Palestras da 1º Edição da JCPOLI
+import PalestrasJ2 from '@/components/abasJCPOLI/2_JCPOLI/PalestrasJ2.vue' // Página de Palestras da 2º Edição da JCPOLI
+import PalestrasJ3 from '@/components/abasJCPOLI/3_JCPOLI/PalestrasJ3.vue' // Página de Palestras da 3º Edição da JCPOLI
 
 @Component({
   components: {

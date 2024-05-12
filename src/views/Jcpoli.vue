@@ -40,23 +40,23 @@
   //import Paragraph from '@/components/organization/Paragraph.vue'
   //import Supporters from '@/components/organization/Supporters.vue'
   // 1º Edição da JCPOLI
-  import CarouselJ1 from '@/components/home/homeJCPOLI/CarouselJ1.vue' // Carosel da 1º Edição da JCPOLI
-  import AboutJ1 from '@/components/home/homeJCPOLI/AboutJ1.vue' // About da 1º Edição da JCPOLI
-  import DatesJ1 from '@/components/home/homeJCPOLI/DatesJ1.vue' // Datas da 1º Edição da JCPOLI
-  import HomeJ1 from '@/components/abasJCPOLI/HomeJ1.vue' // Página de Home da 1º Edição da JCPOLI
+  import CarouselJ1 from '@/components/home/1_JCPOLI/CarouselJ1.vue' // Carosel da 1º Edição da JCPOLI
+  import AboutJ1 from '@/components/home/1_JCPOLI/AboutJ1.vue' // About da 1º Edição da JCPOLI
+  import DatesJ1 from '@/components/home/1_JCPOLI/DatesJ1.vue' // Datas da 1º Edição da JCPOLI
+  import HomeJ1 from '@/components/abasJCPOLI/1_JCPOLI/HomeJ1.vue' // Página de Home da 1º Edição da JCPOLI
   // 2º Edição da JCPOLI
-  import CarouselJ2 from '@/components/home/homeJCPOLI/CarouselJ2.vue' // Carosel da 2º Edição da JCPOLI
-  import AboutJ2 from '@/components/home/homeJCPOLI/AboutJ2.vue' // About da 2º Edição da JCPOLI
-  import DatesJ2 from '@/components/home/homeJCPOLI/DatesJ2.vue' // Datas da 2º Edição da JCPOLI
-  import HomeJ2 from '@/components/abasJCPOLI/HomeJ2.vue' // Página de Home da 2º Edição da JCPOLI
+  import CarouselJ2 from '@/components/home/2_JCPOLI/CarouselJ2.vue' // Carosel da 2º Edição da JCPOLI
+  import AboutJ2 from '@/components/home/2_JCPOLI/AboutJ2.vue' // About da 2º Edição da JCPOLI
+  import DatesJ2 from '@/components/home/2_JCPOLI/DatesJ2.vue' // Datas da 2º Edição da JCPOLI
+  import HomeJ2 from '@/components/abasJCPOLI/2_JCPOLI/HomeJ2.vue' // Página de Home da 2º Edição da JCPOLI
   // 3º Edição da JCPOLI
-  import CarouselJ3 from '@/components/home/homeJCPOLI/CarouselJ3.vue' // Carosel 3º Edição da JCPOLI
-  import AboutJ3 from '@/components/home/homeJCPOLI/AboutJ3.vue' // About da 2º Edição da JCPOLI
-  import DatesJ3 from '@/components/home/homeJCPOLI/DatesJ3.vue' // Datas da 2º Edição da JCPOLI
-  import HomeJ3 from '@/components/abasJCPOLI/HomeJ3.vue' // Página de Home da 2º Edição da JCPOLI
+  import CarouselJ3 from '@/components/home/3_JCPOLI/CarouselJ3.vue' // Carosel 3º Edição da JCPOLI
+  import AboutJ3 from '@/components/home/3_JCPOLI/AboutJ3.vue' // About da 2º Edição da JCPOLI
+  import DatesJ3 from '@/components/home/3_JCPOLI/DatesJ3.vue' // Datas da 2º Edição da JCPOLI
+  import HomeJ3 from '@/components/abasJCPOLI/3_JCPOLI/HomeJ3.vue' // Página de Home da 2º Edição da JCPOLI
 
   
-  //import { speakers_jcpoli1 } from '@/storage/programacao/storageJCPOLI/speakers1JCPOLI'
+  //import { speakers_jcpoli1 } from '@/storage/programacao/1_JCPOLI/speakers1JCPOLI'
   
   @Component({
     components: {

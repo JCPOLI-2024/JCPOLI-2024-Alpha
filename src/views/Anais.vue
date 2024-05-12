@@ -20,9 +20,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import AnaisJ1 from '@/components/abasJCPOLI/AnaisJ1.vue' // Página das Publicações da 1º Edição da JCPOLI
-import AnaisJ2 from '@/components/abasJCPOLI/AnaisJ2.vue' // Página das Publicações da 2º Edição da JCPOLI
-import AnaisJ3 from '@/components/abasJCPOLI/AnaisJ3.vue' // Página das Publicações da 3º Edição da JCPOLI
+import AnaisJ1 from '@/components/abasJCPOLI/1_JCPOLI/AnaisJ1.vue' // Página das Publicações da 1º Edição da JCPOLI
+import AnaisJ2 from '@/components/abasJCPOLI/2_JCPOLI/AnaisJ2.vue' // Página das Publicações da 2º Edição da JCPOLI
+import AnaisJ3 from '@/components/abasJCPOLI/3_JCPOLI/AnaisJ3.vue' // Página das Publicações da 3º Edição da JCPOLI
 
 @Component({
   components: {
