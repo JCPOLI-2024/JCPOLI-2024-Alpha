@@ -2,6 +2,7 @@
 // Aqui se situam tanto rotas da JCPOLI
 import Vue from "vue";
 import Router from "vue-router";
+import Jcpoli from "./views/Jcpoli.vue";
 
 Vue.use(Router);
 
@@ -14,6 +15,10 @@ const router = new Router({
     // Assim, podendo ter a rota "JCPOLI1/Palestras" para exibir as palestras que ocorrer na 1º edição da JCPOLI. 
     // Ou, "JCPOLI2/Palestras" para exibir as palestras que ocorrer na 2º edição da JCPOLI
     // E assim sucessivamente
+    {
+      path: "/",
+      redirect: "/JCPOLI3" // ou para a edição que desejar
+    },
     {
       path: "/JCPOLI:edicao", // Definindo o parâmetro :edicao, assim, toda rota da Home vai ser: JCPOLI1, JCPOLI2, JCPOLI3, seguindo de acordo com qual edição vai estar selecionada 
       //name: "Home",
