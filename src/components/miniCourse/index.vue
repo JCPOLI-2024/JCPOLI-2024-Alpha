@@ -1,10 +1,11 @@
+<!-- Index para a aba de Minicursos -->
 <template>
   <div class="miniCourse">
     <div class="title">
       <i class="fas fa-graduation-cap"></i>
       <h3
         :title="course.title"
-        v-bind:id="'true' ? course.title === 'HTML - a crash course - Cancelado' : ''"
+        v-bind:id="'true' ? course.title === 'Palestra de Abertura da Jornada: AskBlue, dos 0 aos 500' : ''"
       >
         {{ course.title }} <font color="red">{{course.warning}}</font>
       </h3>
@@ -34,12 +35,13 @@
           <div v-if="course.link == null">{{ course.place }}</div>
         </div>
       </div>
-
-    <!--<div class="desc">
+    <!-- Descomentado para que a descrição das palestras apareçam -->
+    <div class="desc">
       <p>
         {{ course.desc }}
       </p>
-    </div>-->
+
+    </div>
   </div>
 </template>
 

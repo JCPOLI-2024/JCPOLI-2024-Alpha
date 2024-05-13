@@ -1,32 +1,29 @@
+<!--Navbar da jcpoli no site, antes chamada de NavBarJCPOLI, agora só NavBar -->
 <template>
   <v-app id="app">
-    <NavBar v-if="$route.path==='/conta' ? false : true" />
+    <!-- Renderiza o NavBar -->
+    <NavBar />
     <notifications position="top right" />
     <router-view />
-
-    <!-- <div
-      v-if="$route.path==='/conta' || $route.path==='/'? false : true"
-      class="footer-subscribe rights-reserved"
-    >
-      <p>&copy; 4º Jornada Científica da Escola de Ciências Exatas e da Computação - JCECEC 2019</p>
-    </div>-->
   </v-app>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+<script>
 import NavBar from "@/components/NavBar.vue";
-import router from "@/router";
+//import NavBarJCPOLI from "@/components/NavBarJCPOLI.vue";
 
-@Component({
+export default {
   components: {
-    NavBar
-  }
-})
-export default class App extends Vue {
-  constructor() {
-    super();
-  }
+    NavBar,
+    //NavBarJCPOLI
+  },
+  // Usado quando se tinha uma integração entre os sites para que houvesse uma navbar exclusiva para a JCPOLI
+  // computed: {
+  //   isSpecialRoute() {
+  //     // Verifica se a rota atual está relacionada à JCPOLI
+  //     return this.$route.path.startsWith("/JCPOLI");
+  //   } 
+  // }
 }
 </script>
 

@@ -1,3 +1,4 @@
+<!-- Página de "em manutenção" da Politécnica -->
 <template>
 
     <div id="four04" class="view">

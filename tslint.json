@@ -16,6 +16,11 @@
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
     "arrow-parens": false,
-    "trailing-comma": false
+    "trailing-comma": false,
+    "no-trailing-whitespace": false, // Para desabilitar warning de "trailing whitespace"
+    "max-line-length": false, // Para desabilitar o warning de "Exceeds maximum line length of 120"
+    "comment-format": false, // Para desabilitar o warning de "comment must start with a space"
+    "semicolon": false, // Para desabilitar o warning de "missing semicolon"
+    "whitespace": false // Para desabilitar o warning de "missing whitespace"
   }
 }

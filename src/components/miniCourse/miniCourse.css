@@ -1,3 +1,4 @@
+/* CSS para a aba de Minicursos */
 .miniCourse {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -59,7 +60,7 @@
 }
 .miniCourse .date-time-place {
   display: grid;
-  grid-area: desc;
+  /* grid-area: desc; comentado para que a descrição das palestras apareçam formatadas */
   grid-template-columns: repeat(3, 1fr);
   gap: 0 15px;
   margin-top: 0px;

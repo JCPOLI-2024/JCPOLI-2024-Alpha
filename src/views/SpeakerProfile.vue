@@ -1,3 +1,4 @@
+<!-- Página para exibir a página dos perfis dos palestrantes -->
 <template>
   <div>
     <header class="banner" :style="{backgroundImage: `url(${defaults.bgBanner})`}">
@@ -67,7 +68,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
-import speakers from "@/models/speakers";
+import speakers from "@/models/speakersJCPOLI";
 
 @Component
 export default class SpeakerProfile extends Vue {

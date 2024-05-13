@@ -43,16 +43,25 @@ export default class Speaker extends Vue {
       : `url(https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg)`;
     */
 
-    this.avatar = `url(https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg)`;``
+    this.avatar = this.speaker.img
+      ? `url(${this.speaker.img})` // Para adicionar imagens dos palestranstes
+      : `url(https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg)`;
 
     this.customSize = this.speaker.customSize
       ? this.speaker.customSize
       : "100%";
   }
 
-  private showProfile(name: string) {
-    this.$router.push({ path: "/profile", query: { name } });
-  }
+  // Pra quando clicar em "Leia completo", abrir a página do palestrante sem abrir uma nova aba (mais rápido pra abrir)
+   private showProfile(name: string) {
+     this.$router.push({ path: "/profile", query: { name } });
+   }
+
+  // Pra quando clicar em "Leia completo", abrir a página do palestrante em uma nova aba (Porém demora mais pra abrir)
+  //  private showProfile(name: string) {
+  //    const profileUrl = this.$router.resolve({ path: "/profile", query: { name } }).href;
+  //    window.open(profileUrl, '_blank');
+  //  }
 }
 </script>
 
