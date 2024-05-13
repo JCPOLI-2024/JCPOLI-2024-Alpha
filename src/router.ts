@@ -15,6 +15,9 @@ const router = new Router({
     // Assim, podendo ter a rota "JCPOLI1/Palestras" para exibir as palestras que ocorrer na 1º edição da JCPOLI. 
     // Ou, "JCPOLI2/Palestras" para exibir as palestras que ocorrer na 2º edição da JCPOLI
     // E assim sucessivamente
+    
+    // Para que quando inicia a aplicação "8080/", não cair na página 404, assim, o caminho "/" redireciona para a ultima edição
+    // Futuramente mudar para redirecionar a página de edições
     {
       path: "/",
       redirect: "/JCPOLI3" // ou para a edição que desejar
