@@ -40,7 +40,19 @@
       <p>
         {{ course.desc }}
       </p>
-
+      <!-- <p>
+        {{ course.certificado }}
+      </p> -->
+      <div v-if="course.certificado">
+        <p> 
+          <v-btn 
+          color="primary"
+          :href="course.certificado"
+          target="_blank">
+          Certificado
+        </v-btn>
+        </p>
+      </div>
     </div>
   </div>
 </template>
