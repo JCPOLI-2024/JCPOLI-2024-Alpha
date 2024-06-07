@@ -110,7 +110,7 @@ const speakers_jcpoli = [
   
   
     {
-      name: 'FELIPE CORREA VELOSO DOS SANTOS',
+      name: 'Felipe Correa Veloso Dos Santos',
       institution: 'PUC-Goiás',
       speaking: 'Introdução ao Power BI',
       description: `Tecnólogo em Irrigação e Drenagem. Doutor em Agronomia. Docente da PUC-Goiás na área de recursos hídricos e estatística (Modelagem matemática, Probabilidade e Estatística, Estatística Aplicada, Climatologia Agrícola, Irrigação e Drenagem, Fenômenos de Transporte, Hidráulica e Hidrologia). Atualmente é líder do Grupo de Pesquisa em Gestão e Modelagem em Recursos Hídricos (GEMORH).`,

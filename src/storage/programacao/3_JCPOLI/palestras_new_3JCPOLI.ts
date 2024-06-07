@@ -1,9 +1,14 @@
 // Storage para as palestras que estavam na 3º JCPOLI
+// certificado foi adicionado para caso o certificado daquela palestra tenha saido, coloque o link
+// img e profile foram adicionados para que apareça a imagem o botão "leia completo" do palestrante ao lado da palestra
+// caso o paletrante não tenha imagem, mas tenho um SpeakerProfile, coloque "profile = true", pq pelo menos vai aparecer o botão de "leia completo" junto com seu nome 
 let Palestras = [
 
   {
     title: "Bioinsumos no Estado de Goiás",
     instructor: "João Asmar Junior",
+    img: '/assets/img/speakers/Bioinsumos.jpg',
+    profile: true,
     institution: "Superintendencia de Engenharia Agrícola e Desenvolvimento Sustentável ",
     desc: `Programa Estadual de Bioinsumos da Secretaria de Estado de Agricultura, Pecuária e Abastecimento (SEAPA) tem como objetivo ampliar e fortalecer a adoção de práticas para a evolução do setor agropecuário, com a expansão da produção, do desenvolvimento e da utilização de bioinsumos e sistemas de produção sustentáveis.`,
     date: "17/04",
@@ -14,7 +19,9 @@ let Palestras = [
   
   {
     title: "PROTEGENDO O FUTURO: SEGURANÇA DA INFORMAÇÃO E INTELIGÊNCIA ARTIFICIAL NO MERCADO ATUAL.",
-    instructor: "Alisson Rodrigues Alaves",
+    instructor: "Alisson Rodrigues Alves",
+    img: '/assets/img/speakers/PALESTRANTE_VICENTE.jpeg',
+    profile: true,
     institution: "UNIGOIÁS / FACULDADE SENAC - GO",
     desc: `Destaca as tecnologias da segurança da informação integrada com Inteligência Artificial.`,
     date: "17/04",
@@ -26,6 +33,8 @@ let Palestras = [
   {
     title: "Estado da Arte em Sistemas e Aplicações para Gerenciamento de Projetos de TI",
     instructor: "Messias Reis",
+    img: '/assets/img/speakers/Messias_Reis.jpg',
+    profile: true,
     institution: "Mundo de Projetos",
     desc: 'A palestra "Estado da Arte em Sistemas e Aplicações para Gerenciamento de Projetos de TI" abordará como a diferenciação entre projetos, processos e rotinas impacta na eficiência organizacional, especialmente em contextos de TI. Enfatizando a necessidade de distinguir projetos com início, meio e fim das atividades rotineiras, a apresentação introduzirá uma metodologia inovadora focada em aplicações computacionais para categorizar demandas e aplicar o gerenciamento adequado. Utilizando um fluxo metodológico que incorpora um modelo de tomada de decisão e uma classificação matemática baseada na matriz Stacey, a proposta visa otimizar o gerenciamento de projetos de tecnologia da informação alinhando métodos apropriados às características e requisitos específicos de cada demanda. A metodologia, apoiada na classificação por prioridades do protocolo de Manchester, tem se mostrado um possível marco na utilização de de softwares e aplicação estratégias diferenciadas para o gerenciamento de projetos, processos e rotinas no universo da tecnologia da informação.',
     date: "17/04",
@@ -37,6 +46,8 @@ let Palestras = [
   {
     title: "Panorama da Arquitetura em Goiás: Séculos XVIII, XIX e XX",
     instructor: "Eurípedes Afonso da Silva Neto",
+    img: '/assets/img/speakers/Eurípedes_FREDERICO.jpeg',
+    profile: true,
     institution: "UFG",
     desc: "Apresentação de parte da arquitetura realizada em Goiás durante os séculos XVIII, XIX e XX. Um panorama uniformizado graficamente através do olhar sobre cem edifícios. Organizando assim uma crônica da transformação da região por meio de suas edificações, demonstrando como foram espelho de um ideal político, social e arquitetônico que permeou a produção local.",
     date: "17/04",
@@ -47,6 +58,8 @@ let Palestras = [
   {
     title: "Vencendo Hackathons!",
     instructor: "Franklin Silva de Castro Bonfim",
+    img: '/assets/img/speakers/Franklin_ANA.png',
+    profile: true,
     institution: "Serviço Nacional de Aprendizagem Comercial (SENAC-GO)",
     desc: 'A palestra "Vencendo Hackathons", destinada a graduandos de Análise e Desenvolvimento de Sistemas, Ciência da Computação, Ciência de Dados e IA e Engenharia de Computação, promete ser uma fonte inestimável de conhecimento e estratégias para aqueles interessados em se destacar nesses eventos competitivos de programação. Os palestrantes, com experiência comprovada em hackathons, compartilharão insights sobre como abordar esses desafios, enfatizando a importância do trabalho em equipe, pensamento criativo e habilidades técnicas afiadas. A apresentação cobrirá desde a preparação pré-evento, como formar equipes equilibradas e desenvolver uma mentalidade vencedora, até técnicas eficazes de brainstorming, prototipagem rápida e apresentação de projetos. Além disso, os participantes aprenderão como maximizar recursos limitados sob pressão de tempo, transformando ideias inovadoras em protótipos funcionais que impressionam os jurados. Essa palestra é uma oportunidade imperdível para quem aspira a dominar a arte de vencer hackathons, preparando os estudantes não apenas para competir, mas para triunfar nesse ambiente estimulante e altamente competitivo.',
     date: "17/04",
@@ -57,6 +70,8 @@ let Palestras = [
   {
     title: "Palestra institucional do CREA-GO JOVEM - Ética e Valorização Profissional",
     instructor: "Eng. Ana Renata Volpini Litfalla",
+    img: '/assets/img/speakers/Palestrante_CREA-GO.jpeg',
+    profile: true,
     institution: `CREA-GO `,
     /*desc: "Palestra institucional do CEEA-GO e CREA-GO JOVEM,  e uma palestra completar sobre Ética e Valorização profissional",*/
     date: "17/04",
@@ -103,6 +118,8 @@ let Palestras = [
    {
     title: "Manejo da Irrigação ",
     instructor: "Fernando Rezende da Costa",
+    img: '/assets/img/speakers/fernandofoto.png',
+    profile: true,
     institution: "Irriga Global/Nutrisolo",
     desc: `A irrigação é a tecnologia com maior potencial de contribuir para o aumento da segurança alimentar e ambiental, bem como para a redução da fome e da pobreza, além de gerar grande número de empregos. Ela traz benefícios importantes relacionados à produção de alimentos, à geração de empregos, ao desenvolvimento social e ao meio ambiente. É uma tecnologia fundamental em qualquer planejamento estratégico dos estados e regiões.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2895",
@@ -115,17 +132,21 @@ let Palestras = [
    {
     title: "Métodos de projeto sustentável ",
     instructor: "Halina Veloso e Zárate",
+    img: '/assets/img/speakers/halinafoto.png',
+    profile: true,
     /*institution: "xx",*/
     desc: `Um panorama sobre a pesquisa de doutorado que investiga a integração de dados sobre carbono no processo de projeto de arquitetura, explorando métodos de projeto baseados em dados focados nos estágios iniciais do projeto. Esta pesquisa visa testar a transferibilidade de dados entre escalas de arquitetura e design urbano. Para isso, realiza uma investigação empírica com profissionais, adotando casos tangíveis e identificando os desafios e gargalos na interação entre dados de carbono incorporados, em escala de construção, e dados urbanos georreferenciados.`,
     date: "17/04",
     time: '08:00',
     place: 'Online: Teams',
     link:"https://teams.microsoft.com/l/meetup-join/19%3adcb5856375ad4247a353459a1d1f6306%40thread.tacv2/1712675896432?context=%7b%22Tid%22%3a%2273319f42-8908-4b89-9f8d-558cf4d5d776%22%2c%22Oid%22%3a%2272de42cb-2066-4981-b6e6-af2344b756bd%22%7d"
-   },
+  },
   
   {
     title: "Potencialidade da fruticultura no Centro-Oeste",
-    instructor: " Uirá do Amaral",
+    instructor: "Uirá do Amaral",
+    img: '/assets/img/speakers/Amaral_MARTHA.jpeg',
+    profile: true,
     institution: "IFGoiano - Urutaí",
     desc: `A fruticultura tem se destacado no Brasil como uma das principais atividades agropecuárias, demonstrando influência no setor econômico e social.  A região Centro Oeste que lidera na produção nacional de grãos, onde a mesma por possuir microrregiões bem definidas em seus estados, viabiliza o emprego da fruticultura em todos eles, visto que cada microrregião dispõe de condições especificas de temperatura, solo e umidade para cada tipo de cultura que venha a ser cultivada.`,
     date: "18/04",
@@ -136,6 +157,8 @@ let Palestras = [
   {
     title: "",
     instructor: "Antônio Generoso",
+    img: '/assets/img/speakers/user-vector-man.jpg',
+    profile: true,
     institution: "Consultor em LGPD",
     desc: `Apresentação a respeito da LGPD  com IA`,
     date: "18/04",
@@ -147,6 +170,8 @@ let Palestras = [
   {
     title: "Meio Ambiente e Comercialização Agrícola",
     instructor: "André Luiz Miranda Silva Zopelari",
+    img: '/assets/img/speakers/user-vector-man.jpg',
+    profile: true,
     institution: "AcadGeo",
     desc: "Meio Ambiente e Comercialização Agrícola",
     date: "18/04",
@@ -157,6 +182,8 @@ let Palestras = [
   {
     title:"De Ciência de Dados a Engenharia de Inteligência Artificial: um achismo de como será o futuro",
     instructor: "João Paulo Marinho Martiins",
+    img: '/assets/img/speakers/Paulo_ANDRE.png',
+    profile: true,
     institution: "Advolve.AI",
     desc: "Como as profissões de Cientista de Dados e Engenheiro de Inteligência Artificial estão moldando o futuro não só da tecnologia, mas também de todas as outras profissões.",
     date: "18/04",
@@ -203,6 +230,8 @@ let Palestras = [
    {
     title: "Customer Experience and Artificial Intelligence",
     instructor: "Patrícia Amaral",
+    img: '/assets/img/speakers/patriciafoto.png', 
+    profile: true,
     /*institution: "xx",*/
     desc: `A experiência do cliente, enriquecida por jornadas bem desenhadas, serve como alavanca crucial para negócios ao criar interações personalizadas e memoráveis. Essa abordagem aumenta a satisfação e fidelidade, transformando clientes em defensores da marca, o que impulsiona a recompra e promove indicações, resultando em crescimento sustentável e maior rentabilidade. A IA está revolucionando a compreensão e interação com os dos clientes, tornando-a mais personalizada, eficiente e satisfatória. Entre novas tecnologias e modelos de negócios inovadores, vamos mergulhar
     neste mundo IA e CX.`,
@@ -216,6 +245,8 @@ let Palestras = [
    {
     title: "Os efeitos dos microplásticos em sedimentos de lagos e rios europeus ",
     instructor: "Anne Louise de Melo Dores",
+    img: '/assets/img/speakers/user-vector-woman.jpg',
+    profile: true,
     /*institution: "xx",*/
     desc: ` Palestrante Egressa do Curso de Engenharia Civil, realiza atualmente mestrado na Universidade de Stuttgart, na Alemanha. Irá tratar do tema: Os efeitos dos microplásticos em sedimentos de lagos e rios europeus.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2899",
@@ -251,6 +282,8 @@ let Palestras = [
   {
     title: "Praticas de Manejo e Conservação do Solo",
     instructor: "Vladia Correchel",
+    img: '/assets/img/speakers/Correchel_MARTHA.jpg',
+    profile: true,
     institution: "Escola de Agronomia UFG (Laboratório de Física do Solo)",
     desc: `Praticas de Manejo e Conservação do Solo`,
     date: "19/04",
@@ -261,6 +294,8 @@ let Palestras = [
   {
     title: "A crítica da arquitetura contemporânea: sobre o prêmio Pritzker",
     instructor:"Sandra Catharinne Pantaleão Resende",
+    img: '/assets/img/speakers/Sandra_FREDERICO.jpeg',
+    profile: true,
     institution: "PUC Goiás, UEG",
     desc: `O prêmio Pritzker, desde 1982, aponta o arquiteto de maior destaque anualmente em que são consideradas suas contribuições para a disciplina, seja pela produção teórica ou prática. A partir de uma perspectiva histórica, apresentam-se reflexões sobre as transformações do campo disciplinar nos últimos 40 anos tendo em vista a consolidação e crise do Movimento Moderno, as manifestações pós-modernas e as posturas após a crise de 2008. 
     Toma-se como referência para as reflexões as posturas dos vencedores com o contexto histórico permitindo indicar mudanças na produção e crítica arquitetônica associadas aos desafios do século XXI.`,
@@ -272,6 +307,8 @@ let Palestras = [
   {
     title:"Modelos Hidrológicos",
     instructor: "Elizon Nunes",
+    img: '/assets/img/speakers/user-vector-man.jpg',
+    profile: true,
     institution: "Labogef/UFG",
     desc: `Modelos Hidrológicos`,
     date: "19/04",
@@ -281,7 +318,9 @@ let Palestras = [
   
   {
     title: "Visualizando o Invisível: A Arte da Representação Gráfica em Ciência de Dados",
-    instructor: "Rodolfo Wenceslau R. Mota ",
+    instructor: "Rodolfo Wenceslau R. Mota",
+    img: '/assets/img/speakers/Rodolfo_Wencelau.jpg',
+    profile: true,
     institution: `SEBRAE-GO`,
     desc: `Nessa palestra, mergulharemos na interseção fascinante entre a Ciência de Dados, a Inteligência Artificial e a incrível habilidade humana de traduzir dados complexos em representações visuais impactantes. Descubra como a aplicação de técnicas avançadas de visualização, aliada ao poder da Inteligência Artificial, desvenda padrões, insights e conexões que escapam à observação comum. Vamos juntos desvendar o invisível?`,
     date: '19/04',
@@ -292,6 +331,8 @@ let Palestras = [
   {
     title: "Planejamento Urbano - Qual é a cidade que queremos?",
     instructor: "Benjamim Jorge Rodrigues dos Santos",
+    img: '/assets/img/speakers/Foto_benjamim_MARTA.jpg',
+    profile: true,
     institution: "PUC Goiás",
     desc: `Palestra ministrada pelo Prof. Dr. Benjamim Jorge discutindo questões fundamentais de mobilidade urbana.`,
     date: "19/04",
@@ -302,6 +343,8 @@ let Palestras = [
   {
     title: "Palestra de abertura do VI Desafio em Ciências de Dados: Oportunidades e Desafios na era da Inteligência Artificial massificada",
     instructor: "Aníbal Tavares de Azevedo",
+    img: '/assets/img/speakers/AnibalTavares.jpg',
+    profile: true,
     institution: "Univesp/Canal próprio no YouTube",
     desc: `Nessa conversa serão apontados alguns desenvolvimentos da inteligência artificial massificada em diversos campos. Diversas aplicações práticas serão abordadas e exemplificadas. Possibilidades de novos negócios para resolver as dores do mundo combinando o uso das tecnologias habilitadoras da indústria 4.0 em conjunto com a inteligência artificial serão discutidas.`,
     date: "18/04",
@@ -313,6 +356,8 @@ let Palestras = [
   {
     title: "Por que somos minoria em STEM?",
     instructor: "Marta Pereira da Luz",
+    img: '/assets/img/speakers/MartaPereira.png',
+    profile: true,
     institution: "PUC Goiás e Eletrobrás Furnas",
     desc: `Na palestra será tratado sobre a realidade do mercado de trabalho e sobre a participação de mulheres em áreas de STEM e será discutido sobre as questões históricas da mulher nestes cenários.
     
@@ -361,6 +406,8 @@ let Palestras = [
    {
     title: "Harvesting rare earth elements and critical minerals from coal derived acid mine drainage",
     instructor: "Dr. Iuri Santos",
+    img: '/assets/img/speakers/iurifoto.png',
+    profile: true,
     /*institution: "xx",*/
     desc: `Palestra: Harvesting rare earth elements and critical minerals from coal derived acid mine drainage.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2914",
@@ -393,6 +440,8 @@ let Palestras = [
    {
     title: "",
     instructor: "Heitor Giuliano Matioli Candido",
+    img: '/assets/img/speakers/user-vector-man.jpg',
+    profile: true,
     institution: "Azul Linhas Aéreas",
     desc: `Seleção e recrutamento de aeronáutas na Azul Linhas Aéreas`,
     date: "17/04",

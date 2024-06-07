@@ -124,6 +124,8 @@ let CienciaEmCasa = [
    {
     title: "Customer Experience and Artificial Intelligence",
     instructor: "Patrícia Amaral",
+    img: '/assets/img/speakers/patriciafoto.png',
+    profile: true,
     /*institution: "xx",*/
     desc: `A experiência do cliente, enriquecida por jornadas bem desenhadas, serve como alavanca crucial para negócios ao criar interações personalizadas e memoráveis. Essa abordagem aumenta a satisfação e fidelidade, transformando clientes em defensores da marca, o que impulsiona a recompra e promove indicações, resultando em crescimento sustentável e maior rentabilidade. A IA está revolucionando a compreensão e interação com os dos clientes, tornando-a mais personalizada, eficiente e satisfatória. Entre novas tecnologias e modelos de negócios inovadores, vamos mergulhar
     neste mundo IA e CX.`,
@@ -149,6 +151,8 @@ let CienciaEmCasa = [
    {
     title: "Os efeitos dos microplásticos em sedimentos de lagos e rios europeus ",
     instructor: "Anne Louise de Melo Dores",
+    img: '/assets/img/speakers/user-vector-woman.jpg',
+    profile: true,
     /*institution: "xx",*/
     desc: ` Palestrante: Anne Louise de Melo Dores, Palestrante Egressa do Curso de Engenharia Civil, realiza atualmente mestrado na Universidade de Stuttgart, na Alemanha. Irá tratar do tema: Os efeitos dos microplásticos em sedimentos de lagos e rios europeus.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2899",
@@ -161,6 +165,8 @@ let CienciaEmCasa = [
    {
     title: "Harvesting rare earth elements and critical minerals from coal derived acid mine drainage",
     instructor: "Dr. Iuri Santos",
+    img: '/assets/img/speakers/iurifoto.png',
+    profile: true,
     /*institution: "xx",*/
     desc: `Palestra: Harvesting rare earth elements and critical minerals from coal derived acid mine drainage.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2914",
@@ -184,6 +190,8 @@ let CienciaEmCasa = [
    {
     title: "Seleção e recrutamento de aeronáutas na Azul Linhas Aéreas",
     instructor: "Heitor Giuliano Matioli Candido",
+    img: '/assets/img/speakers/user-vector-man.jpg',
+    profile: true,
     institution: "Azul Linhas Aéreas",
     desc: `Seleção e recrutamento de aeronáutas na Azul Linhas Aéreas`,
     date: "17/04",
@@ -242,6 +250,8 @@ let CienciaEmCasa = [
    {
     title: "Manejo da Irrigação ",
     instructor: "Fernando Rezende da Costa",
+    img: '/assets/img/speakers/fernandofoto.png',
+    profile: true,
     institution: "Irriga Global/Nutrisolo",
     desc: `A irrigação é a tecnologia com maior potencial de contribuir para o aumento da segurança alimentar e ambiental, bem como para a redução da fome e da pobreza, além de gerar grande número de empregos. Ela traz benefícios importantes relacionados à produção de alimentos, à geração de empregos, ao desenvolvimento social e ao meio ambiente. É uma tecnologia fundamental em qualquer planejamento estratégico dos estados e regiões.`,
     certificado: "https://sites.pucgoias.edu.br/certificados/participantes/2895",
@@ -254,6 +264,8 @@ let CienciaEmCasa = [
    {
     title: "Métodos de projeto sustentável ",
     instructor: "Halina Veloso e Zárate",
+    img: '/assets/img/speakers/halinafoto.png',
+    profile: true,
     /*institution: "xx",*/
     desc: `Um panorama sobre a pesquisa de doutorado que investiga a integração de dados sobre carbono no processo de projeto de arquitetura, explorando métodos de projeto baseados em dados focados nos estágios iniciais do projeto. Esta pesquisa visa testar a transferibilidade de dados entre escalas de arquitetura e design urbano. Para isso, realiza uma investigação empírica com profissionais, adotando casos tangíveis e identificando os desafios e gargalos na interação entre dados de carbono incorporados, em escala de construção, e dados urbanos georreferenciados.`,
     date: "17/04",
@@ -288,6 +300,8 @@ let CienciaEmCasa = [
    {
     title: "Propriedade Intelectual e Desenvolvimento Sustentável: Construindo nosso futuro comum com inovação e criatividade",
     instructor: "Lara Guerreiro Pires",
+    img: '/assets/img/speakers/foto_Iara.png',
+    profile: true,
     institution: "Instituto Nacional da Propriedade Industrial, INPI, Brasil",
     desc: `Propriedade Intelectual e Desenvolvimento Sustentável: Construindo nosso futuro comum com inovação e criatividade`,
     date: "22/04",
