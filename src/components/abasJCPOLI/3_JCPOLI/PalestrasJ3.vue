@@ -16,7 +16,7 @@
       </head>
   
       <Main>
-        <h4 class="text-center">Agenda JCPOLI</h4>
+        <h4 class="text-center">Agenda 3º JCPOLI</h4>
         <!--
         <h3 class="text-center">Doe alimento não perecível durante as atividades presenciais e participe do bazar promovido pela Escola em parceria com a Coordenação de Extensão da PUC Goiás (CDEX/PROEX)</h3>
         -->

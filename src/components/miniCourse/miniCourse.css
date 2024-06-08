@@ -64,6 +64,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0 15px;
   margin-top: 0px;
+  margin-bottom: 13px;
 }
 .miniCourse .date-time-place i {
   text-align: center;
@@ -79,8 +80,33 @@
   grid-area: desc;
 }
 
-#true{
-  color:red;
+.miniCourse .avatar {
+  grid-area: avatar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.miniCourse .avatar > div {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background-image: url(https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg);
+  background-size: cover;
+  background-color: black;
+}
+
+.miniCourse .more {
+  grid-area: more;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#true {
+  color: red;
 }
 
 @media screen and (max-width: 768px) {

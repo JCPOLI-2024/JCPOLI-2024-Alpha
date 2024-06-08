@@ -1,4 +1,4 @@
-<!-- Index para a aba de Minicursos -->
+<!-- Index para a exibição de informações como as de palestras, minicursos e ciencia em casa -->
 <template>
   <div class="miniCourse">
     <div class="title">
@@ -7,24 +7,33 @@
         :title="course.title"
         v-bind:id="'true' ? course.title === 'Palestra de Abertura da Jornada: AskBlue, dos 0 aos 500' : ''"
       >
-        {{ course.title }} <font color="red">{{course.warning}}</font>
+        {{ course.title }} <font color="red">{{ course.warning }}</font>
       </h3>
     </div>
 
     <div class="info-h">
       <div>
-        <h5 class="text-wrap" :title="course.instructor">
+        <!-- Para aparecer imagem do palestrante caso tenha -->
+        <div class="avatar" v-if="course.img">
+          <div
+            v-bind:style="{ backgroundImage: `url(${course.img || defaultImg})`, backgroundPosition: 'center', backgroundSize: 'cover' }"
+          ></div>
+        </div>
+        <h6 class="text-wrap" :title="course.instructor">
           Palestrante: {{ course.instructor }}
-        </h5>
-        <h6 class="text-wrap" :title="course.institution">
-          Instituição: {{ course.institution }}
         </h6>
-        <!--<h6 :title="course.responsible">Responsável: {{course.responsible}}</h6> -->
+        <h7 class="text-wrap" :title="course.institution">
+          Instituição: {{ course.institution }}
+        </h7>
+        <!-- Para aparecer o botão "leia completo" caso o palestrante tenha profile -->
+        <div class="more" v-if="course.profile">
+          <v-btn color="primary" @click="showProfile(course.instructor)">Leia completo</v-btn>
+        </div>
       </div>
-      
     </div>
 
-    <div class="date-time-place">
+    <div class="desc">
+      <div class="date-time-place">
         <i class="far fa-calendar-alt"></i>
         <i class="far fa-clock"></i>
         <i class="fas fa-map-marker-alt"></i>
@@ -35,15 +44,25 @@
           <div v-if="course.link == null">{{ course.place }}</div>
         </div>
       </div>
-    <!-- Descomentado para que a descrição das palestras apareçam -->
-    <div class="desc">
       <p>
         {{ course.desc }}
       </p>
-
+      <!-- Para aparecer o certificado caso tenha saido -->
+      <div class="more" v-if="course.certificado">
+        <p>
+          <v-btn
+            color="primary"
+            :href="course.certificado"
+            target="_blank"
+          >
+            Certificado
+          </v-btn>
+        </p>
+      </div>
     </div>
   </div>
 </template>
+
 
 <script src="./miniCourse.ts" lang="ts"></script>
 

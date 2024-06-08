@@ -20,6 +20,7 @@ const Competicao = [
     <br><a href="https://chat.whatsapp.com/DtOSY0uaQAZ06tCVTGXCmZ">Grupo WhatsApp do desafio</a>
     `,
     editais:"/assets/edital_Idesafio_Otimização.pdf",
+    vencedor:"/assets/I-DESAFIO_EM_OTIMIZAÇÃO_COM_METAHEURISTICA_RESULTADO.pdf",
     date: "20/04 a 19/05",
     place: "Teams",
     image: "/assets/img/slider/logo-maratona.jpeg"
@@ -84,7 +85,8 @@ const Competicao = [
   <br>
   <br><a href="https://forms.office.com/r/F7w9cbRKbD">Link de inscrição, prazo de 8/4 a 18/4</a>
   `,
-    inscrevase:"https://forms.office.com/r/F7w9cbRKbD",
+    //inscrevase:"https://forms.office.com/r/F7w9cbRKbD",
+    vencedor:"/assets/VI_Desafio_em_Ciência_de_Dados_2024_SEGURANÇA_NA_AVIAÇÃO_RESULTADO.pdf",
     datainscri:"08/04 a 18/04/2024",
     date: "17/04 a 19/04",
     time: "20 às 22h",
@@ -97,7 +99,8 @@ const Competicao = [
     instructor: "Luciana Casaletti, Frederico André Rabelo e Genilda da Silva Alexandria Sousa.",
     institution: "PUC Goiás",
     desc: `II Concurso de Fotografia da Escola Politécnica da Universidade Católica de Goiás (PUC Goiás) tem como objetivo fomentar a produção de imagens relacionadas ao tema Fraternidade e Amizade Social e contribuir para a integração dos cursos ofertados pela Escola, bem como o desenvolvimento da cultura e arte entre a comunidade acadêmica.`,
-    inscrevase:"https://forms.office.com/r/S9RdTWvSCz",
+    //inscrevase:"https://forms.office.com/r/S9RdTWvSCz",
+    vencedor:"/assets/RESULTADOS_II_Concurso_de_Fotografia.pdf",
     datainscri:"18/04 a 09/05/2024",
     editais:"/assets/Edital Fotografia JCPOLI 2024.pdf",
     date: "18/04",

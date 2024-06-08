@@ -1,9 +1,13 @@
 // Minicursos que estavam na 3º JCPOLI
-
+// "certificado" foi adicionado para caso o certificado daquela palestra tenha saido, coloque o link
+// "img" e "profile" foram adicionados para que apareça a imagem o botão "leia completo" do palestrante ao lado da palestra
+// caso o palestrante não tenha imagem, mas tenho um SpeakerProfile, coloque "profile = true", pq pelo menos vai aparecer o botão de "leia completo" junto com seu no
 let Courses = [
     {
       title: "Introdução ao Power BI - Parte 1",
       instructor: "Felipe Correa Veloso Dos Santos",
+      img: '/assets/img/speakers/Felipe_Correa_Veloso_dos_Santos_MARTHA_NASCIMENTO_CA.jpg',
+      profile: true,
       institution: "PUC-Goiás",
       desc: `Parte 1 do mini-curso: "Introdução ao Power BI".`,
       date: "17/04",
@@ -14,6 +18,8 @@ let Courses = [
     {
       title: "Introdução ao Power BI - Parte 2",
       instructor: "Felipe Correa Veloso Dos Santos",
+      img: '/assets/img/speakers/Felipe_Correa_Veloso_dos_Santos_MARTHA_NASCIMENTO_CA.jpg',
+      profile: true,
       institution: "PUC-Goiás",
       desc: `Parte 2 do mini-curso: "Introdução ao Power BI"`,
       date: "18/04",
@@ -24,6 +30,8 @@ let Courses = [
     {
       title: "Módulos úteis em Python",
       instructor: "Rafael Leal Martins",
+      img: '/assets/img/speakers/Rafael_Leal_Martins_ANA_FLAVIA_MARINHO_D_1.jpeg',
+      profile: true,
       institution: "PUC Goiás e Fundação Jaime Câmara",
       desc: `A oficina apresentará módulos da linguagem Python, para solucionar diversos problemas computacionais.`,
       date: "18/04",
@@ -34,6 +42,8 @@ let Courses = [
     {
       title: "Produção de óleos essenciais - Parte 1",
       instructor: "Ronice Alves Veloso",
+      img: '/assets/img/speakers/Dra.-Ronice-Alves-Veloso_MARTHA_NASCIMENTO_CA.jpeg',
+      profile: true,
       institution: "Faculdades Integradas da América do Sul (INTEGRA)",
       desc: `Parte 1 do mini-curso: "Produção de óleos essenciais"`,
       date: "18/04",
@@ -44,6 +54,8 @@ let Courses = [
     {
       title: "Produção de óleos essenciais - Parte 2",
       instructor: "Ronice Alves Veloso",
+      img: '/assets/img/speakers/Dra.-Ronice-Alves-Veloso_MARTHA_NASCIMENTO_CA.jpeg',
+      profile: true,
       institution: "Faculdades Integradas da América do Sul (INTEGRA)",
       desc: `Parte 2 do mini-curso: "Produção de óleos essenciais"`,
       date: "19/04",
@@ -54,6 +66,8 @@ let Courses = [
     {
       title: "Módulos úteis em Python",
       instructor: "Rafael Leal Martins",
+      img: '/assets/img/speakers/Rafael_Leal_Martins_ANA_FLAVIA_MARINHO_D_1.jpeg',
+      profile: true,
       institution: "PUC Goiás e Fundação Jaime Câmara",
       desc: `A oficina apresentará módulos da linguagem Python, para solucionar diversos problemas computacionais.`,
       date: "19/04",
@@ -64,6 +78,8 @@ let Courses = [
     {
       title: "Módulos úteis em Python",
       instructor: "Rafael Leal Martins",
+      img: '/assets/img/speakers/Rafael_Leal_Martins_ANA_FLAVIA_MARINHO_D_1.jpeg',
+      profile: true,
       institution: "PUC Goiás e Fundação Jaime Câmara",
       desc: `A oficina apresentará módulos da linguagem Python, para solucionar diversos problemas computacionais.`,
       date: "19/04",

@@ -63,7 +63,7 @@
               <v-btn
                 type="submit"
                 color="primary"
-                href="https://sites.pucgoias.edu.br/certificados/"
+                href="https://sites.pucgoias.edu.br/certificados/participantes/2940"
                 target="_blank"
               >
                 ACESSAR CERTIFICADO

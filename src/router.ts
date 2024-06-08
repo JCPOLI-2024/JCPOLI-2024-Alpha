@@ -1,5 +1,5 @@
 // Esse arquivo é destinado para criar rotas do site
-// Aqui se situam tanto rotas da JCPOLI
+// Aqui se situam todas as rotas da JCPOLI
 import Vue from "vue";
 import Router from "vue-router";
 import Jcpoli from "./views/Jcpoli.vue";
