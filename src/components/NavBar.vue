@@ -65,6 +65,7 @@
         </label>
       </div>
     </div>
+    <!-- Abas da JCPOLI de quando está no desktop -->
     <div class="nav-container desktop">
       <!-- Mostra as abas de quando está na 1º ou 2º JCPOLI -->
       <ul  v-if="!isSpecialRoute()">
@@ -121,11 +122,11 @@ export default class NavBar extends Vue {
   getDataEdicaoAtual() {
     const edicao = this.edicaoAtual;
     if (edicao === 1) {
-      return "De 9 a 11 de Maio de 2022";
+      return "De 9 a 11 de Maio de 2022"; // 1º Edição
     } else if (edicao === 2) {
-      return "De 8 a 10 de Maio de 2023";
+      return "De 8 a 10 de Maio de 2023"; // 2º Edição
     } else if (edicao === 3) {
-      return "De 17 a 20 de Abril de 2024";
+      return "De 17 a 20 de Abril de 2024"; // 3º Edição
     } else {
       return ""; // Caso a edição não seja encontrada ou não esteja definida
     }
