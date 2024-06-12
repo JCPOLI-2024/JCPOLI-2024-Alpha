@@ -12,7 +12,7 @@
       <Main>
         <h4 class="text-center">Agenda</h4>
         <div class="button-container">
-          <button class="button" v-on:click="clearFilter">Todas as datas</button>
+          <button class="button" v-on:click="clearFilter">Todas as datasSSSSSSS</button>
           <button class="button" v-on:click="filterPalestras">
             09/05
           </button>

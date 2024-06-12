@@ -14,6 +14,7 @@
           <router-link to="/JCPOLI" tag="li">Home</router-link>
           <router-link to="/escolaj" tag="li">Escola</router-link>
           <router-link to="/palestrasj" tag="li">Palestras</router-link>
+          <router-link to="/palestrasjBanco" tag="li">Palestras usando Banco</router-link>
           <router-link to="/minicursosj" tag="li">Minicursos</router-link>
           <router-link to="/competicoesj" tag="li">Competições</router-link>
           <router-link to="/exposicoesj" tag="li">Exposições</router-link>
@@ -61,6 +62,7 @@
           <router-link to="/JCPOLI" tag="li">Home</router-link>
           <router-link to="/escolaj" tag="li">Escola</router-link>
           <router-link to="/palestrasj" tag="li">Palestras</router-link>
+          <router-link to="/palestrasjBanco" tag="li">Palestras usando Banco</router-link>
           <router-link to="/minicursosj" tag="li">Minicursos</router-link>
           <router-link to="/competicoesj" tag="li">Competições</router-link>
           <router-link to="/exposicoesj" tag="li">Exposições</router-link>

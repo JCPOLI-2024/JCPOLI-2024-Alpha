@@ -116,6 +116,12 @@ const router = new Router({
       component: () =>
         import(/* webpackChunkName: "minicurso" */ "./views/Palestrasj.vue")
     },
+    {
+      path: "/palestrasjBanco",
+      name: "palestrasjBanco",
+      component: () =>
+        import(/* webpackChunkName: "minicurso" */ "./views/PalestrasjBanco.vue")
+    },
     // Pagina da JCPOLI -  Pagina de Minicuros
     {
       path: "/minicursosj",
