@@ -32,7 +32,7 @@ Ela chama a função loadItems para carregar os itens do banco de dados.
     <!-- A interface do usuário para selecionar o banco de dados e exibir os itens -->
     <div class="d-flex flex-column justify-content-center align-items-center">
       <!-- O seletor para escolher o banco de dados -->
-      <b-form-select v-model="databaseRef" :options="['versao1/palestras', 'versao1/anais']"></b-form-select>
+      <b-form-select v-model="databaseRef" :options="['versao1/palestras', 'versao1/anais', 'escola/versao2/postergados','escola/versao2/reprovados', 'escola/versao2/tcc1', 'escola/versao2/tcc2' ]"></b-form-select>
       <!-- Loop através de cada item e exibir em um cartão -->
       <div class="col-6 mt-2" v-for="item in items" :key="item.id">
         <!-- O cartão para exibir o item -->
@@ -158,6 +158,65 @@ export default {
         return `Título: ${item.title}<br>
                 Autor: ${item.autor}<br>
                 Caminho: ${item.path}`;
+      } else if (this.databaseRef === 'escola/versao2/postergados') {
+        return `Título: ${item.TituloTrabalho}<br>
+                Estudante: ${item.Estudante}<br>
+                Curso: ${item.Curso}<br>
+                Data: ${item.Data}<br>
+                Disciplina: ${item.Disciplina}<br>
+                Membro 1: ${item.NomeMembro1}<br>
+                Membro 2: ${item.NomeMembro2}<br> 
+                Justificativa: ${item.Justificativa}<br>
+                Local: ${item.Local}<br>
+                Orientador: ${item.Orientador}<br>
+                Titulacao Membro1:${item.TitulacaoMembro1}<br>
+                Titulacao Membro2:${item.TitulacaoMembro2}<br>
+                Titulacao Orientador:${item.TitulacaoOrientador}`;
+      }else if (this.databaseRef === 'escola/versao2/reprovados') {
+        return `Orientador: ${item.Orientador}<br>
+                Estudante: ${item.Estudante}<br>        
+                Curso: ${item.Curso}<br>
+                Justificativa: ${item.Justificativa}<br>`;
+      }else if (this.databaseRef === 'escola/versao2/tcc1') {
+        return `Título: ${item.TituloTrabalho}<br>
+                Estudante: ${item.Estudante}<br>
+                Curso: ${item.Curso}<br>
+                Disciplina: ${item.Disciplina}<br>
+                Membro 1: ${item.NomeMembro1}<br>
+                Membro 2: ${item.NomeMembro2}<br>
+                Membro 3: ${item.NomeMembro3}<br>
+                Email Membro 1: ${item.EmailMembro1}<br>
+                Email Membro 2: ${item.EmailMembro2}<br>
+                Email Membro 2: ${item.EmailMembro3}<br> 
+                Data: ${item.Data}<br>
+                Horario: ${item.Horario}<br>
+                Local: ${item.Local}<br>
+                Orientador: ${item.Orientador}<br>
+                Titulacao Membro1:${item.TitulacaoMembro1}<br>
+                Titulacao Membro2:${item.TitulacaoMembro2}<br>
+                Titulacao Membro3:${item.TitulacaoMembro3}<br>
+                Titulacao Orientador:${item.TitulacaoOrientador}<br>
+                ID:${item.ID}`;
+      }else if (this.databaseRef === 'escola/versao2/tcc2') {
+        return `Título: ${item.TituloTrabalho}<br>
+                Estudante: ${item.Estudante}<br>
+                Curso: ${item.Curso}<br>
+                Disciplina: ${item.Disciplina}<br>
+                Membro 1: ${item.NomeMembro1}<br>
+                Membro 2: ${item.NomeMembro2}<br>
+                Membro 3: ${item.NomeMembro3}<br>
+                Email Membro 1: ${item.EmailMembro1}<br>
+                Email Membro 2: ${item.EmailMembro2}<br>
+                Email Membro 2: ${item.EmailMembro3}<br> 
+                Data: ${item.Data}<br>
+                Horario: ${item.Horario}<br>
+                Local: ${item.Local}<br>
+                Orientador: ${item.Orientador}<br>
+                Titulacao Membro1:${item.TitulacaoMembro1}<br>
+                Titulacao Membro2:${item.TitulacaoMembro2}<br>
+                Titulacao Membro3:${item.TitulacaoMembro3}<br>
+                Titulacao Orientador:${item.TitulacaoOrientador}<br>
+                ID:${item.ID}`;
       }
     },
 
