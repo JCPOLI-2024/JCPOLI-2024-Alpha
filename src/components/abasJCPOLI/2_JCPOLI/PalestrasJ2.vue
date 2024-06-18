@@ -1,83 +1,94 @@
 <!-- Pagina da JCPOLI - Pagina para Palestras da 2º JCPOLI -->
 <!-- Mantive a mesma o mesmo padrão de css que já estava aqui na Escola Politecna e de Artes, mas as palestras são as que estavam na JCPOLI -->
 <template>
-    <div>
-      <PhotoHeader
-        :title="title"
-        :description="description"
-        :image="background"
-        offset="calc((-150/500)*100vw + 67.304015296px)"
-      ></PhotoHeader>
-  
-      <Main>
-        <h4 class="text-center">Agenda 2º JCPOLI</h4>
-        <h3 class="text-center">Doe alimento não perecível durante as atividades presenciais e participe do bazar promovido pela Escola em parceria com a Coordenação de Extensão da PUC Goiás (CDEX/PROEX)</h3>
-        <div class="button-container">
-          <button class="button" v-on:click="clearFilter">Todas as datas</button>
-          <button class="button" v-on:click="filterPalestras">08/05</button>
-          <button class="button" v-on:click="filterPalestras">09/05</button>
-          <button class="button" v-on:click="filterPalestras">10/05</button>
-          <!--<button class="button" v-on:click="filterPalestras">12/05</button>
-          <button class="button" v-on:click="filterPalestras">13/05</button>-->
+  <div>
+    <PhotoHeader
+      :title="title"
+      :description="description"
+      :image="background"
+      offset="calc((-150/500)*100vw + 67.304015296px)"
+    ></PhotoHeader>
+
+    <Main>
+      <h4 class="text-center">Agenda 1º JCPOLI</h4>
+      <div class="button-container">
+        <button class="button" @click="clearFilter">Todas as datas</button>
+        <button class="button" @click="filterPalestras('08/05')">08/05</button>
+        <button class="button" @click="filterPalestras('09/05')">09/05</button>
+        <button class="button" @click="filterPalestras('10/05')">10/05</button>
+      </div>
+      <div class="courses-list">
+        <div v-for="(palestra, index) in filtered_palestras" :key="index">
+          <MiniCourse :course="palestra"></MiniCourse>
+          <hr />
         </div>
-        <div class="courses-list">
-          <div v-for="(props, index) in filtered_palestras" :key="index">
-            <!--<h3 class="section-course">{{ props.curso }}</h3> -->
-            <div v-for="(course, index) in props.palestras" :key="index">
-              <MiniCourse :course="course"></MiniCourse>
-              <hr />
-            </div>
-          </div>
-        </div>
-      </Main>
-    </div>
-  </template>
-  
-  <script lang="ts">
-  import { Component, Vue, Prop } from 'vue-property-decorator'
-  import PhotoHeader from '@/components/organization/PhotoHeader.vue'
-  import Main from '@/components/organization/Main.vue'
-  import MiniCourse from '@/components/miniCourse/index.vue'
-  import SectionCourse from '@/components/organization/SectionCourse.vue'
-  
-  import { Palestras_Cursos } from '@/storage/programacao/2_JCPOLI/palestras_new_2JCPOLI'
-  
-  @Component({
-    components: {
-      PhotoHeader,
-      Main,
-      MiniCourse
-    }
-  })
-  export default class PalestrasJ2 extends Vue {
-    private all_palestras
-    private filtered_palestras
-  
-    private title = 'Palestras'
-    private description = 'Palestras da jornada'
-    private background = '/assets/img/slider/6.jpg'
-  
-    filterPalestras(e) {
-      let data = e.target.innerText
-      this.filtered_palestras = this.all_palestras.map(item => {
-        let palestras = item.palestras.filter(aux => {
-          return aux.date == data
-        })
-        return { ...item, palestras }
-      })
-    }
-  
-    clearFilter() {
-      this.filtered_palestras = this.all_palestras
-    }
-  
-    constructor() {
-      super()
-  
-      this.all_palestras = Palestras_Cursos
-      this.filtered_palestras = this.all_palestras
-    }
+      </div>
+    </Main>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import PhotoHeader from '@/components/organization/PhotoHeader.vue';
+import Main from '@/components/organization/Main.vue';
+import MiniCourse from '@/components/miniCourse/index.vue';
+import { app } from '@/firebaseDB';
+import { getDatabase, ref, onValue } from "firebase/database";
+
+@Component({
+  components: {
+    PhotoHeader,
+    Main,
+    MiniCourse
   }
+})
+export default class PalestrasJ1 extends Vue {
+  private all_palestras: Array<any> = [];
+  private filtered_palestras: Array<any> = [];
+  private title = 'Palestras';
+  private description = 'Palestras da jornada';
+  private background = '/assets/img/slider/6.jpg';
+
+  constructor() {
+    super();
+    this.loadPalestras();
+  }
+
+  mounted() {
+    this.loadPalestras();
+  }
+
+  loadPalestras() {
+    const db = getDatabase(app);
+    const palestrasRef = ref(db, 'versao2/palestras_new');
+
+    onValue(palestrasRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        this.all_palestras = Object.keys(data).map((key) => ({
+          id: key,
+          ...data[key],
+        }));
+        this.filtered_palestras = this.all_palestras;
+        console.log('Palestras loaded:', this.all_palestras); // Debug log
+      } else {
+        console.log('No data found in Firebase'); // Debug log
+      }
+    }, (error) => {
+      console.error('Error loading palestras:', error); // Debug log
+    });
+  }
+
+  filterPalestras(date: string) {
+    this.filtered_palestras = this.all_palestras.filter(palestra => palestra.date === date);
+    console.log('Filtered palestras:', this.filtered_palestras); // Debug log
+  }
+
+  clearFilter() {
+    this.filtered_palestras = this.all_palestras;
+    console.log('Cleared filter, showing all palestras:', this.filtered_palestras); // Debug log
+  }
+}
   </script>
   
   <style scoped>
