@@ -145,6 +145,10 @@ export default {
         return item.date + ' - ' + item.time;
       } else if (this.databaseRef === 'versao1/anais') {
         return item.title;
+      }else if (this.databaseRef === 'escola/versao2/tcc1') {
+        return item.TituloTrabalho;
+      }else if (this.databaseRef === 'escola/versao2/tcc2') {
+        return item.TituloTrabalho;
       }
     },
 
